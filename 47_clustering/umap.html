@@ -1598,7 +1598,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;data/mitosis.tif&#39; from &#39;https://gitlab.com/scikit-image/data/-/raw/2cdc5ce89b334d28f06a58c9f0ca21aa6992a5ba/AS_09125_050116030001_D03f00d0.tif&#39; to &#39;C:\Users\haase\AppData\Local\scikit-image\scikit-image\Cache\0.20.0&#39;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file 'data/mitosis.tif' from 'https://gitlab.com/scikit-image/data/-/raw/2cdc5ce89b334d28f06a58c9f0ca21aa6992a5ba/AS_09125_050116030001_D03f00d0.tif' to 'C:\Users\haase\AppData\Local\scikit-image\scikit-image\Cache\0.20.0'.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1837,15 +1837,15 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;label&#39;, &#39;maximum&#39;, &#39;mean&#39;, &#39;median&#39;, &#39;minimum&#39;, &#39;sigma&#39;, &#39;sum&#39;,
-       &#39;variance&#39;, &#39;elongation&#39;, &#39;feret_diameter&#39;, &#39;flatness&#39;, &#39;roundness&#39;,
-       &#39;equivalent_ellipsoid_diameter_0&#39;, &#39;equivalent_ellipsoid_diameter_1&#39;,
-       &#39;equivalent_spherical_perimeter&#39;, &#39;equivalent_spherical_radius&#39;,
-       &#39;number_of_pixels&#39;, &#39;number_of_pixels_on_border&#39;, &#39;perimeter&#39;,
-       &#39;perimeter_on_border&#39;, &#39;perimeter_on_border_ratio&#39;, &#39;principal_axes0&#39;,
-       &#39;principal_axes1&#39;, &#39;principal_axes2&#39;, &#39;principal_axes3&#39;,
-       &#39;principal_moments0&#39;, &#39;principal_moments1&#39;],
-      dtype=&#39;object&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index(['label', 'maximum', 'mean', 'median', 'minimum', 'sigma', 'sum',
+       'variance', 'elongation', 'feret_diameter', 'flatness', 'roundness',
+       'equivalent_ellipsoid_diameter_0', 'equivalent_ellipsoid_diameter_1',
+       'equivalent_spherical_perimeter', 'equivalent_spherical_radius',
+       'number_of_pixels', 'number_of_pixels_on_border', 'perimeter',
+       'perimeter_on_border', 'perimeter_on_border_ratio', 'principal_axes0',
+       'principal_axes1', 'principal_axes2', 'principal_axes3',
+       'principal_moments0', 'principal_moments1'],
+      dtype='object')
 </pre></div>
 </div>
 </div>
@@ -1858,9 +1858,9 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_table</span> <span class="o">=</span> <span class="n">nuclei_statistics</span><span class="p">[</span>
     <span class="p">[</span>
-        <span class="s2">&quot;mean&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;variance&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;elongation&quot;</span><span class="p">,</span>
+        <span class="s2">"mean"</span><span class="p">,</span>
+        <span class="s2">"variance"</span><span class="p">,</span>
+        <span class="s2">"elongation"</span><span class="p">,</span>
     <span class="p">]</span>
 <span class="p">]</span>
 
@@ -2016,8 +2016,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;UMAP1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">embedding4</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;UMAP2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">embedding4</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"UMAP1"</span><span class="p">]</span> <span class="o">=</span> <span class="n">embedding4</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"UMAP2"</span><span class="p">]</span> <span class="o">=</span> <span class="n">embedding4</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -2034,9 +2034,9 @@ title="Print to PDF"
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">2</span>
     
-<span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;MANUAL_CLUSTER_ID&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+<span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"MANUAL_CLUSTER_ID"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">manual_threshold</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;UMAP1&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"UMAP1"</span><span class="p">]</span>
 <span class="p">]</span>
 </pre></div>
 </div>
@@ -2045,15 +2045,15 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seaborn</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;UMAP1&quot;</span><span class="p">],</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;UMAP2&quot;</span><span class="p">],</span>
-    <span class="n">hue</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;MANUAL_CLUSTER_ID&quot;</span><span class="p">],</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"UMAP1"</span><span class="p">],</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"UMAP2"</span><span class="p">],</span>
+    <span class="n">hue</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"MANUAL_CLUSTER_ID"</span><span class="p">],</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;UMAP1&#39;, ylabel=&#39;UMAP2&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel='UMAP1', ylabel='UMAP2'&gt;
 </pre></div>
 </div>
 <img alt="../_images/5e76ddced09708f3fb245f82a29aebc19496baf05a149ec47450c499dd4988e9.png" src="../_images/5e76ddced09708f3fb245f82a29aebc19496baf05a149ec47450c499dd4988e9.png" />
@@ -2065,7 +2065,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># put a 0 for background in front</span>
-<span class="n">new_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;MANUAL_CLUSTER_ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">new_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"MANUAL_CLUSTER_ID"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">new_values</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
 </pre></div>
@@ -2112,9 +2112,9 @@ title="Print to PDF"
                <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
                   <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
     
-    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Image crop&quot;</span><span class="p">)</span>
-    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Cluster&quot;</span><span class="p">)</span>
-    <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Overlay&quot;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Image crop"</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Cluster"</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Overlay"</span><span class="p">)</span>
     
 
 <span class="n">show_crop</span><span class="p">()</span>
@@ -2137,12 +2137,12 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_statistics2</span> <span class="o">=</span> <span class="n">nuclei_statistics</span><span class="p">[</span>
     <span class="p">[</span>
-        <span class="s2">&quot;principal_moments0&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;principal_moments1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;principal_axes0&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;principal_axes1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;principal_axes2&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;principal_axes3&quot;</span><span class="p">,</span>
+        <span class="s2">"principal_moments0"</span><span class="p">,</span>
+        <span class="s2">"principal_moments1"</span><span class="p">,</span>
+        <span class="s2">"principal_axes0"</span><span class="p">,</span>
+        <span class="s2">"principal_axes1"</span><span class="p">,</span>
+        <span class="s2">"principal_axes2"</span><span class="p">,</span>
+        <span class="s2">"principal_axes3"</span><span class="p">,</span>
     <span class="p">]</span>
 <span class="p">]</span><span class="o">.</span><span class="n">values</span>
 
@@ -2164,7 +2164,7 @@ title="Print to PDF"
 <span class="n">embedding5</span> <span class="o">=</span> <span class="n">reducer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">scaled_statistics2</span><span class="p">)</span>
 
 <span class="n">seaborn</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">embedding5</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">embedding5</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> 
-                    <span class="n">hue</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;MANUAL_CLUSTER_ID&quot;</span><span class="p">])</span>
+                    <span class="n">hue</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"MANUAL_CLUSTER_ID"</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2175,7 +2175,7 @@ title="Print to PDF"
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">reducer</span> <span class="o">=</span> <span class="n">umap</span><span class="o">.</span><span class="n">UMAP</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">embedding5</span> <span class="o">=</span> <span class="n">reducer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">scaled_statistics2</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">seaborn</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">embedding5</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">embedding5</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                     <span class="n">hue</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;MANUAL_CLUSTER_ID&quot;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>                     <span class="n">hue</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"MANUAL_CLUSTER_ID"</span><span class="p">])</span>
 
 <span class="ne">TypeError</span>: scatterplot() takes from 0 to 1 positional arguments but 2 positional arguments (and 1 keyword-only argument) were given
 </pre></div>
@@ -2187,8 +2187,8 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_statistics3</span> <span class="o">=</span> <span class="n">nuclei_statistics</span><span class="p">[</span>
     <span class="p">[</span>
-        <span class="s2">&quot;label&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;minimum&quot;</span>
+        <span class="s2">"label"</span><span class="p">,</span>
+        <span class="s2">"minimum"</span>
     <span class="p">]</span>
 <span class="p">]</span><span class="o">.</span><span class="n">values</span>
 
@@ -2209,7 +2209,7 @@ title="Print to PDF"
 <span class="n">embedding6</span> <span class="o">=</span> <span class="n">reducer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">scaled_statistics3</span><span class="p">)</span>
 
 <span class="n">seaborn</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">embedding6</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">embedding6</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> 
-                    <span class="n">hue</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;MANUAL_CLUSTER_ID&quot;</span><span class="p">])</span>
+                    <span class="n">hue</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"MANUAL_CLUSTER_ID"</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2217,9 +2217,9 @@ title="Print to PDF"
 <p>Interpreting this UMAP may not lead to reasonable results. Just as comparison, we draw the plot of the two selected columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seaborn</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">],</span> 
-                    <span class="n">y</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;minimum&quot;</span><span class="p">],</span> 
-                    <span class="n">hue</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">&quot;MANUAL_CLUSTER_ID&quot;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seaborn</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"label"</span><span class="p">],</span> 
+                    <span class="n">y</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"minimum"</span><span class="p">],</span> 
+                    <span class="n">hue</span><span class="o">=</span><span class="n">nuclei_statistics</span><span class="p">[</span><span class="s2">"MANUAL_CLUSTER_ID"</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>

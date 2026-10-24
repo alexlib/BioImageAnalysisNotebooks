@@ -1559,8 +1559,8 @@ title="Print to PDF"
 <p>First, we need to read in our segmentation result as it is the base of the tracking. Let’s also read in the image itself, to be able to see both even though it’s not needed for the tracking itself (only for measuring intensity values).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/cancer_cell_migration_crop.tif&#39;</span><span class="p">)</span>
-<span class="n">label_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/cancer_cell_migration_voronoi_otsu_labeling_crop.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/cancer_cell_migration_crop.tif'</span><span class="p">)</span>
+<span class="n">label_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/cancer_cell_migration_voronoi_otsu_labeling_crop.tif'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1612,7 +1612,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># choosing features of interest</span>
-<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_intensity&#39;</span><span class="p">]</span>
+<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'area'</span><span class="p">,</span> <span class="s1">'mean_intensity'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1628,7 +1628,7 @@ title="Print to PDF"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[INFO][2023/05/25 03:32:40 PM] Localizing objects from segmentation...
 [INFO][2023/05/25 03:32:41 PM] Found intensity_image data
 [INFO][2023/05/25 03:32:41 PM] Calculating weighted centroids using intensity_image
-[INFO][2023/05/25 03:32:41 PM] Objects are of type: &lt;class &#39;dict&#39;&gt;
+[INFO][2023/05/25 03:32:41 PM] Objects are of type: &lt;class 'dict'&gt;
 [INFO][2023/05/25 03:32:41 PM] ...Found 650 objects in 48 frames.
 </pre></div>
 </div>
@@ -1659,7 +1659,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;C:\\Users\\maral\\AppData\\Local\\btrack-examples\\btrack-examples\\Cache\\examples\\cell_config.json&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'C:\\Users\\maral\\AppData\\Local\\btrack-examples\\btrack-examples\\Cache\\examples\\cell_config.json'
 </pre></div>
 </div>
 </div>
@@ -1690,10 +1690,10 @@ title="Print to PDF"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[INFO][2023/05/25 03:32:41 PM] Loaded btrack: C:\Users\maral\mambaforge\envs\laptrack_env2\lib\site-packages\btrack\libs\libtracker.DLL
 [INFO][2023/05/25 03:32:41 PM] Starting BayesianTracker session
 [INFO][2023/05/25 03:32:41 PM] Loading configuration file: C:\Users\maral\AppData\Local\btrack-examples\btrack-examples\Cache\examples\cell_config.json
-[INFO][2023/05/25 03:32:41 PM] Objects are of type: &lt;class &#39;list&#39;&gt;
+[INFO][2023/05/25 03:32:41 PM] Objects are of type: &lt;class 'list'&gt;
 [WARNING][2023/05/25 03:32:41 PM] `track_interactive` will be deprecated. Use `track` instead.
 [INFO][2023/05/25 03:32:41 PM] Starting tracking... 
-[INFO][2023/05/25 03:32:41 PM] Update using: [&#39;MOTION&#39;]
+[INFO][2023/05/25 03:32:41 PM] Update using: ['MOTION']
 [INFO][2023/05/25 03:32:41 PM] Tracking objects in frames 0 to 48 (of 48)...
 [INFO][2023/05/25 03:32:41 PM]  - Timing (Bayesian updates: 1.00ms, Linking: 0.00ms)
 [INFO][2023/05/25 03:32:41 PM]  - Probabilities (Link: 0.99998, Lost: 0.46180)
@@ -1717,7 +1717,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: QWindowsWindow::setGeometry: Unable to set geometry 1086x679+641+254 (frame: 1104x726+632+216) on QWidgetWindow/&quot;_QtMainWindowClassWindow&quot; on &quot;\\.\DISPLAY1&quot;. Resulting geometry: 1360x851+642+261 (frame: 1378x898+633+223) margins: 9, 38, 9, 9 minimum size: 374x575 MINMAXINFO maxSize=0,0 maxpos=0,0 mintrack=392,622 maxtrack=0,0)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: QWindowsWindow::setGeometry: Unable to set geometry 1086x679+641+254 (frame: 1104x726+632+216) on QWidgetWindow/"_QtMainWindowClassWindow" on "\\.\DISPLAY1". Resulting geometry: 1360x851+642+261 (frame: 1378x898+633+223) margins: 9, 38, 9, 9 minimum size: 374x575 MINMAXINFO maxSize=0,0 maxpos=0,0 mintrack=392,622 maxtrack=0,0)
 </pre></div>
 </div>
 </div>

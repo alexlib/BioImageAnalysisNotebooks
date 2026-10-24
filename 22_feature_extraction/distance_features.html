@@ -1572,7 +1572,7 @@ title="Print to PDF"
 
 <span class="n">distance_from_vessel</span> <span class="o">=</span> <span class="n">nsitk</span><span class="o">.</span><span class="n">signed_maurer_distance_map</span><span class="p">(</span><span class="n">not_vessel</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">distance_from_vessel</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">distance_from_vessel</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1588,7 +1588,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_distance_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_intensity_map</span><span class="p">(</span><span class="n">distance_from_vessel</span><span class="p">,</span> <span class="n">objects</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mean_distance_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mean_distance_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1602,8 +1602,8 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">statistics_of_labelled_pixels</span><span class="p">(</span><span class="n">distance_from_vessel</span><span class="p">,</span> <span class="n">objects</span><span class="p">)</span>
 
 <span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">statistics</span><span class="p">)</span>
-<span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[[</span><span class="s1">&#39;label&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_intensity&#39;</span><span class="p">]]</span>
-<span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;mean_intensity&#39;</span><span class="p">:</span><span class="s1">&#39;mean_distance&#39;</span><span class="p">})</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[[</span><span class="s1">'label'</span><span class="p">,</span> <span class="s1">'mean_intensity'</span><span class="p">]]</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'mean_intensity'</span><span class="p">:</span><span class="s1">'mean_distance'</span><span class="p">})</span>
 
 <span class="n">table</span>
 </pre></div>

@@ -1566,7 +1566,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyclesperanto_prototype</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cle</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s1">&#39;TX&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s1">'TX'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1589,7 +1589,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laod example data</span>
-<span class="n">np_array</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/Haase_MRT_tfl3d1.tif&#39;</span><span class="p">)</span>
+<span class="n">np_array</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/Haase_MRT_tfl3d1.tif'</span><span class="p">)</span>
 <span class="n">np_array</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1751,11 +1751,11 @@ title="Print to PDF"
 <span class="n">transformed_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">affine_transform</span><span class="p">(</span><span class="n">input_image</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">shear_transform</span><span class="p">)</span>
 
 <span class="c1">##display images in each plane</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;yz&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"yz"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">maximum_x_projection</span><span class="p">(</span><span class="n">transformed_image</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;xz&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"xz"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">maximum_y_projection</span><span class="p">(</span><span class="n">transformed_image</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"xy"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">maximum_z_projection</span><span class="p">(</span><span class="n">transformed_image</span><span class="p">))</span>
 </pre></div>
 </div>

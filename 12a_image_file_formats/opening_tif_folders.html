@@ -1503,7 +1503,7 @@ title="Print to PDF"
 <span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;../../data/tif_folder/&quot;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">"../../data/tif_folder/"</span>
 </pre></div>
 </div>
 </div>
@@ -1521,11 +1521,11 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
-        <span class="c1">#image = io.imread(&quot;c:/structure/data/blobs.tif&quot;)</span>
-        <span class="c1">#io.imsave(f&quot;c:/structure/data/images/r01c01f34p0{z}-ch0{c}t01.tiff&quot;, image)</span>
+        <span class="c1">#image = io.imread("c:/structure/data/blobs.tif")</span>
+        <span class="c1">#io.imsave(f"c:/structure/data/images/r01c01f34p0{z}-ch0{c}t01.tiff", image)</span>
         
-        <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">,</span>
-                    <span class="n">path</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;image_z</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">-ch</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">.tiff&quot;</span><span class="p">)</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s2">"../../data/blobs.tif"</span><span class="p">,</span>
+                    <span class="n">path</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">"image_z</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">-ch</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">.tiff"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1570,7 +1570,7 @@ image_z06-ch04.tiff
 <p>scikit-image offers a <a class="reference external" href="https://scikit-image.org/docs/stable/api/skimage.io.html#skimage.io.imread_collection"><code class="docutils literal notranslate"><span class="pre">imread_collection</span></code></a> for loading files matching to a pattern, e.g. containing <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">im_collection</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread_collection</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;*&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">im_collection</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread_collection</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">"*"</span><span class="p">)</span>
 <span class="n">im_collection</span>
 </pre></div>
 </div>
@@ -1618,7 +1618,7 @@ image_z06-ch04.tiff
 <span class="n">num_z_slices</span> <span class="o">=</span> <span class="mi">6</span>
 
 <span class="n">image4d_loaded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span>
-    <span class="p">[</span><span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;image_z</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">-ch</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">.tiff&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">"image_z</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">-ch</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">.tiff"</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
     <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 <span class="p">])</span>
 <span class="n">image4d_loaded</span><span class="o">.</span><span class="n">shape</span>

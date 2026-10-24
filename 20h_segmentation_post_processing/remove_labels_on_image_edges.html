@@ -1526,7 +1526,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load data</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 
 <span class="c1"># process the image</span>
 <span class="n">blurred</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">gaussian_blur</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma_x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sigma_y</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1540,7 +1540,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\structure\code\pyclesperanto_prototype\pyclesperanto_prototype\_tier9\_imshow.py:34: UserWarning: cle.imshow is deprecated, use stackview.imshow instead.
-  warnings.warn(&quot;cle.imshow is deprecated, use stackview.imshow instead.&quot;)
+  warnings.warn("cle.imshow is deprecated, use stackview.imshow instead.")
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1564,7 +1564,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_labels</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">labeled</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of objects in the image: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_labels</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Number of objects in the image: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_labels</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1606,7 +1606,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_labels</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">labels_excl_edges</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of objects in the image: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_labels</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Number of objects in the image: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_labels</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1678,7 +1678,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_labels</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">labels_excl_edges</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of objects in the image: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_labels</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Number of objects in the image: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_labels</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>

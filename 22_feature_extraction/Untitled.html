@@ -1559,8 +1559,8 @@ title="Print to PDF"
 
 <span class="c1"># Compute the distance between each pair of consecutive points in the polyline</span>
 <span class="c1"># Iterate over pairs of points using zip and calculate the Euclidean distance </span>
-<span class="c1"># between &#39;point&#39; and &#39;follower&#39; for each pair</span>
-<span class="c1"># Append the distance to the list &#39;distances&#39;</span>
+<span class="c1"># between 'point' and 'follower' for each pair</span>
+<span class="c1"># Append the distance to the list 'distances'</span>
 <span class="k">for</span> <span class="n">point</span><span class="p">,</span> <span class="n">follower</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">polyline</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">polyline</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
     <span class="n">d</span> <span class="o">=</span> <span class="n">euclidean</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">follower</span><span class="p">)</span>
     <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">distances</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span>

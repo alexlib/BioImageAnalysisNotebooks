@@ -1585,14 +1585,14 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># creates a pretrained model</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">StarDist2D</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;2D_versatile_fluo&#39;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">StarDist2D</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">'2D_versatile_fluo'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found model &#39;2D_versatile_fluo&#39; for &#39;StarDist2D&#39;.
-Loading network weights from &#39;weights_best.h5&#39;.
-Loading thresholds from &#39;thresholds.json&#39;.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found model '2D_versatile_fluo' for 'StarDist2D'.
+Loading network weights from 'weights_best.h5'.
+Loading thresholds from 'thresholds.json'.
 Using default values: prob_thresh=0.479071, nms_thresh=0.3.
 </pre></div>
 </div>
@@ -1648,9 +1648,9 @@ Using default values: prob_thresh=0.479071, nms_thresh=0.3.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">random_label_cmap</span><span class="p">(),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">'off'</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -1666,7 +1666,7 @@ Using default values: prob_thresh=0.479071, nms_thresh=0.3.
 
 <span class="c1"># add two images</span>
 <span class="n">axes</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
-<span class="n">axes</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">],</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">],</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">'r'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1689,14 +1689,14 @@ Using default values: prob_thresh=0.479071, nms_thresh=0.3.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 4 registered models for &#39;StarDist2D&#39;:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 4 registered models for 'StarDist2D':
 
 Name                  Alias(es)
 ────                  ─────────
-&#39;2D_versatile_fluo&#39;   &#39;Versatile (fluorescent nuclei)&#39;
-&#39;2D_versatile_he&#39;     &#39;Versatile (H&amp;E nuclei)&#39;
-&#39;2D_paper_dsb2018&#39;    &#39;DSB 2018 (from StarDist 2D paper)&#39;
-&#39;2D_demo&#39;             None
+'2D_versatile_fluo'   'Versatile (fluorescent nuclei)'
+'2D_versatile_he'     'Versatile (H&amp;E nuclei)'
+'2D_paper_dsb2018'    'DSB 2018 (from StarDist 2D paper)'
+'2D_demo'             None
 </pre></div>
 </div>
 </div>

@@ -1553,27 +1553,27 @@ title="Print to PDF"
 <p><strong>Note:</strong> When executing this script, you should adapt the path of the image data so that it runs on your computer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;blobs_segmentation_imagej.ijm&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'blobs_segmentation_imagej.ijm'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>open(&quot;C:/structure/code/clesperanto_SIMposium/blobs.tif&quot;);
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>open("C:/structure/code/clesperanto_SIMposium/blobs.tif");
 
 // binarization
-setAutoThreshold(&quot;Otsu dark&quot;);
-setOption(&quot;BlackBackground&quot;, true);
-run(&quot;Convert to Mask&quot;);
+setAutoThreshold("Otsu dark");
+setOption("BlackBackground", true);
+run("Convert to Mask");
 
 // Connected component labeling + measurement
-run(&quot;Analyze Particles...&quot;, &quot;  show=[Count Masks] &quot;);
+run("Analyze Particles...", "  show=[Count Masks] ");
 
 // Result visualization
-run(&quot;glasbey on dark&quot;);
+run("glasbey on dark");
 
 // Save results
-saveAs(&quot;Tiff&quot;, &quot;C:/structure/code/clesperanto_SIMposium/blobs_labels_imagej.tif&quot;);
+saveAs("Tiff", "C:/structure/code/clesperanto_SIMposium/blobs_labels_imagej.tif");
 </pre></div>
 </div>
 </div>
@@ -1581,7 +1581,7 @@ saveAs(&quot;Tiff&quot;, &quot;C:/structure/code/clesperanto_SIMposium/blobs_lab
 <p>The result looks then like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imagej_label_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;blobs_labels_imagej.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imagej_label_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"blobs_labels_imagej.tif"</span><span class="p">)</span>
 <span class="n">visualization</span> <span class="o">=</span> <span class="n">label2rgb</span><span class="p">(</span><span class="n">imagej_label_image</span><span class="p">,</span> <span class="n">bg_label</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">visualization</span><span class="p">)</span>
 </pre></div>
@@ -1601,8 +1601,8 @@ saveAs(&quot;Tiff&quot;, &quot;C:/structure/code/clesperanto_SIMposium/blobs_lab
 <p>We start with loading and visualizing the raw blobs image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;blobs.tif&quot;</span><span class="p">)</span>
-<span class="n">imshow</span><span class="p">(</span><span class="n">blobs_image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Greys_r&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"blobs.tif"</span><span class="p">)</span>
+<span class="n">imshow</span><span class="p">(</span><span class="n">blobs_image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"Greys_r"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1659,13 +1659,13 @@ saveAs(&quot;Tiff&quot;, &quot;C:/structure/code/clesperanto_SIMposium/blobs_lab
 <p>To compare the images later, we also save this one to disk.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imsave</span><span class="p">(</span><span class="s2">&quot;blobs_labels_skimage.tif&quot;</span><span class="p">,</span> <span class="n">skimage_label_image</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imsave</span><span class="p">(</span><span class="s2">"blobs_labels_skimage.tif"</span><span class="p">,</span> <span class="n">skimage_label_image</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\rober\AppData\Local\Temp\ipykernel_6744\179771585.py:1: UserWarning: blobs_labels_skimage.tif is a low contrast image
-  imsave(&quot;blobs_labels_skimage.tif&quot;, skimage_label_image)
+  imsave("blobs_labels_skimage.tif", skimage_label_image)
 </pre></div>
 </div>
 </div>
@@ -1679,21 +1679,21 @@ saveAs(&quot;Tiff&quot;, &quot;C:/structure/code/clesperanto_SIMposium/blobs_lab
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyclesperanto_prototype</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cle</span>
 
-<span class="n">blobs_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;C:/structure/code/clesperanto_SIMposium/blobs.tif&quot;</span><span class="p">)</span>
+<span class="n">blobs_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"C:/structure/code/clesperanto_SIMposium/blobs.tif"</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">blobs_image</span><span class="p">,</span> <span class="s2">&quot;Blobs&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">blobs_image</span><span class="p">,</span> <span class="s2">"Blobs"</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
 
 <span class="c1"># Threshold Otsu</span>
 <span class="n">binary_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">create_like</span><span class="p">(</span><span class="n">blobs_image</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">threshold_otsu</span><span class="p">(</span><span class="n">blobs_image</span><span class="p">,</span> <span class="n">binary_image</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">binary_image</span><span class="p">,</span> <span class="s2">&quot;Threshold Otsu of CLIJ2 Image of blobs.gif&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">binary_image</span><span class="p">,</span> <span class="s2">"Threshold Otsu of CLIJ2 Image of blobs.gif"</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 
 <span class="c1"># Connected Components Labeling Box</span>
 <span class="n">label_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">create_like</span><span class="p">(</span><span class="n">binary_image</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">connected_components_labeling_box</span><span class="p">(</span><span class="n">binary_image</span><span class="p">,</span> <span class="n">label_image</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="s2">&quot;Connected Components Labeling Box of Threshold Otsu of CLIJ2 Image of blobs.gif&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">64.0</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="s2">"Connected Components Labeling Box of Threshold Otsu of CLIJ2 Image of blobs.gif"</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">64.0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1706,7 +1706,7 @@ saveAs(&quot;Tiff&quot;, &quot;C:/structure/code/clesperanto_SIMposium/blobs_lab
 <p>We will also save this image for later comparison.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imsave</span><span class="p">(</span><span class="s2">&quot;blobs_labels_clesperanto_python.tif&quot;</span><span class="p">,</span> <span class="n">label_image</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imsave</span><span class="p">(</span><span class="s2">"blobs_labels_clesperanto_python.tif"</span><span class="p">,</span> <span class="n">label_image</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1718,7 +1718,7 @@ saveAs(&quot;Tiff&quot;, &quot;C:/structure/code/clesperanto_SIMposium/blobs_lab
 <p><strong>Note:</strong> When executing this script, you should adapt the path of the image data so that it runs on your computer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;blobs_segmentation_clesperanto.py&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'blobs_segmentation_clesperanto.py'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -1737,26 +1737,26 @@ saveAs(&quot;Tiff&quot;, &quot;C:/structure/code/clesperanto_SIMposium/blobs_lab
 # 
 import pyclesperanto_prototype as cle
 
-blobs_image = cle.imread(&quot;C:/structure/code/clesperanto_SIMposium/blobs.tif&quot;)
+blobs_image = cle.imread("C:/structure/code/clesperanto_SIMposium/blobs.tif")
 
-cle.imshow(blobs_image, &quot;Blobs&quot;, False, 0, 255)
+cle.imshow(blobs_image, "Blobs", False, 0, 255)
 
 # Threshold Otsu
 binary_image = cle.create_like(blobs_image)
 cle.threshold_otsu(blobs_image, binary_image)
 
-cle.imshow(binary_image, &quot;Threshold Otsu of CLIJ2 Image of blobs.gif&quot;, False, 0.0, 1.0)
+cle.imshow(binary_image, "Threshold Otsu of CLIJ2 Image of blobs.gif", False, 0.0, 1.0)
 
 # Connected Components Labeling Box
 label_image = cle.create_like(binary_image)
 cle.connected_components_labeling_box(binary_image, label_image)
 
-cle.imshow(label_image, &quot;Connected Components Labeling Box of Threshold Otsu of CLIJ2 Image of blobs.gif&quot;, True, 0.0, 64.0)
+cle.imshow(label_image, "Connected Components Labeling Box of Threshold Otsu of CLIJ2 Image of blobs.gif", True, 0.0, 64.0)
 
 # The following code is ImageJ specific. If you run this code from 
 # Python, consider replacing this part with skimage.io.imsave
 from ij import IJ
-IJ.saveAs(&quot;tif&quot;,&quot;C:/structure/code/clesperanto_SIMposium/blobs_labels_clesperanto_imagej.tif&quot;);
+IJ.saveAs("tif","C:/structure/code/clesperanto_SIMposium/blobs_labels_clesperanto_imagej.tif");
 </pre></div>
 </div>
 </div>
@@ -1764,7 +1764,7 @@ IJ.saveAs(&quot;tif&quot;,&quot;C:/structure/code/clesperanto_SIMposium/blobs_la
 <p>We will also take a look at the result of this workflow:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imagej_label_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;blobs_labels_clesperanto_imagej.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imagej_label_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"blobs_labels_clesperanto_imagej.tif"</span><span class="p">)</span>
 <span class="n">visualization</span> <span class="o">=</span> <span class="n">label2rgb</span><span class="p">(</span><span class="n">imagej_label_image</span><span class="p">,</span> <span class="n">bg_label</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">visualization</span><span class="p">)</span>
 </pre></div>

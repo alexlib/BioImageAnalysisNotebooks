@@ -1522,11 +1522,11 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@tools</span><span class="o">.</span><span class="n">append</span>
 <span class="nd">@tool</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">load_image</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Useful for loading an image file and storing it.&quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;loading&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">"""Useful for loading an image file and storing it."""</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"loading"</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
     <span class="n">image_storage</span><span class="p">[</span><span class="n">filename</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span>
-    <span class="k">return</span> <span class="s2">&quot;The image is now stored as &quot;</span> <span class="o">+</span> <span class="n">filename</span>
+    <span class="k">return</span> <span class="s2">"The image is now stored as "</span> <span class="o">+</span> <span class="n">filename</span>
 </pre></div>
 </div>
 </div>
@@ -1537,19 +1537,19 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@tools</span><span class="o">.</span><span class="n">append</span>
 <span class="nd">@tool</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">segment_bright_objects</span><span class="p">(</span><span class="n">image_name</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Useful for segmenting bright objects in an image </span>
 <span class="sd">    that has been loaded and stored before.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;segmenting (Voronoi-Otsu-Labeling)&quot;</span><span class="p">,</span> <span class="n">image_name</span><span class="p">)</span>
+<span class="sd">    """</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"segmenting (Voronoi-Otsu-Labeling)"</span><span class="p">,</span> <span class="n">image_name</span><span class="p">)</span>
     
     <span class="n">image</span> <span class="o">=</span> <span class="n">image_storage</span><span class="p">[</span><span class="n">image_name</span><span class="p">]</span>
     <span class="n">label_image</span> <span class="o">=</span> <span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
     
-    <span class="n">label_image_name</span> <span class="o">=</span> <span class="s2">&quot;segmented_&quot;</span> <span class="o">+</span> <span class="n">image_name</span>
+    <span class="n">label_image_name</span> <span class="o">=</span> <span class="s2">"segmented_"</span> <span class="o">+</span> <span class="n">image_name</span>
     <span class="n">image_storage</span><span class="p">[</span><span class="n">label_image_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_image</span>
     
-    <span class="k">return</span> <span class="s2">&quot;The segmented image has been stored as &quot;</span> <span class="o">+</span> <span class="n">label_image_name</span>
+    <span class="k">return</span> <span class="s2">"The segmented image has been stored as "</span> <span class="o">+</span> <span class="n">label_image_name</span>
 </pre></div>
 </div>
 </div>
@@ -1559,19 +1559,19 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@tools</span><span class="o">.</span><span class="n">append</span>
 <span class="nd">@tool</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">segment_dark_objects</span><span class="p">(</span><span class="n">image_name</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Useful for segmenting dark objects with bright border in an image </span>
 <span class="sd">    that has been loaded and stored before.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;segmenting (Local-minima-seeded watershed)&quot;</span><span class="p">,</span> <span class="n">image_name</span><span class="p">)</span>
+<span class="sd">    """</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"segmenting (Local-minima-seeded watershed)"</span><span class="p">,</span> <span class="n">image_name</span><span class="p">)</span>
     
     <span class="n">image</span> <span class="o">=</span> <span class="n">image_storage</span><span class="p">[</span><span class="n">image_name</span><span class="p">]</span>
     <span class="n">label_image</span> <span class="o">=</span> <span class="n">local_minima_seeded_watershed</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
     
-    <span class="n">label_image_name</span> <span class="o">=</span> <span class="s2">&quot;segmented_&quot;</span> <span class="o">+</span> <span class="n">image_name</span>
+    <span class="n">label_image_name</span> <span class="o">=</span> <span class="s2">"segmented_"</span> <span class="o">+</span> <span class="n">image_name</span>
     <span class="n">image_storage</span><span class="p">[</span><span class="n">label_image_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_image</span>
     
-    <span class="k">return</span> <span class="s2">&quot;The segmented image has been stored as &quot;</span> <span class="o">+</span> <span class="n">label_image_name</span>
+    <span class="k">return</span> <span class="s2">"The segmented image has been stored as "</span> <span class="o">+</span> <span class="n">label_image_name</span>
 </pre></div>
 </div>
 </div>
@@ -1581,13 +1581,13 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@tools</span><span class="o">.</span><span class="n">append</span>
 <span class="nd">@tool</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">show_image</span><span class="p">(</span><span class="n">image_name</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Useful for showing an image that has been loaded and stored before.&quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;showing&quot;</span><span class="p">,</span> <span class="n">image_name</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">"""Useful for showing an image that has been loaded and stored before."""</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"showing"</span><span class="p">,</span> <span class="n">image_name</span><span class="p">)</span>
     
     <span class="n">image</span> <span class="o">=</span> <span class="n">image_storage</span><span class="p">[</span><span class="n">image_name</span><span class="p">]</span>
     <span class="n">display</span><span class="p">(</span><span class="n">stackview</span><span class="o">.</span><span class="n">insight</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
     
-    <span class="k">return</span> <span class="s2">&quot;The image &quot;</span> <span class="o">+</span> <span class="n">image_name</span> <span class="o">+</span> <span class="s2">&quot; is shown above.&quot;</span>
+    <span class="k">return</span> <span class="s2">"The image "</span> <span class="o">+</span> <span class="n">image_name</span> <span class="o">+</span> <span class="s2">" is shown above."</span>
 </pre></div>
 </div>
 </div>
@@ -1595,7 +1595,7 @@ title="Print to PDF"
 <p>We create some memory and a large language model based on OpenAI’s chatGPT.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">memory</span> <span class="o">=</span> <span class="n">ConversationBufferMemory</span><span class="p">(</span><span class="n">memory_key</span><span class="o">=</span><span class="s2">&quot;chat_history&quot;</span><span class="p">,</span> <span class="n">return_messages</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">memory</span> <span class="o">=</span> <span class="n">ConversationBufferMemory</span><span class="p">(</span><span class="n">memory_key</span><span class="o">=</span><span class="s2">"chat_history"</span><span class="p">,</span> <span class="n">return_messages</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">llm</span><span class="o">=</span><span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1617,7 +1617,7 @@ title="Print to PDF"
 <p>This agent can then respond to prompts.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;Please load the image ../../data/membrane2d.tif and show it.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"Please load the image ../../data/membrane2d.tif and show it."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1642,14 +1642,14 @@ showing ../../data/membrane2d.tif
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAB4CAYAAABb59j9AAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjcuMSwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/bCgiHAAAACXBIWXMAAA9hAAAPYQGoP6dpAAACdElEQVR4nO3aQWrbQBiG4ZHJVj6AkSAH6D26yIWyK93lQln0Hj1AwEYHkKHQjaaLYC/ctA3YU9dfn2clYRjN4uVnZNTVWmuBEKtrbwAuSdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNlLtWCy/LUqZpKn3fl67rWj2GALXWst/vy2azKavVeTO2WdDTNJVxHFstT6DtdluGYThrjWZB931fSnnd5Hq9bvUYAszzXMZxPDZzjmZBH44Z6/Va0LzLJY6mXgqJImiiNDty/M794/Px+uXp4RpbIJQJTRRBE+UqR45TjiBciglNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNlLtrb+At94/Px+uXp4cr7oRbY0ITRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0Uf7JbzlO+baD9zKhiSJoogiaKIImyk28FJ7yksivmNBEuckJfcrE5sCEJkrEhD5lYv+/mgVday2llDLP80+/Ld+/Ha/neW5+/+HTl+P9188f/3jP33Vo5NDMObp6iVXesNvtyjiOLZYm1Ha7LcMwnLVGs6CXZSnTNJW+70vXdS0eQYhaa9nv92Wz2ZTV6rzXumZBwzX4l4MogiaKoIkiaKIImiiCJoqgiSJoogiaKIImyg/TMI2eEgXo2QAAAABJRU5ErkJggg=="></img>
 </td>
 </tr>
-</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The image ../../data/membrane2d.tif is shown above.&#39;
+</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'The image ../../data/membrane2d.tif is shown above.'
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;Please segment the image ../../data/membrane2d.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"Please segment the image ../../data/membrane2d.tif"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1657,14 +1657,14 @@ showing ../../data/membrane2d.tif
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>segmenting (Voronoi-Otsu-Labeling) ../../data/membrane2d.tif
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The segmented image has been stored as segmented_../../data/membrane2d.tif&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'The segmented image has been stored as segmented_../../data/membrane2d.tif'
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;Please show the segmented ../../data/membrane2d.tif image.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"Please show the segmented ../../data/membrane2d.tif image."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1688,7 +1688,7 @@ showing ../../data/membrane2d.tif
 
 </td>
 </tr>
-</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The segmented image is shown above.&#39;
+</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'The segmented image is shown above.'
 </pre></div>
 </div>
 </div>
@@ -1696,7 +1696,7 @@ showing ../../data/membrane2d.tif
 <p>The segmentation does not look like a cell-segmentation. Thus, we should ask more specifically.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;Please segment the image ../../data/membrane2d.tif again and this time, segment the dark cells surrounded by bright membranes. Also show the result of the segmentation.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"Please segment the image ../../data/membrane2d.tif again and this time, segment the dark cells surrounded by bright membranes. Also show the result of the segmentation."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1721,7 +1721,7 @@ showing segmented_../../data/membrane2d.tif
 
 </td>
 </tr>
-</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The segmented image of dark cells surrounded by bright membranes has been shown.&#39;
+</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'The segmented image of dark cells surrounded by bright membranes has been shown.'
 </pre></div>
 </div>
 </div>
@@ -1729,24 +1729,24 @@ showing segmented_../../data/membrane2d.tif
 <p>We can also ask the agent which algorithm it chose and why it chose this tool.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;Which algorithm did you use this time?&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"Which algorithm did you use this time?"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;I used the algorithm to segment dark cells surrounded by bright membranes.&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'I used the algorithm to segment dark cells surrounded by bright membranes.'
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;Why did you use this algorithm?&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"Why did you use this algorithm?"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;I used this algorithm because it is specifically designed to segment dark cells surrounded by bright membranes, which matches the criteria you mentioned in your request.&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'I used this algorithm because it is specifically designed to segment dark cells surrounded by bright membranes, which matches the criteria you mentioned in your request.'
 </pre></div>
 </div>
 </div>

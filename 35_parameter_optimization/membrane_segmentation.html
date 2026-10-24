@@ -1509,9 +1509,9 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
-<span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">,</span> <span class="c1"># result image name</span>
+<span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">,</span> <span class="c1"># result image name</span>
       <span class="n">nsbatwm</span><span class="o">.</span><span class="n">thresholded_local_minima_seeded_watershed</span><span class="p">,</span> <span class="c1"># operation</span>
-      <span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">outline_sigma</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># parameters</span>
+      <span class="s2">"input"</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">outline_sigma</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># parameters</span>
 </pre></div>
 </div>
 </div>
@@ -1519,8 +1519,8 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># image data source: scikit-image cells3d example, slice 28</span>
-<span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/membranes_2d.tif&quot;</span><span class="p">))</span>
-<span class="n">input_image</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"input"</span><span class="p">,</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/membranes_2d.tif"</span><span class="p">))</span>
+<span class="n">input_image</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"input"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">input_image</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1532,7 +1532,7 @@ title="Print to PDF"
 <p>We produce a first segmentation result that is oversegmented, there are obviously too many cells found.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1544,7 +1544,7 @@ title="Print to PDF"
 <p>To give the segmentation algorithm some ground truth to compare segmentation results with, we use this sparse annotation image. It typically is enough to annotate some example cells accurately. Better spend time on making good segmentations and do not draw so many.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ground_truth</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/membranes_2d_sparse_labels.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ground_truth</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/membranes_2d_sparse_labels.tif"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ground_truth</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1570,7 +1570,7 @@ title="Print to PDF"
 <p>We then start the optimization and afterwards print out the optimized parameter set.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">best_param</span> <span class="o">=</span> <span class="n">jlio</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">,</span> <span class="n">ground_truth</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">best_param</span> <span class="o">=</span> <span class="n">jlio</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">,</span> <span class="n">ground_truth</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">best_param</span>
 </pre></div>
 </div>
@@ -1585,7 +1585,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jlio</span><span class="o">.</span><span class="n">set_numeric_parameters</span><span class="p">(</span><span class="n">best_param</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1596,7 +1596,7 @@ title="Print to PDF"
 <p>The quality of this image can be measured by averaging the Jaccard Index of the three ground truth objects. <a class="reference external" href="https://github.com/haesleinhuepf/the-segmentation-game">The Segmentation Game</a> library has a function for this.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jaccard_index_sparse</span><span class="p">(</span><span class="n">ground_truth</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jaccard_index_sparse</span><span class="p">(</span><span class="n">ground_truth</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1626,7 +1626,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jlio2</span> <span class="o">=</span> <span class="n">JaccardLabelImageOptimizer</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
 <span class="n">jlio2</span><span class="o">.</span><span class="n">set_numeric_parameters</span><span class="p">(</span><span class="n">new_starting_point</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1637,7 +1637,7 @@ title="Print to PDF"
 <p>We can then start a second attempt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">best_param</span> <span class="o">=</span> <span class="n">jlio</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">,</span> <span class="n">ground_truth</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">best_param</span> <span class="o">=</span> <span class="n">jlio</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">,</span> <span class="n">ground_truth</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">best_param</span>
 </pre></div>
 </div>
@@ -1651,7 +1651,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jlio</span><span class="o">.</span><span class="n">set_numeric_parameters</span><span class="p">(</span><span class="n">best_param</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1661,7 +1661,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jaccard_index_sparse</span><span class="p">(</span><span class="n">ground_truth</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jaccard_index_sparse</span><span class="p">(</span><span class="n">ground_truth</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>

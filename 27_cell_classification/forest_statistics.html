@@ -1531,7 +1531,7 @@ title="Print to PDF"
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s1">&#39;RTX&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s1">'RTX'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1545,8 +1545,8 @@ title="Print to PDF"
 <p>We also add a label image that was generated in an earlier chapter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/maize_clsm.tif&#39;</span><span class="p">))</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/maize_clsm_labels.tif&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/maize_clsm.tif'</span><span class="p">))</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/maize_clsm_labels.tif'</span><span class="p">))</span>
 
 <span class="n">fix</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -1561,7 +1561,7 @@ title="Print to PDF"
 <p>We previously created an object classifier and apply it now to the pair of intensity and label images.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">classifier</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectClassifier</span><span class="p">(</span><span class="s2">&quot;../../data/maize_cslm_object_classifier.cl&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">classifier</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectClassifier</span><span class="p">(</span><span class="s2">"../../data/maize_cslm_object_classifier.cl"</span><span class="p">)</span>
 <span class="n">classification_map</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">image</span><span class="p">)</span>
 
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">classification_map</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -1647,7 +1647,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">colorize</span><span class="p">(</span><span class="n">styler</span><span class="p">):</span>
-    <span class="n">styler</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;rainbow&quot;</span><span class="p">)</span>
+    <span class="n">styler</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"rainbow"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">styler</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">shares</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
@@ -1746,11 +1746,11 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;area&#39;: [0.1023460967511782],
- &#39;mean_intensity&#39;: [0.27884719464885743],
- &#39;standard_deviation_intensity&#39;: [0.34910187501327306],
- &#39;touching_neighbor_count&#39;: [0.09231893555382481],
- &#39;average_distance_of_n_nearest_neighbors=6&#39;: [0.1773858980328665]}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'area': [0.1023460967511782],
+ 'mean_intensity': [0.27884719464885743],
+ 'standard_deviation_intensity': [0.34910187501327306],
+ 'touching_neighbor_count': [0.09231893555382481],
+ 'average_distance_of_n_nearest_neighbors=6': [0.1773858980328665]}
 </pre></div>
 </div>
 </div>
@@ -1758,7 +1758,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">colorize</span><span class="p">(</span><span class="n">styler</span><span class="p">):</span>
-    <span class="n">styler</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;rainbow&quot;</span><span class="p">)</span>
+    <span class="n">styler</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"rainbow"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">styler</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">feature_importance</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>

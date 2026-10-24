@@ -1510,7 +1510,7 @@ We could just measure object properties for all objects in tiles and then combin
 <p>Our starting point is again a binary image showing segmented objects.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">128</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/blobs.tif"</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">128</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1523,9 +1523,9 @@ We could just measure object properties for all objects in tiles and then combin
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">area_map</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Label objects in a binary image and produce a pixel-count-map image.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">connected_components_labeling_box</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">pixel_count_map</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
     
@@ -1601,11 +1601,11 @@ We could just measure object properties for all objects in tiles and then combin
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">overlap_width</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Overlap width&quot;</span><span class="p">,</span> <span class="n">overlap_width</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Overlap width"</span><span class="p">,</span> <span class="n">overlap_width</span><span class="p">)</span>
     <span class="n">tile_map</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">map_overlap</span><span class="p">(</span><span class="n">procedure</span><span class="p">,</span> <span class="n">tiles</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="n">overlap_width</span><span class="p">,</span> <span class="n">boundary</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">tile_map</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mean squared error&quot;</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">reference</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------------&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"mean squared error"</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">reference</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"-----------------------------------"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

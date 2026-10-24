@@ -1532,21 +1532,21 @@ title="Print to PDF"
 <p>For demonstration purposes, we use a dataset that is provided by Theresa Suckert, OncoRay, University Hospital Carl Gustav Carus, TU Dresden. The dataset is licensed <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">License: CC-BY 4.0</a>. We are using a cropped version here that was resaved a 8-bit image to be able to provide it with the notebook. You find the full size 16-bit image in CZI file format <a class="reference external" href="https://zenodo.org/record/4276076#.YX1F-55BxaQ">online</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/P1_H_C3H_M004_17-cropped.tif&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/P1_H_C3H_M004_17-cropped.tif'</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="c1"># for testing purposes, we crop the image even more.</span>
 <span class="c1"># comment out the following line to run on the whole 5000x2000 pixels</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">1000</span><span class="p">:</span><span class="mi">1500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">:</span><span class="mi">1500</span><span class="p">]</span>
 
 <span class="c1">#compress AND change the numpy array into a zarr array</span>
-<span class="n">compressor</span> <span class="o">=</span> <span class="n">Blosc</span><span class="p">(</span><span class="n">cname</span><span class="o">=</span><span class="s1">&#39;zstd&#39;</span><span class="p">,</span> <span class="n">clevel</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="n">Blosc</span><span class="o">.</span><span class="n">BITSHUFFLE</span><span class="p">)</span>
+<span class="n">compressor</span> <span class="o">=</span> <span class="n">Blosc</span><span class="p">(</span><span class="n">cname</span><span class="o">=</span><span class="s1">'zstd'</span><span class="p">,</span> <span class="n">clevel</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="n">Blosc</span><span class="o">.</span><span class="n">BITSHUFFLE</span><span class="p">)</span>
 
 <span class="c1"># Convert image into zarr array</span>
 <span class="n">chunk_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">zarray</span> <span class="o">=</span> <span class="n">zarr</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="n">chunk_size</span><span class="p">,</span> <span class="n">compressor</span><span class="o">=</span><span class="n">compressor</span><span class="p">)</span>
 
 <span class="c1"># save zarr to disk</span>
-<span class="n">zarr_filename</span> <span class="o">=</span> <span class="s1">&#39;../../data/P1_H_C3H_M004_17-cropped.zarr&#39;</span>
+<span class="n">zarr_filename</span> <span class="o">=</span> <span class="s1">'../../data/P1_H_C3H_M004_17-cropped.zarr'</span>
 <span class="n">zarr</span><span class="o">.</span><span class="n">convenience</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">zarr_filename</span><span class="p">,</span> <span class="n">zarray</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1638,10 +1638,10 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">count_nuclei</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Label objects in a binary image and produce a pixel-count-map image.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Processing image of size&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="sd">    """</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Processing image of size"</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
     
     <span class="c1"># Count nuclei including those which touch the image border</span>
     <span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mf">3.5</span><span class="p">)</span>

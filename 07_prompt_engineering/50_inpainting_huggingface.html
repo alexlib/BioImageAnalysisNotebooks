@@ -1511,11 +1511,11 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pipe</span> <span class="o">=</span> <span class="n">StableDiffusionInpaintPipeline</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span>
-    <span class="s2">&quot;stabilityai/stable-diffusion-2-inpainting&quot;</span><span class="p">,</span>
-    <span class="c1"># &quot;runwayml/stable-diffusion-inpainting&quot;, </span>
+    <span class="s2">"stabilityai/stable-diffusion-2-inpainting"</span><span class="p">,</span>
+    <span class="c1"># "runwayml/stable-diffusion-inpainting", </span>
     <span class="n">torch_dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float16</span>
 <span class="p">)</span>
-<span class="n">pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>
+<span class="n">pipe</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">"cuda"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1525,7 +1525,7 @@ title="Print to PDF"
 <p>We load our example image as numpy array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np_init_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/real_cat.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np_init_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/real_cat.png"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1544,7 +1544,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask_np</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/real_cat_mic_mask.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask_np</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/real_cat_mic_mask.tif"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1563,7 +1563,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;A black white cat fur&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prompt</span> <span class="o">=</span> <span class="s2">"A black white cat fur"</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">pipe</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="n">prompt</span><span class="p">,</span> 
              <span class="n">image</span><span class="o">=</span><span class="n">init_image</span><span class="p">,</span> 
              <span class="n">mask_image</span><span class="o">=</span><span class="n">mask_image</span><span class="p">,</span> 

@@ -1513,8 +1513,8 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">blur</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;image must havve &lt; 4 dimensions.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;blurring sigma =&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"image must havve &lt; 4 dimensions."</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"blurring sigma ="</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1596,8 +1596,8 @@ title="Print to PDF"
 <span class="nn">~\AppData\Local\Temp/ipykernel_16644/3584614194.py</span> in <span class="ni">blur</span><span class="nt">(image, sigma)</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span><span class="w"> </span><span class="nf">blur</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">3</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;image must havve &lt; 4 dimensions.&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;blurring sigma =&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"image must havve &lt; 4 dimensions."</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">"blurring sigma ="</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">return</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 
 <span class="ne">ValueError</span>: image must havve &lt; 4 dimensions.
@@ -1652,8 +1652,8 @@ blurring sigma = 2
 <span class="nn">~\AppData\Local\Temp/ipykernel_16644/3584614194.py</span> in <span class="ni">blur</span><span class="nt">(image, sigma)</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span><span class="w"> </span><span class="nf">blur</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">3</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;image must havve &lt; 4 dimensions.&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;blurring sigma =&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"image must havve &lt; 4 dimensions."</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">"blurring sigma ="</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">return</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 
 <span class="ne">ValueError</span>: image must havve &lt; 4 dimensions.
@@ -1719,8 +1719,8 @@ blurring sigma = 2
 <span class="nn">~\AppData\Local\Temp/ipykernel_16644/3584614194.py</span> in <span class="ni">blur</span><span class="nt">(image, sigma)</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span><span class="w"> </span><span class="nf">blur</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">3</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;image must havve &lt; 4 dimensions.&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;blurring sigma =&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"image must havve &lt; 4 dimensions."</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">"blurring sigma ="</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">return</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
 
 <span class="ne">ValueError</span>: image must havve &lt; 4 dimensions.

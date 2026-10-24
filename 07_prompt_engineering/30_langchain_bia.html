@@ -1553,11 +1553,11 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@tools</span><span class="o">.</span><span class="n">append</span>
 <span class="nd">@tool</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">load_image</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Useful for loading an image file and storing it.&quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;loading&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">"""Useful for loading an image file and storing it."""</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"loading"</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
     <span class="n">image_storage</span><span class="p">[</span><span class="n">filename</span><span class="p">]</span> <span class="o">=</span> <span class="n">image</span>
-    <span class="k">return</span> <span class="s2">&quot;The image is now stored as &quot;</span> <span class="o">+</span> <span class="n">filename</span>
+    <span class="k">return</span> <span class="s2">"The image is now stored as "</span> <span class="o">+</span> <span class="n">filename</span>
 </pre></div>
 </div>
 </div>
@@ -1567,16 +1567,16 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@tools</span><span class="o">.</span><span class="n">append</span>
 <span class="nd">@tool</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">segment_bright_objects</span><span class="p">(</span><span class="n">image_name</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Useful for segmenting bright objects in an image that has been loaded and stored before.&quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;segmenting&quot;</span><span class="p">,</span> <span class="n">image_name</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">"""Useful for segmenting bright objects in an image that has been loaded and stored before."""</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"segmenting"</span><span class="p">,</span> <span class="n">image_name</span><span class="p">)</span>
     
     <span class="n">image</span> <span class="o">=</span> <span class="n">image_storage</span><span class="p">[</span><span class="n">image_name</span><span class="p">]</span>
     <span class="n">label_image</span> <span class="o">=</span> <span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
     
-    <span class="n">label_image_name</span> <span class="o">=</span> <span class="s2">&quot;segmented_&quot;</span> <span class="o">+</span> <span class="n">image_name</span>
+    <span class="n">label_image_name</span> <span class="o">=</span> <span class="s2">"segmented_"</span> <span class="o">+</span> <span class="n">image_name</span>
     <span class="n">image_storage</span><span class="p">[</span><span class="n">label_image_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_image</span>
     
-    <span class="k">return</span> <span class="s2">&quot;The segmented image has been stored as &quot;</span> <span class="o">+</span> <span class="n">label_image_name</span>
+    <span class="k">return</span> <span class="s2">"The segmented image has been stored as "</span> <span class="o">+</span> <span class="n">label_image_name</span>
 </pre></div>
 </div>
 </div>
@@ -1586,13 +1586,13 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@tools</span><span class="o">.</span><span class="n">append</span>
 <span class="nd">@tool</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">show_image</span><span class="p">(</span><span class="n">image_name</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Useful for showing an image that has been loaded and stored before.&quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;showing&quot;</span><span class="p">,</span> <span class="n">image_name</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">"""Useful for showing an image that has been loaded and stored before."""</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"showing"</span><span class="p">,</span> <span class="n">image_name</span><span class="p">)</span>
     
     <span class="n">image</span> <span class="o">=</span> <span class="n">image_storage</span><span class="p">[</span><span class="n">image_name</span><span class="p">]</span>
     <span class="n">display</span><span class="p">(</span><span class="n">stackview</span><span class="o">.</span><span class="n">insight</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
     
-    <span class="k">return</span> <span class="s2">&quot;The image &quot;</span> <span class="o">+</span> <span class="n">image_name</span> <span class="o">+</span> <span class="s2">&quot; is shown above.&quot;</span>
+    <span class="k">return</span> <span class="s2">"The image "</span> <span class="o">+</span> <span class="n">image_name</span> <span class="o">+</span> <span class="s2">" is shown above."</span>
 </pre></div>
 </div>
 </div>
@@ -1602,13 +1602,13 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@tools</span><span class="o">.</span><span class="n">append</span>
 <span class="nd">@tool</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">count_objects</span><span class="p">(</span><span class="n">image_name</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Useful for counting objects in a segmented image that has been loaded and stored before.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Useful for counting objects in a segmented image that has been loaded and stored before."""</span>
     <span class="n">label_image</span> <span class="o">=</span> <span class="n">image_storage</span><span class="p">[</span><span class="n">image_name</span><span class="p">]</span>
     
     <span class="n">num_labels</span> <span class="o">=</span> <span class="n">label_image</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;counting labels in &quot;</span><span class="p">,</span> <span class="n">image_name</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">num_labels</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"counting labels in "</span><span class="p">,</span> <span class="n">image_name</span><span class="p">,</span> <span class="s2">":"</span><span class="p">,</span> <span class="n">num_labels</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;The label image </span><span class="si">{</span><span class="n">image_name</span><span class="si">}</span><span class="s2"> contains </span><span class="si">{</span><span class="n">num_labels</span><span class="si">}</span><span class="s2"> labels.&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">"The label image </span><span class="si">{</span><span class="n">image_name</span><span class="si">}</span><span class="s2"> contains </span><span class="si">{</span><span class="n">num_labels</span><span class="si">}</span><span class="s2"> labels."</span>
 </pre></div>
 </div>
 </div>
@@ -1616,7 +1616,7 @@ title="Print to PDF"
 <p>We create some memory and a large language model based on OpenAI’s chatGPT.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">memory</span> <span class="o">=</span> <span class="n">ConversationBufferMemory</span><span class="p">(</span><span class="n">memory_key</span><span class="o">=</span><span class="s2">&quot;chat_history&quot;</span><span class="p">,</span> <span class="n">return_messages</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">memory</span> <span class="o">=</span> <span class="n">ConversationBufferMemory</span><span class="p">(</span><span class="n">memory_key</span><span class="o">=</span><span class="s2">"chat_history"</span><span class="p">,</span> <span class="n">return_messages</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">llm</span><span class="o">=</span><span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1638,7 +1638,7 @@ title="Print to PDF"
 <p>This agent can then respond to prompts.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;Please load the image ../../data/blobs.tif and show it.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"Please load the image ../../data/blobs.tif and show it."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1663,14 +1663,14 @@ showing ../../data/blobs.tif
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAB4CAYAAABb59j9AAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjcuMSwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/bCgiHAAAACXBIWXMAAA9hAAAPYQGoP6dpAAACxUlEQVR4nO3cQYrTYBjH4S/FbXqA0oAH8B4uvJA7ceeFXHgPDyB0yAFSENw0LmSK1JHOkH6T5N/nWbUzTBLKj5c3U9pmHMexQIjN3BcAtyRoogiaKIImiqCJImiiCJoogiaKoIkiaKIImiiCJsqbWgc+nU6l7/vStm1pmqbWaQgwjmM5Ho9lt9uVzWbajK0WdN/3peu6Wocn0OFwKPv9ftIxqgXdtm0p5c9FbrfbWqchwDAMpeu6czNTVAv6cc3YbreC5llusZq6KSSKoIlSbeV4TW8/fj0//vHlw4xXwtxMaKIImiiCJoqgiSJoogiaKIImiqCJImiiCJoogiaKoIkiaKIImiiCJoqgiSJoogiaKIImiqCJImiirPJT3z7lzf+Y0EQRNFFWuXJcYyW5XyY0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRIr999JJvI70fJjRRBE2UVawcVgaey4QmiqCJImiiCJoogiaKoIkiaKIImiiCJsoq3ilkXmt6p1bQrCrYa6wcRLnLCZ00kWpY8+tjQhPlLic0t/P3NC9l/oku6DtwuUKseaW4RtC82OVUXhJBl3XfBC3da68kbgqJssgJPffEnPv8L3VPO/I1iwx6aZYWzNznXzJB38DUwK79vYCfT9AVTA10zQHP/R8QN4VEETRRBE2URezQa94ZWRYTmijVJvQ4jqWUUoZh+Od37z59Oz/+/vl9Of36eX4+DEPc80tzX88tn7/UU6/H488em5miGW9xlCc8PDyUrutqHJpQh8Oh7Pf7SceoFvTpdCp935e2bUvTNDVOQYhxHMvxeCy73a5sNtO24GpBwxzcFBJF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBE+Q16XDyXBcRSiwAAAABJRU5ErkJggg=="></img>
 </td>
 </tr>
-</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The image ../../data/blobs.tif is shown above.&#39;
+</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'The image ../../data/blobs.tif is shown above.'
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;Please segment the image ../../data/blobs.tif .&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"Please segment the image ../../data/blobs.tif ."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1678,14 +1678,14 @@ showing ../../data/blobs.tif
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>segmenting ../../data/blobs.tif
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The segmented image has been stored as segmented_../../data/blobs.tif&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'The segmented image has been stored as segmented_../../data/blobs.tif'
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;Please show the segmented ../../data/blobs.tif image.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"Please show the segmented ../../data/blobs.tif image."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1709,14 +1709,14 @@ showing ../../data/blobs.tif
 
 </td>
 </tr>
-</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The segmented image ../../data/blobs.tif is shown above.&#39;
+</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'The segmented image ../../data/blobs.tif is shown above.'
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;How many objects are there in the segmented ../../data/blobs.tif image?&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"How many objects are there in the segmented ../../data/blobs.tif image?"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1724,7 +1724,7 @@ showing ../../data/blobs.tif
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counting labels in  segmented_../../data/blobs.tif : 64
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The segmented ../../data/blobs.tif image contains 64 objects.&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'The segmented ../../data/blobs.tif image contains 64 objects.'
 </pre></div>
 </div>
 </div>
@@ -1743,12 +1743,12 @@ showing ../../data/blobs.tif
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"""</span>
 <span class="s2">Please load the image ../../data/blobs.tif, </span>
 <span class="s2">segment bright objects in it, </span>
 <span class="s2">count them and </span>
 <span class="s2">show the segmentation result.</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="s2">"""</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1775,14 +1775,14 @@ showing segmented_../../data/blobs.tif
 
 </td>
 </tr>
-</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The segmented image has been shown.&#39;
+</table></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'The segmented image has been shown.'
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;How many objects were there?&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agent</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"How many objects were there?"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1790,7 +1790,7 @@ showing segmented_../../data/blobs.tif
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>counting labels in  segmented_../../data/blobs.tif : 64
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The segmented image contains 64 objects.&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'The segmented image contains 64 objects.'
 </pre></div>
 </div>
 </div>

@@ -1504,8 +1504,8 @@ title="Print to PDF"
 <p>First, we should define the origin of the data we want to process and where the results should be saved to.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">input_file</span> <span class="o">=</span> <span class="s2">&quot;../../data/CalibZAPWfixed_000154_max.tif&quot;</span>
-<span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;../../data/CalibZAPWfixed_000154_max_labels.tif&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">input_file</span> <span class="o">=</span> <span class="s2">"../../data/CalibZAPWfixed_000154_max.tif"</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="s2">"../../data/CalibZAPWfixed_000154_max_labels.tif"</span>
 </pre></div>
 </div>
 </div>
@@ -1554,7 +1554,7 @@ title="Print to PDF"
                   <span class="n">background_subtraction_radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> 
                   <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
                   <span class="n">outline_sigma</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Segment nuclei in an image and return labels&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Segment nuclei in an image and return labels"""</span>
     <span class="c1"># pre-process image</span>
     <span class="n">background_subtracted</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">top_hat_box</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> 
                   <span class="n">radius_x</span><span class="o">=</span><span class="n">background_subtraction_radius</span><span class="p">,</span> 

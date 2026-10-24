@@ -1528,7 +1528,7 @@ title="Print to PDF"
 <p>The data we use here was derived from maize_clsm.tif was taken from <a class="reference external" href="https://github.com/dlegland/mathematical_morphology_with_MorphoLibJ/blob/master/sampleImages/maize_clsm.tif">here</a>, an image shared by David Legland under <a class="reference external" href="https://github.com/dlegland/mathematical_morphology_with_MorphoLibJ/blob/master/LICENSE">CC-BY 4.0 license</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/maize_clsm.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/maize_clsm.tif"</span><span class="p">)</span>
 
 <span class="n">stackview</span><span class="o">.</span><span class="n">insight</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </pre></div>
@@ -1556,7 +1556,7 @@ title="Print to PDF"
 <p>A corresponding label image looks like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/maize_clsm_labels.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/maize_clsm_labels.tif"</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">exclude_small_labels</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">maximum_size</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">extend_labeling_via_voronoi</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
 <span class="n">labels</span>

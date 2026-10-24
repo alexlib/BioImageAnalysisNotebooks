@@ -1552,7 +1552,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">surface</span> <span class="o">=</span> <span class="n">nppas</span><span class="o">.</span><span class="n">gastruloid</span><span class="p">()</span>
 
-<span class="n">surface_layer</span> <span class="o">=</span> <span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">blending</span><span class="o">=</span><span class="s1">&#39;translucent&#39;</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s1">&#39;flat&#39;</span><span class="p">)</span>
+<span class="n">surface_layer</span> <span class="o">=</span> <span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">blending</span><span class="o">=</span><span class="s1">'translucent'</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s1">'flat'</span><span class="p">)</span>
 <span class="n">surface</span> <span class="o">=</span> <span class="n">surface_layer</span><span class="o">.</span><span class="n">data</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
@@ -1570,7 +1570,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hide_all</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 
 <span class="n">area_surface</span> <span class="o">=</span> <span class="n">nppas</span><span class="o">.</span><span class="n">add_quality</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">quality_id</span><span class="o">=</span><span class="n">nppas</span><span class="o">.</span><span class="n">Quality</span><span class="o">.</span><span class="n">AREA</span><span class="p">)</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">area_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">area_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 </pre></div>
@@ -1584,7 +1584,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hide_all</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 
 <span class="n">aspect_ratio_surface</span> <span class="o">=</span> <span class="n">nppas</span><span class="o">.</span><span class="n">add_quality</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">quality_id</span><span class="o">=</span><span class="n">nppas</span><span class="o">.</span><span class="n">Quality</span><span class="o">.</span><span class="n">ASPECT_RATIO</span><span class="p">)</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">aspect_ratio_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">aspect_ratio_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 </pre></div>
@@ -1598,7 +1598,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hide_all</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 
 <span class="n">distortion_surface</span> <span class="o">=</span> <span class="n">nppas</span><span class="o">.</span><span class="n">add_quality</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">quality_id</span><span class="o">=</span><span class="n">nppas</span><span class="o">.</span><span class="n">Quality</span><span class="o">.</span><span class="n">DISTORTION</span><span class="p">)</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">distortion_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">distortion_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 </pre></div>
@@ -1612,7 +1612,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hide_all</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 
 <span class="n">min_angle_surface</span> <span class="o">=</span> <span class="n">nppas</span><span class="o">.</span><span class="n">add_quality</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">quality_id</span><span class="o">=</span><span class="n">nppas</span><span class="o">.</span><span class="n">Quality</span><span class="o">.</span><span class="n">MIN_ANGLE</span><span class="p">)</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">min_angle_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">min_angle_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 </pre></div>
@@ -1626,7 +1626,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hide_all</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 
 <span class="n">condition_surface</span> <span class="o">=</span> <span class="n">nppas</span><span class="o">.</span><span class="n">add_quality</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">quality_id</span><span class="o">=</span><span class="n">nppas</span><span class="o">.</span><span class="n">Quality</span><span class="o">.</span><span class="n">CONDITION</span><span class="p">)</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">condition_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">condition_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 </pre></div>
@@ -1640,7 +1640,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hide_all</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 
 <span class="n">max_angle_surface</span> <span class="o">=</span> <span class="n">nppas</span><span class="o">.</span><span class="n">add_quality</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">quality_id</span><span class="o">=</span><span class="n">nppas</span><span class="o">.</span><span class="n">Quality</span><span class="o">.</span><span class="n">MAX_ANGLE</span><span class="p">)</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">max_angle_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">max_angle_surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 </pre></div>
@@ -1654,7 +1654,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hide_all</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 
 <span class="n">curvature1</span> <span class="o">=</span> <span class="n">nppas</span><span class="o">.</span><span class="n">add_quality</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">quality_id</span><span class="o">=</span><span class="n">nppas</span><span class="o">.</span><span class="n">Quality</span><span class="o">.</span><span class="n">MEAN_CURVATURE</span><span class="p">)</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">curvature1</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">curvature1</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 </pre></div>
@@ -1668,7 +1668,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hide_all</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 
 <span class="n">curvature2</span> <span class="o">=</span> <span class="n">nppas</span><span class="o">.</span><span class="n">add_quality</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">quality_id</span><span class="o">=</span><span class="n">nppas</span><span class="o">.</span><span class="n">Quality</span><span class="o">.</span><span class="n">SPHERE_FITTED_CURVATURE_DECA_VOXEL</span><span class="p">)</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">curvature2</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">curvature2</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 </pre></div>
@@ -1682,7 +1682,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hide_all</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 
 <span class="n">curvature3</span> <span class="o">=</span> <span class="n">nppas</span><span class="o">.</span><span class="n">add_quality</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">quality_id</span><span class="o">=</span><span class="n">nppas</span><span class="o">.</span><span class="n">Quality</span><span class="o">.</span><span class="n">SPHERE_FITTED_CURVATURE_HECTA_VOXEL</span><span class="p">)</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">curvature3</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">curvature3</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 </pre></div>
@@ -1696,7 +1696,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hide_all</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 
 <span class="n">curvature4</span> <span class="o">=</span> <span class="n">nppas</span><span class="o">.</span><span class="n">add_quality</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">quality_id</span><span class="o">=</span><span class="n">nppas</span><span class="o">.</span><span class="n">Quality</span><span class="o">.</span><span class="n">SPHERE_FITTED_CURVATURE_KILO_VOXEL</span><span class="p">)</span>
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">curvature4</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">curvature4</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 </pre></div>
@@ -1713,10 +1713,10 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">values</span> <span class="o">=</span> <span class="n">viewer</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
 
 <span class="n">table</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;X&quot;</span><span class="p">:</span> <span class="n">vertices</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span>
-    <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="n">vertices</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span>
-    <span class="s2">&quot;Z&quot;</span><span class="p">:</span> <span class="n">vertices</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
-    <span class="s2">&quot;value&quot;</span><span class="p">:</span><span class="n">values</span>
+    <span class="s2">"X"</span><span class="p">:</span> <span class="n">vertices</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span>
+    <span class="s2">"Y"</span><span class="p">:</span> <span class="n">vertices</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span>
+    <span class="s2">"Z"</span><span class="p">:</span> <span class="n">vertices</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+    <span class="s2">"value"</span><span class="p">:</span><span class="n">values</span>
 <span class="p">}</span>
 
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>

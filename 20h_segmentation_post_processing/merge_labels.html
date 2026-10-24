@@ -1521,7 +1521,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyclesperanto_prototype</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cle</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">napari_segment_blobs_and_things_with_membranes</span><span class="w"> </span><span class="kn">import</span> <span class="n">local_minima_seeded_watershed</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">&quot;TX&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">"TX"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1536,7 +1536,7 @@ title="Print to PDF"
 <p>The most trivial use-case might be merging labeled objects that touch.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/blobs.tif"</span><span class="p">)</span>
 <span class="n">blobs_labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">blobs</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">blobs_labels</span>
 </pre></div>
@@ -1592,7 +1592,7 @@ title="Print to PDF"
 <p>As an example we use a cropped slice of the <a class="reference external" href="https://scikit-image.org/docs/stable/auto_examples/applications/plot_3d_image_processing.html"><code class="docutils literal notranslate"><span class="pre">cells3d</span></code> example dataset in scikit-image</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/membranes_2d.tif&quot;</span><span class="p">)[</span><span class="mi">30</span><span class="p">:</span><span class="mi">130</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/membranes_2d.tif"</span><span class="p">)[</span><span class="mi">30</span><span class="p">:</span><span class="mi">130</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">]</span>
 <span class="n">image</span>
 </pre></div>
 </div>
@@ -1654,7 +1654,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\structure\code\pyclesperanto_prototype\pyclesperanto_prototype\_tier3\_generate_touch_mean_intensity_matrix.py:30: UserWarning: generate_touch_mean_intensity_matrix is supposed to work with images of integer type only.
 Loss of information is possible when passing non-integer images.
-  warnings.warn(&quot;generate_touch_mean_intensity_matrix is supposed to work with images of integer type only.\n&quot; +
+  warnings.warn("generate_touch_mean_intensity_matrix is supposed to work with images of integer type only.\n" +
 </pre></div>
 </div>
 <div class="output text_html"><table>

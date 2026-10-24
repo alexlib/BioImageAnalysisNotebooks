@@ -1502,13 +1502,13 @@ title="Print to PDF"
 <span class="kn">import</span><span class="w"> </span><span class="nn">stackview</span>
 
 <span class="c1"># initialize GPU</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">&quot;GTX&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">"GTX"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\structure\code\pyclesperanto_prototype\pyclesperanto_prototype\_tier0\_device.py:77: UserWarning: No OpenCL device found with GTX in their name. Using gfx1035 instead.
-  warnings.warn(f&quot;No OpenCL device found with {name} in their name. Using {device.name} instead.&quot;)
+  warnings.warn(f"No OpenCL device found with {name} in their name. Using {device.name} instead.")
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;gfx1035 on Platform: AMD Accelerated Parallel Processing (2 refs)&gt;
@@ -1520,7 +1520,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load data</span>
-<span class="n">label_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs_labeled.tif&#39;</span><span class="p">)</span>
+<span class="n">label_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs_labeled.tif'</span><span class="p">)</span>
 
 <span class="n">stackview</span><span class="o">.</span><span class="n">insight</span><span class="p">(</span><span class="n">label_image</span><span class="p">)</span>
 </pre></div>

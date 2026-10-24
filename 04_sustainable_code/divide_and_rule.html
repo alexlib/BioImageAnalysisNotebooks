@@ -1506,7 +1506,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/blobs.tif"</span><span class="p">)</span>
 <span class="n">footprint</span> <span class="o">=</span> <span class="n">disk</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">background_subtracted</span> <span class="o">=</span> <span class="n">white_tophat</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> 
                                      <span class="n">footprint</span><span class="o">=</span><span class="n">footprint</span><span class="p">)</span>
@@ -1515,12 +1515,12 @@ title="Print to PDF"
                     <span class="n">sigma</span><span class="o">=</span><span class="n">particle_radius</span><span class="p">)</span>
 <span class="n">binary</span> <span class="o">=</span> <span class="n">denoised</span> <span class="o">&gt;</span> <span class="n">threshold_otsu</span><span class="p">(</span><span class="n">denoised</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">label</span><span class="p">(</span><span class="n">binary</span><span class="p">)</span>
-<span class="n">requested_measurements</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">,</span> <span class="s2">&quot;mean_intensity&quot;</span><span class="p">]</span>
+<span class="n">requested_measurements</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"label"</span><span class="p">,</span> <span class="s2">"area"</span><span class="p">,</span> <span class="s2">"mean_intensity"</span><span class="p">]</span>
 <span class="n">regionprops</span> <span class="o">=</span> <span class="n">regionprops_table</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> 
                                 <span class="n">labels</span><span class="p">,</span> 
                                 <span class="n">properties</span><span class="o">=</span><span class="n">requested_measurements</span><span class="p">)</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">regionprops</span><span class="p">)</span>
-<span class="n">mean_total_intensity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">table</span><span class="p">[</span><span class="s2">&quot;mean_intensity&quot;</span><span class="p">])</span>
+<span class="n">mean_total_intensity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">"area"</span><span class="p">]</span> <span class="o">*</span> <span class="n">table</span><span class="p">[</span><span class="s2">"mean_intensity"</span><span class="p">])</span>
 <span class="n">mean_total_intensity</span>
 </pre></div>
 </div>
@@ -1535,10 +1535,10 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># configuration</span>
-<span class="n">file_to_analyze</span> <span class="o">=</span> <span class="s2">&quot;../../data/blobs.tif&quot;</span>
+<span class="n">file_to_analyze</span> <span class="o">=</span> <span class="s2">"../../data/blobs.tif"</span>
 <span class="n">background_subtraction_radius</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="n">particle_radius</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">requested_measurements</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">,</span> <span class="s2">&quot;mean_intensity&quot;</span><span class="p">]</span>
+<span class="n">requested_measurements</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"area"</span><span class="p">,</span> <span class="s2">"mean_intensity"</span><span class="p">]</span>
 
 <span class="c1"># load data</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">file_to_analyze</span><span class="p">)</span>
@@ -1561,7 +1561,7 @@ title="Print to PDF"
 <span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">regionprops</span><span class="p">)</span>
 
 <span class="c1"># descriptive statistics</span>
-<span class="n">mean_total_intensity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">table</span><span class="p">[</span><span class="s2">&quot;mean_intensity&quot;</span><span class="p">])</span>
+<span class="n">mean_total_intensity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">"area"</span><span class="p">]</span> <span class="o">*</span> <span class="n">table</span><span class="p">[</span><span class="s2">"mean_intensity"</span><span class="p">])</span>
 <span class="n">mean_total_intensity</span>
 </pre></div>
 </div>
@@ -1577,20 +1577,20 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># reusable functions</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">preprocess_image</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">background_subtraction_radius</span><span class="p">,</span> <span class="n">particle_radius</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Apply background removal and denoising&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Apply background removal and denoising"""</span>
     <span class="n">footprint</span> <span class="o">=</span> <span class="n">disk</span><span class="p">(</span><span class="n">background_subtraction_radius</span><span class="p">)</span>
     <span class="n">background_subtracted</span> <span class="o">=</span> <span class="n">white_tophat</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">footprint</span><span class="o">=</span><span class="n">footprint</span><span class="p">)</span>
     <span class="n">denoised</span> <span class="o">=</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">background_subtracted</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">particle_radius</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">denoised</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">segment_image</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Apply thresholding and connected component analysis&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Apply thresholding and connected component analysis"""</span>
     <span class="n">binary</span> <span class="o">=</span> <span class="n">image</span> <span class="o">&gt;</span> <span class="n">threshold_otsu</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
     <span class="n">labels</span> <span class="o">=</span> <span class="n">label</span><span class="p">(</span><span class="n">binary</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">labels</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">extract_features</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">requested_measurements</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Measure specified properties&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Measure specified properties"""</span>
     <span class="n">regionprops</span> <span class="o">=</span> <span class="n">regionprops_table</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> 
                                     <span class="n">labels</span><span class="p">,</span> 
                                     <span class="n">properties</span><span class="o">=</span><span class="n">requested_measurements</span><span class="p">)</span>
@@ -1606,19 +1606,19 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">analyse_average_total_intensity</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> 
                                     <span class="n">background_subtraction_radius</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> 
                                     <span class="n">particle_radius</span> <span class="o">=</span> <span class="mi">5</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load an image, segment objects and measure their mean total intensity.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Load an image, segment objects and measure their mean total intensity."""</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
     <span class="n">denoised</span> <span class="o">=</span> <span class="n">preprocess_image</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> 
                                 <span class="n">background_subtraction_radius</span><span class="p">,</span> 
                                 <span class="n">particle_radius</span><span class="p">)</span>
     <span class="n">labels</span> <span class="o">=</span> <span class="n">segment_image</span><span class="p">(</span><span class="n">denoised</span><span class="p">)</span>
-    <span class="n">requested_measurements</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">,</span> <span class="s2">&quot;mean_intensity&quot;</span><span class="p">]</span>
+    <span class="n">requested_measurements</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"area"</span><span class="p">,</span> <span class="s2">"mean_intensity"</span><span class="p">]</span>
     <span class="n">table</span> <span class="o">=</span> <span class="n">extract_features</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> 
                              <span class="n">labels</span><span class="p">,</span> 
                              <span class="n">requested_measurements</span><span class="p">)</span>
 
     <span class="c1"># descriptive statistics</span>
-    <span class="n">mean_total_intensity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">table</span><span class="p">[</span><span class="s2">&quot;mean_intensity&quot;</span><span class="p">])</span>
+    <span class="n">mean_total_intensity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">"area"</span><span class="p">]</span> <span class="o">*</span> <span class="n">table</span><span class="p">[</span><span class="s2">"mean_intensity"</span><span class="p">])</span>
     
     <span class="k">return</span> <span class="n">mean_total_intensity</span>
 </pre></div>
@@ -1628,7 +1628,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># configuration</span>
-<span class="n">file_to_analyze</span> <span class="o">=</span> <span class="s2">&quot;../../data/blobs.tif&quot;</span>
+<span class="n">file_to_analyze</span> <span class="o">=</span> <span class="s2">"../../data/blobs.tif"</span>
 </pre></div>
 </div>
 </div>
@@ -1649,7 +1649,7 @@ title="Print to PDF"
 <p>This function can then be reused also for other image files.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">analyse_average_total_intensity</span><span class="p">(</span><span class="s2">&quot;../../data/BBBC007_batch/20P1_POS0005_D_1UL.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">analyse_average_total_intensity</span><span class="p">(</span><span class="s2">"../../data/BBBC007_batch/20P1_POS0005_D_1UL.tif"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

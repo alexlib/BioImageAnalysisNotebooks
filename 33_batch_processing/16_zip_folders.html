@@ -1510,8 +1510,8 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define paths</span>
-<span class="n">image_folder</span> <span class="o">=</span> <span class="s1">&#39;../../data/BBBC007/images&#39;</span>
-<span class="n">mask_folder</span> <span class="o">=</span> <span class="s1">&#39;../../data/BBBC007/masks&#39;</span>
+<span class="n">image_folder</span> <span class="o">=</span> <span class="s1">'../../data/BBBC007/images'</span>
+<span class="n">mask_folder</span> <span class="o">=</span> <span class="s1">'../../data/BBBC007/masks'</span>
 </pre></div>
 </div>
 </div>
@@ -1525,10 +1525,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;A9 p5d (cropped 1).tif&#39;,
- &#39;A9 p5d (cropped 2).tif&#39;,
- &#39;A9 p5d (cropped 3).tif&#39;,
- &#39;A9 p5d (cropped 4).tif&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['A9 p5d (cropped 1).tif',
+ 'A9 p5d (cropped 2).tif',
+ 'A9 p5d (cropped 3).tif',
+ 'A9 p5d (cropped 4).tif']
 </pre></div>
 </div>
 </div>
@@ -1541,17 +1541,17 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;A9 p5d (cropped 1).tif&#39;,
- &#39;A9 p5d (cropped 2).tif&#39;,
- &#39;A9 p5d (cropped 3).tif&#39;,
- &#39;A9 p5d (cropped 4).tif&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['A9 p5d (cropped 1).tif',
+ 'A9 p5d (cropped 2).tif',
+ 'A9 p5d (cropped 3).tif',
+ 'A9 p5d (cropped 4).tif']
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Image&#39;</span><span class="p">,</span> <span class="s1">&#39;Average Intensity&#39;</span><span class="p">,</span> <span class="s1">&#39;Number of Objects&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Image'</span><span class="p">,</span> <span class="s1">'Average Intensity'</span><span class="p">,</span> <span class="s1">'Number of Objects'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1563,7 +1563,7 @@ title="Print to PDF"
     <span class="n">image_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">image_folder</span><span class="p">,</span> <span class="n">image_file</span><span class="p">)</span>
     <span class="n">mask_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">mask_folder</span><span class="p">,</span> <span class="n">mask_file</span><span class="p">)</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">mask_path</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">mask_path</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1602,9 +1602,9 @@ title="Print to PDF"
 
     <span class="c1"># Append results for the current pair</span>
     <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;Image&#39;</span><span class="p">:</span> <span class="n">image_file</span><span class="p">,</span>
-        <span class="s1">&#39;Average Intensity&#39;</span><span class="p">:</span> <span class="n">avg_intensity</span><span class="p">,</span>
-        <span class="s1">&#39;Number of Objects&#39;</span><span class="p">:</span> <span class="n">num_objects</span>
+        <span class="s1">'Image'</span><span class="p">:</span> <span class="n">image_file</span><span class="p">,</span>
+        <span class="s1">'Average Intensity'</span><span class="p">:</span> <span class="n">avg_intensity</span><span class="p">,</span>
+        <span class="s1">'Number of Objects'</span><span class="p">:</span> <span class="n">num_objects</span>
     <span class="p">}</span>
 
 <span class="c1"># Display the result</span>

@@ -1562,7 +1562,7 @@ title="Print to PDF"
 <p>First we start by loading a 3D dataset showing a Tribolium castaneum embryo undergoing gastrulation (curtesy: Daniela Vorkel, Myers lab, MPI-CBG / CSBD Dresden). The dataset shows dense nuclei marked with nuclei-GFP on the left forming the embryo and less dense nuclei, called serosa, on the right surrounding the embryo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/Lund-25MB.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/Lund-25MB.tif"</span><span class="p">)</span>
 <span class="n">image</span>
 </pre></div>
 </div>
@@ -1628,14 +1628,14 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;label&#39;, &#39;maximum&#39;, &#39;mean&#39;, &#39;median&#39;, &#39;minimum&#39;, &#39;sigma&#39;, &#39;sum&#39;,
-       &#39;variance&#39;, &#39;elongation&#39;, &#39;feret_diameter&#39;, &#39;flatness&#39;, &#39;roundness&#39;,
-       &#39;equivalent_ellipsoid_diameter_0&#39;, &#39;equivalent_ellipsoid_diameter_1&#39;,
-       &#39;equivalent_ellipsoid_diameter_2&#39;, &#39;equivalent_spherical_perimeter&#39;,
-       &#39;equivalent_spherical_radius&#39;, &#39;number_of_pixels&#39;,
-       &#39;number_of_pixels_on_border&#39;, &#39;perimeter&#39;, &#39;perimeter_on_border&#39;,
-       &#39;perimeter_on_border_ratio&#39;],
-      dtype=&#39;object&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index(['label', 'maximum', 'mean', 'median', 'minimum', 'sigma', 'sum',
+       'variance', 'elongation', 'feret_diameter', 'flatness', 'roundness',
+       'equivalent_ellipsoid_diameter_0', 'equivalent_ellipsoid_diameter_1',
+       'equivalent_ellipsoid_diameter_2', 'equivalent_spherical_perimeter',
+       'equivalent_spherical_radius', 'number_of_pixels',
+       'number_of_pixels_on_border', 'perimeter', 'perimeter_on_border',
+       'perimeter_on_border_ratio'],
+      dtype='object')
 </pre></div>
 </div>
 </div>
@@ -1822,11 +1822,11 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_statistics</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">[</span>
     <span class="p">[</span>
-        <span class="s1">&#39;mean&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;variance&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;number_of_pixels&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;elongation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;feret_diameter&#39;</span><span class="p">,</span>
+        <span class="s1">'mean'</span><span class="p">,</span>
+        <span class="s1">'variance'</span><span class="p">,</span>
+        <span class="s1">'number_of_pixels'</span><span class="p">,</span>
+        <span class="s1">'elongation'</span><span class="p">,</span>
+        <span class="s1">'feret_diameter'</span><span class="p">,</span>
     <span class="p">]</span>
 <span class="p">]</span><span class="o">.</span><span class="n">values</span>
 </pre></div>
@@ -1874,13 +1874,13 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seaborn</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">embedding</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> 
                     <span class="n">y</span><span class="o">=</span><span class="n">embedding</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;UMAP1&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;UMAP2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'UMAP1'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'UMAP2'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;UMAP2&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, 'UMAP2')
 </pre></div>
 </div>
 <img alt="../_images/32f92443c8647b6c4c54aec3da05cadb64666bef1f3cc9f6b1938952ef677690.png" src="../_images/32f92443c8647b6c4c54aec3da05cadb64666bef1f3cc9f6b1938952ef677690.png" />

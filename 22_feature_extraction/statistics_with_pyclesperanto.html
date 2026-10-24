@@ -1521,7 +1521,7 @@ title="Print to PDF"
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># initialize GPU</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">&quot;RTX&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">"RTX"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1534,7 +1534,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load data</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 
 <span class="c1"># segment the image</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mf">3.5</span><span class="p">)</span>
@@ -1556,7 +1556,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;label&#39;, &#39;original_label&#39;, &#39;bbox_min_x&#39;, &#39;bbox_min_y&#39;, &#39;bbox_min_z&#39;, &#39;bbox_max_x&#39;, &#39;bbox_max_y&#39;, &#39;bbox_max_z&#39;, &#39;bbox_width&#39;, &#39;bbox_height&#39;, &#39;bbox_depth&#39;, &#39;min_intensity&#39;, &#39;max_intensity&#39;, &#39;sum_intensity&#39;, &#39;area&#39;, &#39;mean_intensity&#39;, &#39;sum_intensity_times_x&#39;, &#39;mass_center_x&#39;, &#39;sum_intensity_times_y&#39;, &#39;mass_center_y&#39;, &#39;sum_intensity_times_z&#39;, &#39;mass_center_z&#39;, &#39;sum_x&#39;, &#39;centroid_x&#39;, &#39;sum_y&#39;, &#39;centroid_y&#39;, &#39;sum_z&#39;, &#39;centroid_z&#39;, &#39;sum_distance_to_centroid&#39;, &#39;mean_distance_to_centroid&#39;, &#39;sum_distance_to_mass_center&#39;, &#39;mean_distance_to_mass_center&#39;, &#39;standard_deviation_intensity&#39;, &#39;max_distance_to_centroid&#39;, &#39;max_distance_to_mass_center&#39;, &#39;mean_max_distance_to_centroid_ratio&#39;, &#39;mean_max_distance_to_mass_center_ratio&#39;])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys(['label', 'original_label', 'bbox_min_x', 'bbox_min_y', 'bbox_min_z', 'bbox_max_x', 'bbox_max_y', 'bbox_max_z', 'bbox_width', 'bbox_height', 'bbox_depth', 'min_intensity', 'max_intensity', 'sum_intensity', 'area', 'mean_intensity', 'sum_intensity_times_x', 'mass_center_x', 'sum_intensity_times_y', 'mass_center_y', 'sum_intensity_times_z', 'mass_center_z', 'sum_x', 'centroid_x', 'sum_y', 'centroid_y', 'sum_z', 'centroid_z', 'sum_distance_to_centroid', 'mean_distance_to_centroid', 'sum_distance_to_mass_center', 'mean_distance_to_mass_center', 'standard_deviation_intensity', 'max_distance_to_centroid', 'max_distance_to_mass_center', 'mean_max_distance_to_centroid_ratio', 'mean_max_distance_to_mass_center_ratio'])
 </pre></div>
 </div>
 </div>

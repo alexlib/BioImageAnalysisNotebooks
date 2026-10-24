@@ -1588,7 +1588,7 @@ title="Print to PDF"
 <p>Iterating over arrays allows you to do something with all array elements:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Dog&quot;</span><span class="p">,</span> <span class="s2">&quot;Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Mouse&quot;</span><span class="p">]:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"Dog"</span><span class="p">,</span> <span class="s2">"Cat"</span><span class="p">,</span> <span class="s2">"Mouse"</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1609,7 +1609,7 @@ Mouse
 <span class="n">measurement_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">m_1</span><span class="p">,</span> <span class="n">m_2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">measurement_1</span><span class="p">,</span> <span class="n">measurement_2</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Paired measurements: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">m_1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; and &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">m_2</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Paired measurements: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">m_1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" and "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">m_2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1633,8 +1633,8 @@ Paired measurements: 8 and 4
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># numbering and iterating through collections</span>
-<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">animal</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s2">&quot;Dog&quot;</span><span class="p">,</span> <span class="s2">&quot;Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Mouse&quot;</span><span class="p">]):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The animal number &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; in the list is &quot;</span> <span class="o">+</span> <span class="n">animal</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">animal</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s2">"Dog"</span><span class="p">,</span> <span class="s2">"Cat"</span><span class="p">,</span> <span class="s2">"Mouse"</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"The animal number "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" in the list is "</span> <span class="o">+</span> <span class="n">animal</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1834,7 +1834,7 @@ The animal number 2 in the list is Mouse
 <p>Assume you have a list of filenames and you want to do something with them, for example print them out. Program a for loop which prints out all file names which end with “tif”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dataset1.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;dataset2.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;summary.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;readme.md&#39;</span><span class="p">,</span> <span class="s1">&#39;blobs.tif&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'dataset1.tif'</span><span class="p">,</span> <span class="s1">'dataset2.tif'</span><span class="p">,</span> <span class="s1">'summary.csv'</span><span class="p">,</span> <span class="s1">'readme.md'</span><span class="p">,</span> <span class="s1">'blobs.tif'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>

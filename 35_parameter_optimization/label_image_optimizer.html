@@ -1527,10 +1527,10 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
 <span class="c1"># define background subtraction</span>
-<span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;blurred&quot;</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">gaussian_blur</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">sigma_x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">sigma_y</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"blurred"</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">gaussian_blur</span><span class="p">,</span> <span class="s2">"input"</span><span class="p">,</span> <span class="n">sigma_x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">sigma_y</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="c1"># define segmentation</span>
-<span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;binarized&quot;</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">threshold_otsu</span><span class="p">,</span> <span class="s2">&quot;blurred&quot;</span><span class="p">)</span>
-<span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s2">&quot;binarized&quot;</span><span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"binarized"</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">threshold_otsu</span><span class="p">,</span> <span class="s2">"blurred"</span><span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s2">"binarized"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1543,7 +1543,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;input&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['input']
 </pre></div>
 </div>
 </div>
@@ -1556,7 +1556,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;labeled&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['labeled']
 </pre></div>
 </div>
 </div>
@@ -1564,8 +1564,8 @@ title="Print to PDF"
 <p>After setting the inputs, we can ask the workflow to compute results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">))</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"input"</span><span class="p">,</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/blobs.tif"</span><span class="p">))</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">)</span>
 
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -1578,7 +1578,7 @@ title="Print to PDF"
 <p>For optimization of such a workflow, we need a ground truth annotation image. A sparse annotation of some objects is enough for this.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ground_truth</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs_sparse_labels.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ground_truth</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/blobs_sparse_labels.tif"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ground_truth</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1591,7 +1591,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jlio</span> <span class="o">=</span> <span class="n">JaccardLabelImageOptimizer</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
-<span class="n">best_param</span> <span class="o">=</span> <span class="n">jlio</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">,</span> <span class="n">ground_truth</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">best_param</span> <span class="o">=</span> <span class="n">jlio</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">,</span> <span class="n">ground_truth</span><span class="p">,</span> <span class="n">maxiter</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">best_param</span>
 </pre></div>
 </div>
@@ -1608,16 +1608,16 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jlio</span><span class="o">.</span><span class="n">set_numeric_parameters</span><span class="p">(</span><span class="n">best_param</span><span class="p">)</span>
 
 <span class="c1"># before printing the workflow, we quickly remove the input image</span>
-<span class="n">w</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">'input'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Workflow:
-blurred &lt;- (&lt;function gaussian_blur at 0x0000023723085A60&gt;, &#39;input&#39;, None, 4.8002358210977345, 4.445626372447739, 0.00038486116050511713)
-binarized &lt;- (&lt;function threshold_otsu at 0x00000237232EADC0&gt;, &#39;blurred&#39;)
-labeled &lt;- (&lt;function connected_components_labeling_box at 0x000002372316AB80&gt;, &#39;binarized&#39;)
+blurred &lt;- (&lt;function gaussian_blur at 0x0000023723085A60&gt;, 'input', None, 4.8002358210977345, 4.445626372447739, 0.00038486116050511713)
+binarized &lt;- (&lt;function threshold_otsu at 0x00000237232EADC0&gt;, 'blurred')
+labeled &lt;- (&lt;function connected_components_labeling_box at 0x000002372316AB80&gt;, 'binarized')
 </pre></div>
 </div>
 </div>
@@ -1625,8 +1625,8 @@ labeled &lt;- (&lt;function connected_components_labeling_box at 0x000002372316A
 <p>After setting the input again, we can also apply the workflow to the image and inspect the result visually.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">))</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"input"</span><span class="p">,</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/blobs.tif"</span><span class="p">))</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

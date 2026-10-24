@@ -1562,7 +1562,7 @@ title="Print to PDF"
 <p>As example image, use the image set <a class="reference external" href="https://bbbc.broadinstitute.org/bbbc/BBBC038">BBBC038v1</a>, available from the Broad Bioimage Benchmark Collection <a class="reference external" href="https://doi.org/10.1038/s41592-019-0612-7">Caicedo et al., Nature Methods, 2019</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/BBBC038/0bf4b1.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/BBBC038/0bf4b1.tif'</span><span class="p">)</span>
 
 <span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </pre></div>
@@ -1671,8 +1671,8 @@ title="Print to PDF"
 
 <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">format_data</span><span class="p">(</span><span class="n">feature_stack</span><span class="p">,</span> <span class="n">annotation</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;input shape&quot;</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;annotation shape&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"input shape"</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"annotation shape"</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1737,7 +1737,7 @@ annotation shape (200,)
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/napari_tools_menu/__init__.py:165: FutureWarning: Public access to Window.qt_viewer is deprecated and will be removed in
-v0.5.0. It is considered an &quot;implementation detail&quot; of the napari
+v0.5.0. It is considered an "implementation detail" of the napari
 application, not part of the napari viewer model. If your use case
 requires access to qt_viewer, please open an issue to discuss.
   self.tools_menu = ToolsMenu(self, self.qt_viewer.viewer)
@@ -1779,7 +1779,7 @@ requires access to qt_viewer, please open an issue to discuss.
 <p>As we have used functions in the example above, we can just repeat the same procedure with the manual annotations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate features (that&#39;s actually not necessary, </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate features (that's actually not necessary, </span>
 <span class="c1"># as the variable is still there and the image is the same. </span>
 <span class="c1"># but we do it for completeness)</span>
 <span class="n">feature_stack</span> <span class="o">=</span> <span class="n">generate_feature_stack</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
@@ -1815,7 +1815,7 @@ requires access to qt_viewer, please open an issue to discuss.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Labels layer &#39;result_2d&#39; at 0x7f816a1faaf0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Labels layer 'result_2d' at 0x7f816a1faaf0&gt;
 </pre></div>
 </div>
 </div>

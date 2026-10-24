@@ -1525,7 +1525,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/BBBC007_batch/17P1_POS0013_D_1UL.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/BBBC007_batch/17P1_POS0013_D_1UL.tif"</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">number_of_nuclei</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 <span class="n">number_of_nuclei</span>
@@ -1540,7 +1540,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/BBBC007_batch/20P1_POS0005_D_1UL.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/BBBC007_batch/20P1_POS0005_D_1UL.tif"</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">number_of_nuclei</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 <span class="n">number_of_nuclei</span>
@@ -1555,7 +1555,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/BBBC007_batch/20P1_POS0007_D_1UL.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/BBBC007_batch/20P1_POS0007_D_1UL.tif"</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">number_of_nuclei</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 <span class="n">number_of_nuclei</span>
@@ -1574,10 +1574,10 @@ title="Print to PDF"
 <p>One way of preventing code-repetition are for-loops.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">folder</span> <span class="o">=</span> <span class="s2">&quot;../../data/BBBC007_batch/&quot;</span>
-<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;17P1_POS0013_D_1UL.tif&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;20P1_POS0005_D_1UL.tif&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;20P1_POS0007_D_1UL.tif&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">folder</span> <span class="o">=</span> <span class="s2">"../../data/BBBC007_batch/"</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"17P1_POS0013_D_1UL.tif"</span><span class="p">,</span>
+        <span class="s2">"20P1_POS0005_D_1UL.tif"</span><span class="p">,</span>
+        <span class="s2">"20P1_POS0007_D_1UL.tif"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>

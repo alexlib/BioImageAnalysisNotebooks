@@ -1567,7 +1567,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open an image file</span>
-<span class="n">multichannel_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/zfish_eye.tif&quot;</span><span class="p">)</span>
+<span class="n">multichannel_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/zfish_eye.tif"</span><span class="p">)</span>
 
 <span class="c1"># extract a channel</span>
 <span class="n">single_channel_image</span> <span class="o">=</span> <span class="n">multichannel_image</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span>
@@ -1669,7 +1669,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span> <span class="o">=</span> <span class="n">measure</span><span class="o">.</span><span class="n">regionprops_table</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> 
                                        <span class="n">intensity_image</span><span class="o">=</span><span class="n">cropped_image</span><span class="p">,</span>
-                                       <span class="n">properties</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_intensity&#39;</span><span class="p">,</span> <span class="s1">&#39;major_axis_length&#39;</span><span class="p">,</span> <span class="s1">&#39;minor_axis_length&#39;</span><span class="p">))</span>
+                                       <span class="n">properties</span><span class="o">=</span><span class="p">(</span><span class="s1">'area'</span><span class="p">,</span> <span class="s1">'mean_intensity'</span><span class="p">,</span> <span class="s1">'major_axis_length'</span><span class="p">,</span> <span class="s1">'minor_axis_length'</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1688,7 +1688,7 @@ title="Print to PDF"
 <p>We can use existing table columns to compute other measurements, such as the <code class="docutils literal notranslate"><span class="pre">aspect_ratio</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;aspect_ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;major_axis_length&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;minor_axis_length&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s1">'aspect_ratio'</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[</span><span class="s1">'major_axis_length'</span><span class="p">]</span> <span class="o">/</span> <span class="n">dataframe</span><span class="p">[</span><span class="s1">'minor_axis_length'</span><span class="p">]</span>
 <span class="n">dataframe</span>
 </pre></div>
 </div>
@@ -1819,12 +1819,12 @@ title="Print to PDF"
 <p>Measurements can be visualized using plots.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seaborn</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;aspect_ratio&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;mean_intensity&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seaborn</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'area'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'aspect_ratio'</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">'mean_intensity'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;area&#39;, ylabel=&#39;aspect_ratio&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel='area', ylabel='aspect_ratio'&gt;
 </pre></div>
 </div>
 <img alt="../_images/71d9c84c2d15b34f1dc3efd56d1a0e3c84a014919773a42233fb8eb4e1e81e8c.png" src="../_images/71d9c84c2d15b34f1dc3efd56d1a0e3c84a014919773a42233fb8eb4e1e81e8c.png" />
@@ -1836,10 +1836,10 @@ title="Print to PDF"
 <p>Taking this table as a starting point, we can use statistics to get an overview about the measured data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">])</span>
-<span class="n">stddev_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s1">'area'</span><span class="p">])</span>
+<span class="n">stddev_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s1">'area'</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean nucleus area is&quot;</span><span class="p">,</span> <span class="n">mean_area</span><span class="p">,</span> <span class="s2">&quot;+-&quot;</span><span class="p">,</span> <span class="n">stddev_area</span><span class="p">,</span> <span class="s2">&quot;pixels&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Mean nucleus area is"</span><span class="p">,</span> <span class="n">mean_area</span><span class="p">,</span> <span class="s2">"+-"</span><span class="p">,</span> <span class="n">stddev_area</span><span class="p">,</span> <span class="s2">"pixels"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1855,7 +1855,7 @@ title="Print to PDF"
 <p>For better understanding the internal structure of tissues, but also to correct for artifacts in image processing workflows, we can classify cells, for example according to their size and shape.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">object_classifier</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectClassifier</span><span class="p">(</span><span class="s1">&#39;../../data/blobs_classifier.cl&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">object_classifier</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectClassifier</span><span class="p">(</span><span class="s1">'../../data/blobs_classifier.cl'</span><span class="p">)</span>
 <span class="n">classification_image</span> <span class="o">=</span> <span class="n">object_classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="n">cropped_image</span><span class="p">)</span>
 
 <span class="n">stackview</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">classification_image</span><span class="p">)</span>

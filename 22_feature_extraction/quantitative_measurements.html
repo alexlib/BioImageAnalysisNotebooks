@@ -1537,7 +1537,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load image</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/blobs.tif"</span><span class="p">)</span>
 
 <span class="c1"># denoising</span>
 <span class="n">blurred_image</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1591,10 +1591,10 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;area&#39;</span><span class="p">:</span>       <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">area</span>               <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">],</span>
-    <span class="s1">&#39;mean&#39;</span><span class="p">:</span>       <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">mean_intensity</span>     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">],</span>
-    <span class="s1">&#39;major_axis&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">major_axis_length</span>  <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">],</span>
-    <span class="s1">&#39;minor_axis&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">minor_axis_length</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">]</span>
+    <span class="s1">'area'</span><span class="p">:</span>       <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">area</span>               <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">],</span>
+    <span class="s1">'mean'</span><span class="p">:</span>       <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">mean_intensity</span>     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">],</span>
+    <span class="s1">'major_axis'</span><span class="p">:</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">major_axis_length</span>  <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">],</span>
+    <span class="s1">'minor_axis'</span><span class="p">:</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">minor_axis_length</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1719,7 +1719,7 @@ title="Print to PDF"
 <p>You can also add custom columns by computing your own metric, for example the <code class="docutils literal notranslate"><span class="pre">aspect_ratio</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;aspect_ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">major_axis_length</span> <span class="o">/</span> <span class="n">p</span><span class="o">.</span><span class="n">minor_axis_length</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'aspect_ratio'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">major_axis_length</span> <span class="o">/</span> <span class="n">p</span><span class="o">.</span><span class="n">minor_axis_length</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">]</span>
 <span class="n">df</span>
 </pre></div>
 </div>
@@ -1847,7 +1847,7 @@ title="Print to PDF"
 <p>Those dataframes can be saved to disk conveniently:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;blobs_analysis.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"blobs_analysis.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1856,7 +1856,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># measure mean area</span>
-<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'area'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>

@@ -1529,7 +1529,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workflow</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
 
 <span class="c1"># define denoising</span>
-<span class="n">workflow</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;denoised&quot;</span><span class="p">,</span> <span class="n">gaussian</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"denoised"</span><span class="p">,</span> <span class="n">gaussian</span><span class="p">,</span> <span class="s2">"input"</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1540,7 +1540,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define segmentation</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">threshold</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">image</span> <span class="o">&gt;</span> <span class="n">threshold_otsu</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-<span class="n">workflow</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;binarized&quot;</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="s2">&quot;denoised&quot;</span><span class="p">)</span>
+<span class="n">workflow</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"binarized"</span><span class="p">,</span> <span class="n">threshold</span><span class="p">,</span> <span class="s2">"denoised"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1548,18 +1548,18 @@ title="Print to PDF"
 <p>We also apply connected component labeling to the binary image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workflow</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="s2">&quot;binarized&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workflow</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="s2">"binarized"</span><span class="p">)</span>
 
-<span class="c1"># Let&#39;s print out the whole workflow</span>
+<span class="c1"># Let's print out the whole workflow</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">workflow</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Workflow:
-denoised &lt;- (&lt;function gaussian at 0x19b297940&gt;, &#39;input&#39;, 2, None, &#39;nearest&#39;, 0, None, False, 4.0)
-binarized &lt;- (&lt;function threshold at 0x19dbd8430&gt;, &#39;denoised&#39;)
-labeled &lt;- (&lt;function label at 0x19ba7c820&gt;, &#39;binarized&#39;, None, False)
+denoised &lt;- (&lt;function gaussian at 0x19b297940&gt;, 'input', 2, None, 'nearest', 0, None, False, 4.0)
+binarized &lt;- (&lt;function threshold at 0x19dbd8430&gt;, 'denoised')
+labeled &lt;- (&lt;function label at 0x19ba7c820&gt;, 'binarized', None, False)
 </pre></div>
 </div>
 </div>
@@ -1569,7 +1569,7 @@ labeled &lt;- (&lt;function label at 0x19ba7c820&gt;, &#39;binarized&#39;, None,
 <p>Until here, there were no images involved. We now load an image and store it in the workflow as <code class="docutils literal notranslate"><span class="pre">&quot;input&quot;</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workflow</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;https://samples.fiji.sc/blobs.png&quot;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workflow</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">"input"</span><span class="p">,</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"https://samples.fiji.sc/blobs.png"</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">workflow</span><span class="p">))</span>
 </pre></div>
@@ -1577,9 +1577,9 @@ labeled &lt;- (&lt;function label at 0x19ba7c820&gt;, &#39;binarized&#39;, None,
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Workflow:
-denoised &lt;- (&lt;function gaussian at 0x19b297940&gt;, &#39;input&#39;, 2, None, &#39;nearest&#39;, 0, None, False, 4.0)
-binarized &lt;- (&lt;function threshold at 0x19dbd8430&gt;, &#39;denoised&#39;)
-labeled &lt;- (&lt;function label at 0x19ba7c820&gt;, &#39;binarized&#39;, None, False)
+denoised &lt;- (&lt;function gaussian at 0x19b297940&gt;, 'input', 2, None, 'nearest', 0, None, False, 4.0)
+binarized &lt;- (&lt;function threshold at 0x19dbd8430&gt;, 'denoised')
+labeled &lt;- (&lt;function label at 0x19ba7c820&gt;, 'binarized', None, False)
 input &lt;- [[ 40  32  24 ... 216 200 200]
  [ 56  40  24 ... 232 216 216]
  [ 64  48  24 ... 240 232 232]
@@ -1594,7 +1594,7 @@ input &lt;- [[ 40  32  24 ... 216 200 200]
 <p>To actually execute computation, we call the <code class="docutils literal notranslate"><span class="pre">workflow.get()</span></code> function that produces a single specified output. Under the hood, it will also execute all intermediate operations that are necessary to come to the final output.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;labeled&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"labeled"</span><span class="p">)</span>
 
 <span class="n">imshow</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>

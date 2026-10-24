@@ -1523,7 +1523,7 @@ title="Print to PDF"
 <p>We’re using a dataset published by <a class="reference external" href="https://doi.org/10.1091/mbc.E13-04-0221">Heriche et al.</a> licensed <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> available in the <a class="reference external" href="https://idr.openmicroscopy.org/webclient/img_detail/179719/">Image Data Resource</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raw_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/plate1_1_013 [Well 5, Field 1 (Spot 5)].png&quot;</span><span class="p">)[:,:,</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raw_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/plate1_1_013 [Well 5, Field 1 (Spot 5)].png"</span><span class="p">)[:,:,</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="n">nuclei</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">raw_image</span><span class="p">,</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 

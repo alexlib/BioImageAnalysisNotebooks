@@ -1513,13 +1513,13 @@ title="Print to PDF"
 <p>As example dataset, we will use an image shared by <a class="reference external" href="https://zenodo.org/record/3382102#.Y57rFnbMJaQ">Gregory Marquart and Harold Burgess</a> under <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode">CC-BY 4.0 license</a>. We need to download it first.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;../../data/y293-Gal4_vmat-GFP-f01.lif&quot;</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://zenodo.org/record/3382102/files/y293-Gal4_vmat-GFP-f01.lif?download=1&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">"../../data/y293-Gal4_vmat-GFP-f01.lif"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">'https://zenodo.org/record/3382102/files/y293-Gal4_vmat-GFP-f01.lif?download=1'</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="c1"># only download the file if we don&#39;t have it yet</span>
+    <span class="c1"># only download the file if we don't have it yet</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-    <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+    <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1533,7 +1533,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;LifFile object with 1 image&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'LifFile object with 1 image'
 </pre></div>
 </div>
 </div>
@@ -1546,7 +1546,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;LifImage object with dimensions: Dims(x=616, y=500, z=86, t=1, m=1)&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'LifImage object with dimensions: Dims(x=616, y=500, z=86, t=1, m=1)'
 </pre></div>
 </div>
 </div>
@@ -1604,20 +1604,20 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;dims&#39;: Dims(x=616, y=500, z=86, t=1, m=1),
- &#39;display_dims&#39;: (1, 2),
- &#39;dims_n&#39;: {1: 616, 2: 500, 3: 86},
- &#39;scale_n&#39;: {1: 2.1354804344851965,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'dims': Dims(x=616, y=500, z=86, t=1, m=1),
+ 'display_dims': (1, 2),
+ 'dims_n': {1: 616, 2: 500, 3: 86},
+ 'scale_n': {1: 2.1354804344851965,
   2: 2.135480168493237,
   3: 0.9929687300128537},
- &#39;path&#39;: &#39;Experiment_002/&#39;,
- &#39;name&#39;: &#39;Series011&#39;,
- &#39;channels&#39;: 2,
- &#39;scale&#39;: (2.1354804344851965, 2.135480168493237, 0.9929687300128537, None),
- &#39;bit_depth&#39;: (12, 12),
- &#39;mosaic_position&#39;: [],
- &#39;channel_as_second_dim&#39;: False,
- &#39;settings&#39;: {}}
+ 'path': 'Experiment_002/',
+ 'name': 'Series011',
+ 'channels': 2,
+ 'scale': (2.1354804344851965, 2.135480168493237, 0.9929687300128537, None),
+ 'bit_depth': (12, 12),
+ 'mosaic_position': [],
+ 'channel_as_second_dim': False,
+ 'settings': {}}
 </pre></div>
 </div>
 </div>
@@ -1625,7 +1625,7 @@ title="Print to PDF"
 <p>For example, it might be useful later to know the voxel size in z/y/x order.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">voxel_size</span> <span class="o">=</span> <span class="n">lif_image</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;scale&#39;</span><span class="p">][</span><span class="mi">2</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">voxel_size</span> <span class="o">=</span> <span class="n">lif_image</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s1">'scale'</span><span class="p">][</span><span class="mi">2</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">voxel_size</span>
 </pre></div>
 </div>
@@ -1639,7 +1639,7 @@ title="Print to PDF"
 <p>We can also read out how many slices the 3D stack has.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_slices</span> <span class="o">=</span> <span class="n">lif_image</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;dims&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">z</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_slices</span> <span class="o">=</span> <span class="n">lif_image</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s1">'dims'</span><span class="p">]</span><span class="o">.</span><span class="n">z</span>
 <span class="n">num_slices</span>
 </pre></div>
 </div>
@@ -1654,7 +1654,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">lif_to_numpy_stack</span><span class="p">(</span><span class="n">lif_image</span><span class="p">):</span>
-    <span class="n">num_slices</span> <span class="o">=</span> <span class="n">lif_image</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;dims&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">z</span>
+    <span class="n">num_slices</span> <span class="o">=</span> <span class="n">lif_image</span><span class="o">.</span><span class="n">info</span><span class="p">[</span><span class="s1">'dims'</span><span class="p">]</span><span class="o">.</span><span class="n">z</span>
     
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">lif_image</span><span class="o">.</span><span class="n">get_frame</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">))</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_slices</span><span class="p">)])</span>
 </pre></div>

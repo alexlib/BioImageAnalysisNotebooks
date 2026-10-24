@@ -1553,7 +1553,7 @@ title="Print to PDF"
               
   <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;import the libraries&#39;&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">'''import the libraries'''</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
@@ -1567,7 +1567,7 @@ title="Print to PDF"
 <h1>Load the data<a class="headerlink" href="#load-the-data" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../data/drugs.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'../../data/drugs.csv'</span><span class="p">,</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="s1">';'</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1696,8 +1696,8 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Drug&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Value&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set3&quot;</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">swarmplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Drug&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Value&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'Drug'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Value'</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">"Set3"</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">swarmplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'Drug'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Value'</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">"black"</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
@@ -1721,13 +1721,13 @@ title="Print to PDF"
 <p>It can be installed with: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pingouin</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;check unique drugs&#39;&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">'''check unique drugs'''</span>
 <span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;drugY&#39;, &#39;drugC&#39;, &#39;drugX&#39;, &#39;drugA&#39;, &#39;drugB&#39;], dtype=object)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['drugY', 'drugC', 'drugX', 'drugA', 'drugB'], dtype=object)
 </pre></div>
 </div>
 </div>
@@ -1737,7 +1737,7 @@ title="Print to PDF"
 <h1>Example for selecting a condition<a class="headerlink" href="#example-for-selecting-a-condition" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugC&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugC'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1768,7 +1768,7 @@ Name: Value, dtype: float64
 <h1>t-test example for comparing drugY and drugX<a class="headerlink" href="#t-test-example-for-comparing-drugy-and-drugx" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pg</span><span class="o">.</span><span class="n">ttest</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugY&#39;</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugX&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pg</span><span class="o">.</span><span class="n">ttest</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugY'</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugX'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1822,11 +1822,11 @@ Name: Value, dtype: float64
 <h1>Is the data normally distributed?<a class="headerlink" href="#is-the-data-normally-distributed" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugA&#39;</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugB&#39;</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugC&#39;</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugX&#39;</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugY&#39;</span><span class="p">]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugA'</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugB'</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugC'</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugX'</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugY'</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
@@ -1851,7 +1851,7 @@ Value  0.912185  0.000013   False
 <p>The Kruskal-Wallis H-test tests the null hypothesis that the population median of all of the groups are equal. It is a non-parametric version of ANOVA.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pg</span><span class="o">.</span><span class="n">kruskal</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dv</span><span class="o">=</span> <span class="s1">&#39;Value&#39;</span><span class="p">,</span> <span class="n">between</span><span class="o">=</span> <span class="s1">&#39;Drug&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pg</span><span class="o">.</span><span class="n">kruskal</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dv</span><span class="o">=</span> <span class="s1">'Value'</span><span class="p">,</span> <span class="n">between</span><span class="o">=</span> <span class="s1">'Drug'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1897,7 +1897,7 @@ Value  0.912185  0.000013   False
 <h1>The Mann–Whitney U test (also called Wilcoxon rank-sum test) is a non-parametric test of the null hypothesis<a class="headerlink" href="#the-mannwhitney-u-test-also-called-wilcoxon-rank-sum-test-is-a-non-parametric-test-of-the-null-hypothesis" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">mwu</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugY&#39;</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugX&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">mwu</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugY'</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugX'</span><span class="p">])</span>
 <span class="n">p1</span>
 </pre></div>
 </div>
@@ -1943,7 +1943,7 @@ Value  0.912185  0.000013   False
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p2</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">mwu</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugY&#39;</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugA&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p2</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">mwu</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugY'</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugA'</span><span class="p">])</span>
 <span class="n">p2</span>
 </pre></div>
 </div>
@@ -1989,7 +1989,7 @@ Value  0.912185  0.000013   False
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p3</span> <span class="o">=</span>  <span class="n">pg</span><span class="o">.</span><span class="n">mwu</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugY&#39;</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugB&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p3</span> <span class="o">=</span>  <span class="n">pg</span><span class="o">.</span><span class="n">mwu</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugY'</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugB'</span><span class="p">])</span>
 <span class="n">p3</span>
 </pre></div>
 </div>
@@ -2035,7 +2035,7 @@ Value  0.912185  0.000013   False
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p4</span> <span class="o">=</span>  <span class="n">pg</span><span class="o">.</span><span class="n">mwu</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugY&#39;</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">&#39;drugC&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p4</span> <span class="o">=</span>  <span class="n">pg</span><span class="o">.</span><span class="n">mwu</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugY'</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Drug</span><span class="o">==</span><span class="s1">'drugC'</span><span class="p">])</span>
 <span class="n">p4</span>
 </pre></div>
 </div>
@@ -2084,10 +2084,10 @@ Value  0.912185  0.000013   False
 <h1>P-values correction for multiple comparisons.<a class="headerlink" href="#p-values-correction-for-multiple-comparisons" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Benjamini–Hochberg FDR correction of an array of p-values&#39;&#39;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">'''Benjamini–Hochberg FDR correction of an array of p-values'''</span>
 
-<span class="n">pvals</span> <span class="o">=</span> <span class="p">[</span><span class="n">p1</span><span class="p">[</span><span class="s1">&#39;p-val&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p2</span><span class="p">[</span><span class="s1">&#39;p-val&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p3</span><span class="p">[</span><span class="s1">&#39;p-val&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p4</span><span class="p">[</span><span class="s1">&#39;p-val&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-<span class="n">reject</span><span class="p">,</span> <span class="n">pvals_corr</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">multicomp</span><span class="p">(</span><span class="n">pvals</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;fdr_bh&#39;</span><span class="p">)</span>
+<span class="n">pvals</span> <span class="o">=</span> <span class="p">[</span><span class="n">p1</span><span class="p">[</span><span class="s1">'p-val'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p2</span><span class="p">[</span><span class="s1">'p-val'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p3</span><span class="p">[</span><span class="s1">'p-val'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p4</span><span class="p">[</span><span class="s1">'p-val'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">reject</span><span class="p">,</span> <span class="n">pvals_corr</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">multicomp</span><span class="p">(</span><span class="n">pvals</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'fdr_bh'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">reject</span><span class="p">,</span> <span class="n">pvals_corr</span><span class="p">)</span>
 </pre></div>
 </div>

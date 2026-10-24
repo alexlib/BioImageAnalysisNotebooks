@@ -1545,8 +1545,8 @@ title="Print to PDF"
 <p>Just as a recap, we take a quick look at the two label images. One was produced in ImageJ, the other using scikit-image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs_labels_imagej</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;blobs_labels_imagej.tif&quot;</span><span class="p">)</span>
-<span class="n">blobs_labels_skimage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;blobs_labels_skimage.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs_labels_imagej</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"blobs_labels_imagej.tif"</span><span class="p">)</span>
+<span class="n">blobs_labels_skimage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"blobs_labels_skimage.tif"</span><span class="p">)</span>
 
 <span class="n">imshow</span><span class="p">(</span><span class="n">blobs_labels_imagej</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">blobs_labels_skimage</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1695,10 +1695,10 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table1</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;ImageJ&quot;</span><span class="p">:</span> <span class="n">imagej_areas</span>
+    <span class="s2">"ImageJ"</span><span class="p">:</span> <span class="n">imagej_areas</span>
 <span class="p">}</span>
 <span class="n">table2</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;scikit-image&quot;</span><span class="p">:</span> <span class="n">skimage_areas</span>
+    <span class="s2">"scikit-image"</span><span class="p">:</span> <span class="n">skimage_areas</span>
 <span class="p">}</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">table1</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">table2</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1837,7 +1837,7 @@ ttost_ind<span class=" -Color -Color-Bold -Color-Bold-Yellow">(</span>
     x2<span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     low<span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     upp<span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
-    usevar<span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span><span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;pooled&#39;</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
+    usevar<span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span><span class=" -Color -Color-Bold -Color-Bold-Blue">'pooled'</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     weights<span class=" -Color -Color-Bold -Color-Bold-Yellow">=(</span><span class=" -Color -Color-Bold -Color-Bold-Green">None</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span> <span class=" -Color -Color-Bold -Color-Bold-Green">None</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">),</span>
     transform<span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span><span class=" -Color -Color-Bold -Color-Bold-Green">None</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
 <span class=" -Color -Color-Bold -Color-Bold-Yellow">)</span>
@@ -1863,7 +1863,7 @@ x2 : array_like, 1-D or 2-D
     second of the two independent samples, see notes for 2-D case
 low, upp : float
     equivalence interval low &lt; m1 - m2 &lt; upp
-usevar : str, &#39;pooled&#39; or &#39;unequal&#39;
+usevar : str, 'pooled' or 'unequal'
     If ``pooled``, then the standard deviation of the samples is assumed to be
     the same. If ``unequal``, then Welch ttest with Satterthwait degrees
     of freedom is used

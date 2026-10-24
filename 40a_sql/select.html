@@ -1544,8 +1544,8 @@ title="Print to PDF"
 <p>When working with SQL, common practice is to call tables (a.k.a. DataFrames) as singluar. This allows to read SQL code better. For example in a database containing experiments, we can later use <code class="docutils literal notranslate"><span class="pre">experiment.concentration</span></code> to describe the concentration of a drug that was used to expose cells.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/experiments.csv&quot;</span><span class="p">)</span>
-<span class="n">measurement</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/measurements.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../../data/experiments.csv"</span><span class="p">)</span>
+<span class="n">measurement</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../../data/measurements.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1564,10 +1564,10 @@ title="Print to PDF"
 <p>Next, we define a query in SQL. SQL has a quite nicely human readable format. Typically we start by defining what we want to read (<code class="docutils literal notranslate"><span class="pre">SELECT</span></code>) and from where (<code class="docutils literal notranslate"><span class="pre">FROM</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT * </span>
 <span class="s2">FROM measurement</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -1684,10 +1684,10 @@ title="Print to PDF"
 <p>By the way, SQL is not case-sensitive per-se but you typically find SQL command words in capital letters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">select * </span>
 <span class="s2">from measurement</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -1804,10 +1804,10 @@ title="Print to PDF"
 <p>You can also select specific columns by name. Also here, SQL is not case-sensitive. The selected column <code class="docutils literal notranslate"><span class="pre">concentration</span></code> shows up as <code class="docutils literal notranslate"><span class="pre">Concentration</span></code> because that’s its name in the database.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">select Comment, concentration</span>
 <span class="s2">from experiment</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -1866,11 +1866,11 @@ title="Print to PDF"
 <p>This table can also be sorted using the <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> statement, for example to see the highest number of cells. In this case we sort the column descending using the <code class="docutils literal notranslate"><span class="pre">DESC</span></code> statement. The ascending order <code class="docutils literal notranslate"><span class="pre">ASC</span></code> would be default.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT * </span>
 <span class="s2">FROM measurement</span>
 <span class="s2">ORDER BY number_of_cells DESC</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -1990,12 +1990,12 @@ title="Print to PDF"
 <p>In case a table is very large, retrieving all rows may take a long time. To get insights into the data anyway, it may make sense to <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code> the table by the top 10 rows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT * </span>
 <span class="s2">FROM measurement</span>
 <span class="s2">ORDER BY number_of_cells DESC</span>
 <span class="s2">LIMIT 10;</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>

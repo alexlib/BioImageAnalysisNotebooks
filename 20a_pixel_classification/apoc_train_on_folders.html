@@ -1539,8 +1539,8 @@ title="Print to PDF"
 <p>For demonstration purposes, we reuse data of the <a class="reference external" href="https://bbbc.broadinstitute.org/BBBC007">BBBC007 dataset</a> version 1 (Jones et al., Proc. ICCV Workshop on Computer Vision for Biomedical Image Applications, 2005), available from the Broad Bioimage Benchmark Collection <a class="reference external" href="http://dx.doi.org/10.1038/nmeth.2083">Ljosa et al., Nature Methods, 2012</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_folder</span> <span class="o">=</span> <span class="s2">&quot;../../data/BBBC007/images/&quot;</span>
-<span class="n">masks_folder</span> <span class="o">=</span> <span class="s2">&quot;../../data/BBBC007/masks/&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_folder</span> <span class="o">=</span> <span class="s2">"../../data/BBBC007/images/"</span>
+<span class="n">masks_folder</span> <span class="o">=</span> <span class="s2">"../../data/BBBC007/masks/"</span>
 </pre></div>
 </div>
 </div>
@@ -1577,7 +1577,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># setup classifer and where it should be saved</span>
-<span class="n">segmenter</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectSegmenter</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="s2">&quot;test2.cl&quot;</span><span class="p">)</span>
+<span class="n">segmenter</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectSegmenter</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="s2">"test2.cl"</span><span class="p">)</span>
 
 <span class="c1"># setup feature set used for training</span>
 <span class="n">features</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">PredefinedFeatureSet</span><span class="o">.</span><span class="n">object_size_1_to_5_px</span><span class="o">.</span><span class="n">value</span>
@@ -1598,7 +1598,7 @@ title="Print to PDF"
 <p>After the training, we can apply the classifier to all images in the image folder. The following line reloads the classifier from disk. In that way we can ensure that it was stored correctly.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">segmenter</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectSegmenter</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="s2">&quot;test2.cl&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">segmenter</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectSegmenter</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="s2">"test2.cl"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

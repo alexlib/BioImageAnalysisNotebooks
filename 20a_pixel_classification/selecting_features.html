@@ -1530,9 +1530,9 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 
-<span class="n">manual_annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs_annotations.tif&#39;</span><span class="p">)</span>
+<span class="n">manual_annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs_annotations.tif'</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 
@@ -1552,12 +1552,12 @@ Afterwards, we take a look at the result for a quick sanity check.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define features</span>
-<span class="n">features</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">PredefinedFeatureSet</span><span class="o">.</span><span class="n">small_dog_log</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> \
-           <span class="n">apoc</span><span class="o">.</span><span class="n">PredefinedFeatureSet</span><span class="o">.</span><span class="n">medium_dog_log</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> \
+<span class="n">features</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">PredefinedFeatureSet</span><span class="o">.</span><span class="n">small_dog_log</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="s2">" "</span> <span class="o">+</span> \
+           <span class="n">apoc</span><span class="o">.</span><span class="n">PredefinedFeatureSet</span><span class="o">.</span><span class="n">medium_dog_log</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="s2">" "</span> <span class="o">+</span> \
            <span class="n">apoc</span><span class="o">.</span><span class="n">PredefinedFeatureSet</span><span class="o">.</span><span class="n">large_dog_log</span><span class="o">.</span><span class="n">value</span>
 
 <span class="c1"># this is where the model will be saved</span>
-<span class="n">cl_filename</span> <span class="o">=</span> <span class="s1">&#39;../../data/blobs_object_segmenter2.cl&#39;</span>
+<span class="n">cl_filename</span> <span class="o">=</span> <span class="s1">'../../data/blobs_object_segmenter2.cl'</span>
 
 <span class="n">apoc</span><span class="o">.</span><span class="n">erase_classifier</span><span class="p">(</span><span class="n">cl_filename</span><span class="p">)</span>
 <span class="n">classifier</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectSegmenter</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="n">cl_filename</span><span class="p">,</span> 
@@ -1584,7 +1584,7 @@ Afterwards, we take a look at the result for a quick sanity check.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shares</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">statistics</span><span class="p">()</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">colorize</span><span class="p">(</span><span class="n">styler</span><span class="p">):</span>
-    <span class="n">styler</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;rainbow&quot;</span><span class="p">)</span>
+    <span class="n">styler</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"rainbow"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">styler</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">shares</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
@@ -1855,10 +1855,10 @@ Afterwards, we take a look at the result for a quick sanity check.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define features</span>
-<span class="n">features</span> <span class="o">=</span> <span class="s2">&quot;gaussian_blur=1 difference_of_gaussian=5 laplace_box_of_gaussian_blur=5&quot;</span>
+<span class="n">features</span> <span class="o">=</span> <span class="s2">"gaussian_blur=1 difference_of_gaussian=5 laplace_box_of_gaussian_blur=5"</span>
 
 <span class="c1"># this is where the model will be saved</span>
-<span class="n">cl_filename</span> <span class="o">=</span> <span class="s1">&#39;../../data/blobs_object_segmenter3.cl&#39;</span>
+<span class="n">cl_filename</span> <span class="o">=</span> <span class="s1">'../../data/blobs_object_segmenter3.cl'</span>
 
 <span class="n">apoc</span><span class="o">.</span><span class="n">erase_classifier</span><span class="p">(</span><span class="n">cl_filename</span><span class="p">)</span>
 <span class="n">classifier</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectSegmenter</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="n">cl_filename</span><span class="p">,</span> 
@@ -1960,10 +1960,10 @@ Afterwards, we take a look at the result for a quick sanity check.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define features</span>
-<span class="n">features</span> <span class="o">=</span> <span class="s2">&quot;gaussian_blur=1 difference_of_gaussian=2 difference_of_gaussian=3 difference_of_gaussian=4 difference_of_gaussian=5 difference_of_gaussian=6 laplace_box_of_gaussian_blur=5&quot;</span>
+<span class="n">features</span> <span class="o">=</span> <span class="s2">"gaussian_blur=1 difference_of_gaussian=2 difference_of_gaussian=3 difference_of_gaussian=4 difference_of_gaussian=5 difference_of_gaussian=6 laplace_box_of_gaussian_blur=5"</span>
 
 <span class="c1"># this is where the model will be saved</span>
-<span class="n">cl_filename</span> <span class="o">=</span> <span class="s1">&#39;../../data/blobs_object_segmenter3.cl&#39;</span>
+<span class="n">cl_filename</span> <span class="o">=</span> <span class="s1">'../../data/blobs_object_segmenter3.cl'</span>
 
 <span class="n">apoc</span><span class="o">.</span><span class="n">erase_classifier</span><span class="p">(</span><span class="n">cl_filename</span><span class="p">)</span>
 <span class="n">classifier</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectSegmenter</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="n">cl_filename</span><span class="p">,</span> 

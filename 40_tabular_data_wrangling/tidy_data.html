@@ -1508,7 +1508,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../data/Multi_analysis.csv&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'../../data/Multi_analysis.csv'</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">';'</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
 </div>
@@ -1836,7 +1836,7 @@ title="Print to PDF"
 <p>We can specify names for the value and for the variables. In this case, our measurements are of intensity and our variables are Intervention (before or after) and channel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_tidy</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;intensity&#39;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Intervention&#39;</span><span class="p">,</span> <span class="s1">&#39;Channel&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_tidy</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">value_name</span><span class="o">=</span><span class="s1">'intensity'</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="p">[</span><span class="s1">'Intervention'</span><span class="p">,</span> <span class="s1">'Channel'</span><span class="p">])</span>
 <span class="n">df_tidy</span>
 </pre></div>
 </div>
@@ -1940,14 +1940,14 @@ title="Print to PDF"
 <p>It may not look better for interpreting, but it becomes easier to manipulate, because now we can more easily mask by columns. Here we select intensity measurement rows for “channel_2” and “After” intervention.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">row_mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_tidy</span><span class="p">[</span><span class="s1">&#39;Channel&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;channel_2&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_tidy</span><span class="p">[</span><span class="s1">&#39;Intervention&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;After&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">row_mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_tidy</span><span class="p">[</span><span class="s1">'Channel'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'channel_2'</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_tidy</span><span class="p">[</span><span class="s1">'Intervention'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'After'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_tidy</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">row_mask</span><span class="p">,</span> <span class="p">:][</span><span class="s1">&#39;intensity&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_tidy</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">row_mask</span><span class="p">,</span> <span class="p">:][</span><span class="s1">'intensity'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>

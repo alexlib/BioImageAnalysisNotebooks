@@ -1543,7 +1543,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load file</span>
-<span class="n">raw_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/plate1_1_013 [Well 5, Field 1 (Spot 5)].png&#39;</span><span class="p">)</span>
+<span class="n">raw_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/plate1_1_013 [Well 5, Field 1 (Spot 5)].png'</span><span class="p">)</span>
 
 <span class="c1"># visualize</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">raw_image</span><span class="p">)</span>
@@ -1566,8 +1566,8 @@ title="Print to PDF"
 
 <span class="c1"># visualize</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_cy3</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_cy3</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1588,14 +1588,14 @@ title="Print to PDF"
 
 <span class="c1"># visualize</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_cy3</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_cy3</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">nuclei_cy3</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\rober\miniconda3\envs\bio39\lib\site-packages\pyclesperanto_prototype\_tier9\_imshow.py:46: UserWarning: The imshow parameter color_map is deprecated. Use colormap instead.
-  warnings.warn(&quot;The imshow parameter color_map is deprecated. Use colormap instead.&quot;)
+  warnings.warn("The imshow parameter color_map is deprecated. Use colormap instead.")
 </pre></div>
 </div>
 <img alt="../_images/a906df9f94baa40d3504aff6fd8bd74bb1f6c160e0c6ed3861211756a9fa9a86.png" src="../_images/a906df9f94baa40d3504aff6fd8bd74bb1f6c160e0c6ed3861211756a9fa9a86.png" />
@@ -1608,14 +1608,14 @@ title="Print to PDF"
 
 <span class="c1"># visualize</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">intensity_map</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">intensity_map</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\rober\miniconda3\envs\bio39\lib\site-packages\pyclesperanto_prototype\_tier9\_imshow.py:46: UserWarning: The imshow parameter color_map is deprecated. Use colormap instead.
-  warnings.warn(&quot;The imshow parameter color_map is deprecated. Use colormap instead.&quot;)
+  warnings.warn("The imshow parameter color_map is deprecated. Use colormap instead.")
 </pre></div>
 </div>
 <img alt="../_images/f5d1571acbbba97334a87fe3d6eec2664d76edff89a9a86aed73614f840c42a0.png" src="../_images/f5d1571acbbba97334a87fe3d6eec2664d76edff89a9a86aed73614f840c42a0.png" />
@@ -1818,7 +1818,7 @@ title="Print to PDF"
 <p>The intensity vector can then be retrieved from the tabular statistics. Note: In this case, the background intensity is not 0, because we were directly reading it from the original image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intensity_vector2</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">[</span><span class="s1">&#39;mean_intensity&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intensity_vector2</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">[</span><span class="s1">'mean_intensity'</span><span class="p">]</span>
 <span class="n">intensity_vector2</span>
 </pre></div>
 </div>
@@ -1868,14 +1868,14 @@ title="Print to PDF"
 
 <span class="c1"># visualize</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">channel_egfp</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">nuclei_with_high_intensity_egfg</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\rober\miniconda3\envs\bio39\lib\site-packages\pyclesperanto_prototype\_tier9\_imshow.py:46: UserWarning: The imshow parameter color_map is deprecated. Use colormap instead.
-  warnings.warn(&quot;The imshow parameter color_map is deprecated. Use colormap instead.&quot;)
+  warnings.warn("The imshow parameter color_map is deprecated. Use colormap instead.")
 </pre></div>
 </div>
 <img alt="../_images/48e11aa7c0c5c19b40e9692923027602ef9e496f9b3b624a674cc280aa3d5cea.png" src="../_images/48e11aa7c0c5c19b40e9692923027602ef9e496f9b3b624a674cc280aa3d5cea.png" />
@@ -1885,7 +1885,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_double_positives</span> <span class="o">=</span> <span class="n">nuclei_with_high_intensity_egfg</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of Cy3 nuclei that also express eGFP&quot;</span><span class="p">,</span> <span class="n">number_of_double_positives</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Number of Cy3 nuclei that also express eGFP"</span><span class="p">,</span> <span class="n">number_of_double_positives</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

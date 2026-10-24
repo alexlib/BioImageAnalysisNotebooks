@@ -1616,7 +1616,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">distance_mesh</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">draw_distance_mesh_between_touching_labels</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">distance_mesh</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">&quot;rainbow&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">distance_mesh</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">"rainbow"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2389,8 +2389,8 @@ title="Print to PDF"
 <p>The following code snippets show how we can interpret that table. All examples refer to the labeled object <code class="docutils literal notranslate"><span class="pre">7</span></code> in the center of the label image shown above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The label of the last object is&quot;</span><span class="p">,</span> 
-      <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The label of the last object is"</span><span class="p">,</span> 
+      <span class="n">stats</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2402,9 +2402,9 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The last object has&quot;</span><span class="p">,</span> 
-      <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;touching_neighbor_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
-     <span class="s2">&quot;touching neighbors&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The last object has"</span><span class="p">,</span> 
+      <span class="n">stats</span><span class="p">[</span><span class="s2">"touching_neighbor_count"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+     <span class="s2">"touching neighbors"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2416,8 +2416,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The maximum distance of any label centroid to any other is&quot;</span><span class="p">,</span> 
-      <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;maximum_distance_of_touching_neighbors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The maximum distance of any label centroid to any other is"</span><span class="p">,</span> 
+      <span class="n">stats</span><span class="p">[</span><span class="s2">"maximum_distance_of_touching_neighbors"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -2429,8 +2429,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The last object has an average distance to its touching neighbors of&quot;</span><span class="p">,</span>
-     <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;average_distance_of_touching_neighbors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The last object has an average distance to its touching neighbors of"</span><span class="p">,</span>
+     <span class="n">stats</span><span class="p">[</span><span class="s2">"average_distance_of_touching_neighbors"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
      <span class="p">)</span>
 </pre></div>
 </div>
@@ -2443,8 +2443,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The last object has an minimum distance to its touching neighbors of&quot;</span><span class="p">,</span>
-     <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;minimum_distance_of_touching_neighbors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The last object has an minimum distance to its touching neighbors of"</span><span class="p">,</span>
+     <span class="n">stats</span><span class="p">[</span><span class="s2">"minimum_distance_of_touching_neighbors"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
      <span class="p">)</span>
 </pre></div>
 </div>
@@ -2457,8 +2457,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The last object has an maximum distance to its touching neighbors of&quot;</span><span class="p">,</span>
-     <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;maximum_distance_of_touching_neighbors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The last object has an maximum distance to its touching neighbors of"</span><span class="p">,</span>
+     <span class="n">stats</span><span class="p">[</span><span class="s2">"maximum_distance_of_touching_neighbors"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
      <span class="p">)</span>
 </pre></div>
 </div>
@@ -2472,11 +2472,11 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are&quot;</span><span class="p">,</span>
-          <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;proximal_neighbor_count_d&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
-          <span class="s2">&quot;objects around the last labeled object within a radius of&quot;</span><span class="p">,</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"There are"</span><span class="p">,</span>
+          <span class="n">stats</span><span class="p">[</span><span class="s2">"proximal_neighbor_count_d"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+          <span class="s2">"objects around the last labeled object within a radius of"</span><span class="p">,</span>
           <span class="n">d</span><span class="p">,</span>
-          <span class="s2">&quot;pixels&quot;</span>
+          <span class="s2">"pixels"</span>
          <span class="p">)</span>
 </pre></div>
 </div>
@@ -2493,9 +2493,9 @@ There are 6.0 objects around the last labeled object within a radius of 80 pixel
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;. neighbor of the last label is&quot;</span><span class="p">,</span>
-          <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;maximum_distance_of_n&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;_nearest_neighbors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
-          <span class="s2">&quot;pixels away.&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"The "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">". neighbor of the last label is"</span><span class="p">,</span>
+          <span class="n">stats</span><span class="p">[</span><span class="s2">"maximum_distance_of_n"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"_nearest_neighbors"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+          <span class="s2">"pixels away."</span>
     <span class="p">)</span>
 </pre></div>
 </div>
@@ -2514,9 +2514,9 @@ The 6. neighbor of the last label is 36.055511474609375 pixels away.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The average distance to the &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; neighbors of the last label is&quot;</span><span class="p">,</span>
-          <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;average_distance_of_n&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;_nearest_neighbors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
-          <span class="s2">&quot;pixels.&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"The average distance to the "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" neighbors of the last label is"</span><span class="p">,</span>
+          <span class="n">stats</span><span class="p">[</span><span class="s2">"average_distance_of_n"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"_nearest_neighbors"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+          <span class="s2">"pixels."</span>
     <span class="p">)</span>
 </pre></div>
 </div>
@@ -2562,9 +2562,9 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The last labelled object has&quot;</span><span class="p">,</span> 
-      <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;touch_count_sum&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
-      <span class="s2">&quot;pixels where it touches others&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The last labelled object has"</span><span class="p">,</span> 
+      <span class="n">stats</span><span class="p">[</span><span class="s2">"touch_count_sum"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+      <span class="s2">"pixels where it touches others"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2576,9 +2576,9 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The last labelled object touches an other object with at least&quot;</span><span class="p">,</span> 
-      <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;minimum_touch_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
-      <span class="s2">&quot;pixels&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The last labelled object touches an other object with at least"</span><span class="p">,</span> 
+      <span class="n">stats</span><span class="p">[</span><span class="s2">"minimum_touch_count"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+      <span class="s2">"pixels"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2590,9 +2590,9 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The last labelled object touches an other object with up to&quot;</span><span class="p">,</span> 
-      <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;maximum_touch_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
-      <span class="s2">&quot;pixels&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The last labelled object touches an other object with up to"</span><span class="p">,</span> 
+      <span class="n">stats</span><span class="p">[</span><span class="s2">"maximum_touch_count"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+      <span class="s2">"pixels"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2604,9 +2604,9 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The last labelled object touches an other object with at least&quot;</span><span class="p">,</span> 
-      <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;minimum_touch_portion&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
-      <span class="s2">&quot;percent of its border&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The last labelled object touches an other object with at least"</span><span class="p">,</span> 
+      <span class="n">stats</span><span class="p">[</span><span class="s2">"minimum_touch_portion"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="s2">"percent of its border"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2618,9 +2618,9 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The last labelled object touches an other object with up to&quot;</span><span class="p">,</span> 
-      <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;maximum_touch_portion&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
-      <span class="s2">&quot;percent of its border&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"The last labelled object touches an other object with up to"</span><span class="p">,</span> 
+      <span class="n">stats</span><span class="p">[</span><span class="s2">"maximum_touch_portion"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="s2">"percent of its border"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2637,7 +2637,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 <p>For visualization of the table columns as maps, we typically need to prefix the measurements with a <code class="docutils literal notranslate"><span class="pre">0</span></code>. This <code class="docutils literal notranslate"><span class="pre">0</span></code> represents the measurement of the background.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stats</span><span class="p">[</span><span class="s2">&quot;touching_neighbor_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stats</span><span class="p">[</span><span class="s2">"touching_neighbor_count"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2649,7 +2649,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_measurements</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">prefix_in_x</span><span class="p">([</span><span class="n">stats</span><span class="p">[</span><span class="s2">&quot;touching_neighbor_count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_measurements</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">prefix_in_x</span><span class="p">([</span><span class="n">stats</span><span class="p">[</span><span class="s2">"touching_neighbor_count"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()])</span>
 <span class="n">list_of_measurements</span>
 </pre></div>
 </div>
@@ -2685,7 +2685,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 <p>As more realistic example, we visualize the measurements in an image stack of a Tribolium embryo. The dataset, curtesy of Daniela Vorkel / Myers lab / MPI-CBG / CSBD can be <a class="reference external" href="https://github.com/clEsperanto/clesperanto_example_data/blob/main/Lund-100MB.tif">downloaded here</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">embryo</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../../clesperanto_example_data/Lund-100MB.tif&quot;</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">embryo</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../../clesperanto_example_data/Lund-100MB.tif"</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span>
 
 <span class="n">bg_subtracted</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">top_hat_box</span><span class="p">(</span><span class="n">embryo</span><span class="p">,</span> <span class="n">radius_x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius_y</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
@@ -2700,13 +2700,13 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
-<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Raw&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Raw"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">embryo</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Background subtracted&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Background subtracted"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">bg_subtracted</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Nuclei segmentation&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Nuclei segmentation"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">nuclei_labels</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Cell estimation&quot;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Cell estimation"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2902,7 +2902,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"label"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2929,7 +2929,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 <h3>Number of touching neighbors and proximal neighbors<a class="headerlink" href="#number-of-touching-neighbors-and-proximal-neighbors" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;touching_neighbor_count&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"touching_neighbor_count"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2954,7 +2954,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;proximal_neighbor_count_d10&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"proximal_neighbor_count_d10"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2979,7 +2979,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;proximal_neighbor_count_d20&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"proximal_neighbor_count_d20"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3004,7 +3004,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;proximal_neighbor_count_d40&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"proximal_neighbor_count_d40"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3032,7 +3032,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 <h3>Distances to touching neighbors<a class="headerlink" href="#distances-to-touching-neighbors" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;minimum_distance_of_touching_neighbors&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"minimum_distance_of_touching_neighbors"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3057,7 +3057,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;average_distance_of_touching_neighbors&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"average_distance_of_touching_neighbors"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3082,7 +3082,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;maximum_distance_of_touching_neighbors&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"maximum_distance_of_touching_neighbors"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3110,7 +3110,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 <h3>Distance to nearest neighbors<a class="headerlink" href="#distance-to-nearest-neighbors" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;maximum_distance_of_n1_nearest_neighbors&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"maximum_distance_of_n1_nearest_neighbors"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3135,7 +3135,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;maximum_distance_of_n6_nearest_neighbors&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"maximum_distance_of_n6_nearest_neighbors"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3160,7 +3160,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;maximum_distance_of_n10_nearest_neighbors&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"maximum_distance_of_n10_nearest_neighbors"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3188,7 +3188,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 <h3>Distance to the most distant other label<a class="headerlink" href="#distance-to-the-most-distant-other-label" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;distance_to_most_distant_other&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"distance_to_most_distant_other"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3217,7 +3217,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 <p>Touch count is the number of voxels labels touch others.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;touch_count_sum&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"touch_count_sum"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3242,7 +3242,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;minimum_touch_count&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"minimum_touch_count"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3267,7 +3267,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;maximum_touch_count&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"maximum_touch_count"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3296,7 +3296,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 <p>Touch portion is the relative amount of pixels where objects touch one other object divided by the number of all pixels where the object touches others.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;minimum_touch_portion&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"minimum_touch_portion"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3321,7 +3321,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;maximum_touch_portion&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"maximum_touch_portion"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3346,7 +3346,7 @@ The average distance to the 6 neighbors of the last label is 33.329612731933594 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">&quot;standard_deviation_touch_portion&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualize</span><span class="p">(</span><span class="n">cell_estimation</span><span class="p">,</span> <span class="n">tribolium_statistics</span><span class="p">,</span> <span class="s2">"standard_deviation_touch_portion"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

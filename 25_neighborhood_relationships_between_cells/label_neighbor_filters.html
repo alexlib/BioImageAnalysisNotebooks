@@ -1549,7 +1549,7 @@ title="Print to PDF"
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">random</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">&quot;RTX&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">"RTX"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1593,7 +1593,7 @@ title="Print to PDF"
 
 <span class="c1"># visualize measurments in space</span>
 <span class="n">parametric_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">tissue</span><span class="p">,</span> <span class="n">measurements</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1610,7 +1610,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_mean_measurements</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_of_touching_neighbors</span><span class="p">(</span><span class="n">measurements</span><span class="p">,</span> <span class="n">touch_matrix</span><span class="p">)</span>
 
 <span class="n">parametric_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">tissue</span><span class="p">,</span> <span class="n">local_mean_measurements</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1627,7 +1627,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_median_measurements</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">median_of_touching_neighbors</span><span class="p">(</span><span class="n">measurements</span><span class="p">,</span> <span class="n">touch_matrix</span><span class="p">)</span>
 
 <span class="n">parametric_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">tissue</span><span class="p">,</span> <span class="n">local_median_measurements</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1646,7 +1646,7 @@ title="Print to PDF"
 <span class="n">local_median_measurements</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">median_of_touching_neighbors</span><span class="p">(</span><span class="n">measurements</span><span class="p">,</span> <span class="n">neighbor_matrix</span><span class="p">)</span>
 
 <span class="n">parametric_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">tissue</span><span class="p">,</span> <span class="n">local_median_measurements</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1661,14 +1661,14 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># visualize measurments in space</span>
 <span class="n">measurement_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">tissue</span><span class="p">,</span> <span class="n">measurements</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;original&#39;</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">measurement_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'original'</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">measurement_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">radius</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Radius&#39;</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Radius'</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
     <span class="c1"># note: this function takes a parametric image the label map instead of a vector and the touch_matrix used above</span>
     <span class="n">parametric_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_of_touching_neighbors_map</span><span class="p">(</span><span class="n">measurement_image</span><span class="p">,</span> <span class="n">tissue</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="n">radius</span><span class="p">)</span>
-    <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+    <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

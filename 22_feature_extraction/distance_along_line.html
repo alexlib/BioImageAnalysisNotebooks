@@ -1576,7 +1576,7 @@ title="Print to PDF"
 <p>We start using a binary image that looks like an arm.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">binary_arm</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/binary_arm.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">binary_arm</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/binary_arm.tif"</span><span class="p">)</span>
 <span class="n">stackview</span><span class="o">.</span><span class="n">insight</span><span class="p">(</span><span class="n">binary_arm</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1672,7 +1672,7 @@ We use this label image for visualization and further down, we will also use thi
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__array_function__ internals&gt;:200: RuntimeWarning: Converting input from bool to &lt;class &#39;numpy.uint8&#39;&gt; for compatibility.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__array_function__ internals&gt;:200: RuntimeWarning: Converting input from bool to &lt;class 'numpy.uint8'&gt; for compatibility.
 </pre></div>
 </div>
 <div class="output text_html"><table>
@@ -1732,8 +1732,8 @@ We use this label image for visualization and further down, we will also use thi
     
     <span class="c1"># Compute the distance between each pair of consecutive points in the polyline</span>
     <span class="c1"># Iterate over pairs of points using zip and calculate the Euclidean distance </span>
-    <span class="c1"># between &#39;point&#39; and &#39;follower&#39; for each pair</span>
-    <span class="c1"># Append the distance to the list &#39;distances&#39;</span>
+    <span class="c1"># between 'point' and 'follower' for each pair</span>
+    <span class="c1"># Append the distance to the list 'distances'</span>
     <span class="k">for</span> <span class="n">point</span><span class="p">,</span> <span class="n">follower</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">polyline</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">polyline</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
         <span class="n">d</span> <span class="o">=</span> <span class="n">euclidean</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">follower</span><span class="p">)</span>
         <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">distances</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span>
@@ -1872,10 +1872,10 @@ We use this label image for visualization and further down, we will also use thi
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">distances_of_points_along_skeleton</span><span class="p">(</span><span class="n">skeleton</span><span class="p">,</span> <span class="n">coordinates_xy</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Takes a binary skeleton image and a list of coordinates in format [[X1, X2, ...], [Y1, Y2, ...]]</span>
 <span class="sd">    It will then determine all distances of the points along the skeleton. </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">polyline</span> <span class="o">=</span> <span class="n">skeleton_to_pointlist</span><span class="p">(</span><span class="n">skeleton</span><span class="p">)</span>
     <span class="n">distances</span> <span class="o">=</span> <span class="n">distances_along_pointlist</span><span class="p">(</span><span class="n">polyline</span><span class="p">)</span>
     

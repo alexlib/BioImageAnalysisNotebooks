@@ -1526,7 +1526,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">procedure</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;proceduring&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"proceduring"</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1626,7 +1626,7 @@ title="Print to PDF"
 proceduring (1, 1)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/dask/array/overlap.py:642: FutureWarning: Default &#39;boundary&#39; argument value will change from &#39;reflect&#39; to &#39;none&#39; in future versions from 2022.03.0 onwards. Use &#39;boundary=&quot;none&quot;&#39; to opt into the future behavior now or set &#39;boundary=&quot;reflect&quot;&#39; to maintain the current behavior going forward.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/dask/array/overlap.py:642: FutureWarning: Default 'boundary' argument value will change from 'reflect' to 'none' in future versions from 2022.03.0 onwards. Use 'boundary="none"' to opt into the future behavior now or set 'boundary="reflect"' to maintain the current behavior going forward.
   warnings.warn(
 </pre></div>
 </div>
@@ -1668,13 +1668,13 @@ proceduring (130, 130)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">overlap_width</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Overlap width&quot;</span><span class="p">,</span> <span class="n">overlap_width</span><span class="p">)</span>
-    <span class="n">tile_map</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">map_overlap</span><span class="p">(</span><span class="n">procedure</span><span class="p">,</span> <span class="n">tiles</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="n">overlap_width</span><span class="p">,</span> <span class="n">boundary</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Overlap width"</span><span class="p">,</span> <span class="n">overlap_width</span><span class="p">)</span>
+    <span class="n">tile_map</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">map_overlap</span><span class="p">(</span><span class="n">procedure</span><span class="p">,</span> <span class="n">tiles</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="n">overlap_width</span><span class="p">,</span> <span class="n">boundary</span><span class="o">=</span><span class="s1">'nearest'</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">tile_map</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
     <span class="n">difference</span> <span class="o">=</span> <span class="n">result</span> <span class="o">-</span> <span class="n">untiled_result</span>
     <span class="n">imshow</span><span class="p">(</span><span class="n">difference</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sum difference&quot;</span><span class="p">,</span> <span class="n">difference</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------------------------&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"sum difference"</span><span class="p">,</span> <span class="n">difference</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"-----------------------------------"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -1521,7 +1521,7 @@ graphics card with at least 8 GB of GDDR6 memory. Otherwise, it may be quite slo
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyclesperanto_prototype</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cle</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">&quot;RTX&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">"RTX"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1540,7 +1540,7 @@ The data set has been resampled to a voxel size of 1x1x1 microns. The embryo exp
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">skimage.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">imread</span>
 
-<span class="n">timelapse</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;/Users/haase/data/Lund_18.0_22.0_Hours-resampled.tif&#39;</span><span class="p">)</span>
+<span class="n">timelapse</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'/Users/haase/data/Lund_18.0_22.0_Hours-resampled.tif'</span><span class="p">)</span>
 
 <span class="c1"># print out the spatial dimensions of the image</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">timelapse</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -1583,7 +1583,7 @@ The data set has been resampled to a voxel size of 1x1x1 microns. The embryo exp
     <span class="c1"># show_labels(gpu_labelled_spots)</span>
     
     <span class="n">number_of_spots</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">maximum_of_all_pixels</span><span class="p">(</span><span class="n">gpu_labelled_spots</span><span class="p">))</span>
-    <span class="c1"># print(&quot;Number of detected spots: &quot; + str(number_of_spots))</span>
+    <span class="c1"># print("Number of detected spots: " + str(number_of_spots))</span>
     
     <span class="c1"># label map closing</span>
     <span class="n">number_of_dilations</span> <span class="o">=</span> <span class="mi">10</span>
@@ -1608,7 +1608,7 @@ The data set has been resampled to a voxel size of 1x1x1 microns. The embryo exp
     <span class="c1"># get result back from GPU as numpy array</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">gpu_labels</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint16</span><span class="p">)</span>
         
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Processing took &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; s&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Processing took "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" s"</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>

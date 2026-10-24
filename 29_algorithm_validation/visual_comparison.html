@@ -1536,10 +1536,10 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filenames</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;blobs_labels_imagej.tif&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;blobs_labels_skimage.tif&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;blobs_labels_clesperanto_python.tif&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;blobs_labels_clesperanto_imagej.tif&quot;</span>
+    <span class="s2">"blobs_labels_imagej.tif"</span><span class="p">,</span>
+    <span class="s2">"blobs_labels_skimage.tif"</span><span class="p">,</span>
+    <span class="s2">"blobs_labels_clesperanto_python.tif"</span><span class="p">,</span>
+    <span class="s2">"blobs_labels_clesperanto_imagej.tif"</span>
 <span class="p">]</span>
 
 <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
@@ -1624,7 +1624,7 @@ title="Print to PDF"
 <p>We will now program two for-loops that iterate over pairs of label images and compare them using the same approach. The result will be a 4x4 matrix with the number of pixels that are different when comparing the corresponding algorithm implementations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Algorithms&quot;</span><span class="p">:</span> <span class="n">filenames</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Algorithms"</span><span class="p">:</span> <span class="n">filenames</span><span class="p">}</span>
 
 <span class="k">for</span> <span class="n">filename_A</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
     <span class="n">image_A</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">filename_A</span><span class="p">)</span>

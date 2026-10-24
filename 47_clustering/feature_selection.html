@@ -1535,7 +1535,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load data</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/Lund-25MB.tif&quot;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/Lund-25MB.tif"</span><span class="p">)</span>
 
 <span class="c1"># Segment nuclei</span>
 <span class="n">background_subtracted</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">top_hat_box</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">radius_x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius_y</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
@@ -1553,16 +1553,16 @@ title="Print to PDF"
 <span class="n">selected_table</span> <span class="o">=</span> <span class="n">nuclei_statistics</span><span class="p">[</span>
     <span class="p">[</span>
        <span class="c1"># likely unrelated features</span>
-       <span class="s1">&#39;label&#39;</span><span class="p">,</span> 
+       <span class="s1">'label'</span><span class="p">,</span> 
         
        <span class="c1"># intensity releated features</span>
-       <span class="s1">&#39;maximum&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;minimum&#39;</span><span class="p">,</span> <span class="s1">&#39;variance&#39;</span><span class="p">,</span>
+       <span class="s1">'maximum'</span><span class="p">,</span> <span class="s1">'mean'</span><span class="p">,</span> <span class="s1">'minimum'</span><span class="p">,</span> <span class="s1">'variance'</span><span class="p">,</span>
         
        <span class="c1"># shape related features </span>
-       <span class="s1">&#39;elongation&#39;</span><span class="p">,</span> <span class="s1">&#39;feret_diameter&#39;</span><span class="p">,</span> <span class="s1">&#39;flatness&#39;</span><span class="p">,</span> <span class="s1">&#39;roundness&#39;</span><span class="p">,</span>
+       <span class="s1">'elongation'</span><span class="p">,</span> <span class="s1">'feret_diameter'</span><span class="p">,</span> <span class="s1">'flatness'</span><span class="p">,</span> <span class="s1">'roundness'</span><span class="p">,</span>
 
        <span class="c1"># size related features</span>
-       <span class="s1">&#39;equivalent_spherical_radius&#39;</span><span class="p">,</span> <span class="s1">&#39;number_of_pixels&#39;</span><span class="p">,</span> <span class="s1">&#39;perimeter&#39;</span>
+       <span class="s1">'equivalent_spherical_radius'</span><span class="p">,</span> <span class="s1">'number_of_pixels'</span><span class="p">,</span> <span class="s1">'perimeter'</span>
     <span class="p">]</span>
 <span class="p">]</span>
 <span class="n">selected_table</span>
@@ -1782,7 +1782,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">selected_table</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">colorize</span><span class="p">(</span><span class="n">styler</span><span class="p">):</span>
-    <span class="n">styler</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">)</span>
+    <span class="n">styler</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"coolwarm"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">styler</span>
 <span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="n">colorize</span><span class="p">)</span>
 </pre></div>

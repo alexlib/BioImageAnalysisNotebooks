@@ -1542,9 +1542,9 @@ title="Print to PDF"
 <p>We again start by loading our tables from disc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/experiments.csv&quot;</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/images.csv&quot;</span><span class="p">)</span>
-<span class="n">measurement</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/measurements.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../../data/experiments.csv"</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../../data/images.csv"</span><span class="p">)</span>
+<span class="n">measurement</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../../data/measurements.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1562,11 +1562,11 @@ title="Print to PDF"
 <p>SQL also allows combining tables using the <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> statement. Most common is the <code class="docutils literal notranslate"><span class="pre">INNER</span> <span class="pre">JOIN</span></code> which allows to combine two tables in a way that rows are matched according to a defined connection <code class="docutils literal notranslate"><span class="pre">ON</span></code> which the tables are combined. The <code class="docutils literal notranslate"><span class="pre">INNER</span> <span class="pre">JOIN</span></code> makes sure that only rows are shown to which both tables have entries. That’s why experiment <code class="docutils literal notranslate"><span class="pre">ID</span> <span class="pre">4</span></code> is not shown in the following table. There were no images stored during experiment 4.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT * </span>
 <span class="s2">FROM experiment</span>
 <span class="s2">INNER JOIN image ON experiment.ID = image.experiment_ID</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -1722,11 +1722,11 @@ title="Print to PDF"
 <p>If one wanted to combine the tables in a way that also experiment 4 is listed, we need to use an <code class="docutils literal notranslate"><span class="pre">OUTER</span> <span class="pre">JOIN</span></code>. In this case, as the experiments table is on the left of our SQL statement, we use the <code class="docutils literal notranslate"><span class="pre">LEFT</span> <span class="pre">OUTER</span> <span class="pre">JOIN</span></code>. Experiment 4 is then listed in our table with some <code class="docutils literal notranslate"><span class="pre">NaNs</span></code> in the columns of the images.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT * </span>
 <span class="s2">FROM experiment</span>
 <span class="s2">LEFT OUTER JOIN image ON experiment.ID = image.experiment_ID</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -1893,12 +1893,12 @@ title="Print to PDF"
 <p>The <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> statements above can also be used in chains to combine more than two tables. For example, we might be interested in the number of cells over time for every image in every experiment</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT * </span>
 <span class="s2">FROM experiment</span>
 <span class="s2">LEFT OUTER JOIN image ON experiment.ID = image.experiment_ID</span>
 <span class="s2">INNER JOIN measurement ON image.ID = measurement.image_ID</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -2114,12 +2114,12 @@ title="Print to PDF"
 <p>When a table becomes too wide and has columns we do not really need for our analysis, it is recommended to replace the <code class="docutils literal notranslate"><span class="pre">*</span></code> in the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement with column names.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT experiment.Comment, image.Filename, measurement.time_after_exposure_in_s, measurement.number_of_cells</span>
 <span class="s2">FROM experiment</span>
 <span class="s2">LEFT OUTER JOIN image ON experiment.ID = image.experiment_ID</span>
 <span class="s2">INNER JOIN measurement ON image.ID = measurement.image_ID</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -2239,12 +2239,12 @@ title="Print to PDF"
 <p>Using the <code class="docutils literal notranslate"><span class="pre">AS</span></code> statement, we can also rename columns and make our new table easier to read and understand.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT experiment.Comment AS experiment_name, image.Filename, measurement.time_after_exposure_in_s, measurement.number_of_cells</span>
 <span class="s2">FROM experiment</span>
 <span class="s2">LEFT OUTER JOIN image ON experiment.ID = image.experiment_ID</span>
 <span class="s2">INNER JOIN measurement ON image.ID = measurement.image_ID</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -2361,12 +2361,12 @@ title="Print to PDF"
 <p>As this statement is quite complicated and we should not copy past it over and over, we can store it in a pandas DataFrame <code class="docutils literal notranslate"><span class="pre">overview</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT experiment.Comment AS experiment_name, image.Filename, measurement.time_after_exposure_in_s, measurement.number_of_cells</span>
 <span class="s2">FROM experiment</span>
 <span class="s2">LEFT OUTER JOIN image ON experiment.ID = image.experiment_ID</span>
 <span class="s2">INNER JOIN measurement ON image.ID = measurement.image_ID</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">overview</span> <span class="o">=</span> <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -2376,10 +2376,10 @@ title="Print to PDF"
 <p>The <code class="docutils literal notranslate"><span class="pre">overview</span></code> table is part of our database. Note: The overview was not saved to disc yet.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT * </span>
 <span class="s2">FROM overview</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -2496,7 +2496,7 @@ title="Print to PDF"
 <p>For reuse in later lessons, we save the summary to disc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">overview</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../../data/overview.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">overview</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"../../data/overview.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

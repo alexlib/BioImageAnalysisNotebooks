@@ -1499,7 +1499,7 @@ title="Print to PDF"
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># initialize GPU</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">&quot;GTX&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">"GTX"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1512,7 +1512,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load data</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;https://samples.fiji.sc/blobs.png&#39;</span><span class="p">),</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">voronoi_otsu_labeling</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">'https://samples.fiji.sc/blobs.png'</span><span class="p">),</span> <span class="n">spot_sigma</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>

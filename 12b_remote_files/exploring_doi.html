@@ -1523,12 +1523,12 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">read_doi</span><span class="p">(</span><span class="n">doi</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Reads meta data of records in doi.org.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
-    <span class="n">doi</span> <span class="o">=</span> <span class="n">doi</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;https://doi.org/&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://doi.org/api/handles/&quot;</span> <span class="o">+</span> <span class="n">doi</span>
+    <span class="n">doi</span> <span class="o">=</span> <span class="n">doi</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"https://doi.org/"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://doi.org/api/handles/"</span> <span class="o">+</span> <span class="n">doi</span>
     
     <span class="c1"># Download the file</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
@@ -1541,27 +1541,27 @@ title="Print to PDF"
 <p>We can then call the function and store the results in a <code class="docutils literal notranslate"><span class="pre">data</span></code> object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">read_doi</span><span class="p">(</span><span class="s2">&quot;https://doi.org/10.5281/zenodo.3833824&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">read_doi</span><span class="p">(</span><span class="s2">"https://doi.org/10.5281/zenodo.3833824"</span><span class="p">)</span>
 <span class="n">data</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;responseCode&#39;: 1,
- &#39;handle&#39;: &#39;10.5281/zenodo.3833824&#39;,
- &#39;values&#39;: [{&#39;index&#39;: 100,
-   &#39;type&#39;: &#39;HS_ADMIN&#39;,
-   &#39;data&#39;: {&#39;format&#39;: &#39;admin&#39;,
-    &#39;value&#39;: {&#39;handle&#39;: &#39;10.admin/codata&#39;,
-     &#39;index&#39;: 300,
-     &#39;permissions&#39;: &#39;111111111111&#39;}},
-   &#39;ttl&#39;: 86400,
-   &#39;timestamp&#39;: &#39;2020-05-19T10:28:11Z&#39;},
-  {&#39;index&#39;: 1,
-   &#39;type&#39;: &#39;URL&#39;,
-   &#39;data&#39;: {&#39;format&#39;: &#39;string&#39;, &#39;value&#39;: &#39;https://zenodo.org/record/3833824&#39;},
-   &#39;ttl&#39;: 86400,
-   &#39;timestamp&#39;: &#39;2020-05-19T10:28:11Z&#39;}]}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'responseCode': 1,
+ 'handle': '10.5281/zenodo.3833824',
+ 'values': [{'index': 100,
+   'type': 'HS_ADMIN',
+   'data': {'format': 'admin',
+    'value': {'handle': '10.admin/codata',
+     'index': 300,
+     'permissions': '111111111111'}},
+   'ttl': 86400,
+   'timestamp': '2020-05-19T10:28:11Z'},
+  {'index': 1,
+   'type': 'URL',
+   'data': {'format': 'string', 'value': 'https://zenodo.org/record/3833824'},
+   'ttl': 86400,
+   'timestamp': '2020-05-19T10:28:11Z'}]}
 </pre></div>
 </div>
 </div>
@@ -1569,19 +1569,19 @@ title="Print to PDF"
 <p>This <a class="reference external" href="https://www.json.org/json-en.html">json</a> object consists of Python dictionaries and lists. We can navigate through those and extract information.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;values&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">'values'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;index&#39;: 100,
- &#39;type&#39;: &#39;HS_ADMIN&#39;,
- &#39;data&#39;: {&#39;format&#39;: &#39;admin&#39;,
-  &#39;value&#39;: {&#39;handle&#39;: &#39;10.admin/codata&#39;,
-   &#39;index&#39;: 300,
-   &#39;permissions&#39;: &#39;111111111111&#39;}},
- &#39;ttl&#39;: 86400,
- &#39;timestamp&#39;: &#39;2020-05-19T10:28:11Z&#39;}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'index': 100,
+ 'type': 'HS_ADMIN',
+ 'data': {'format': 'admin',
+  'value': {'handle': '10.admin/codata',
+   'index': 300,
+   'permissions': '111111111111'}},
+ 'ttl': 86400,
+ 'timestamp': '2020-05-19T10:28:11Z'}
 </pre></div>
 </div>
 </div>

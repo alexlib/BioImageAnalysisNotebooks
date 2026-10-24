@@ -1530,7 +1530,7 @@ title="Print to PDF"
 <p>The example image data used here was acquired by Bert Nitzsche and Robert Haase (both MPI-CBG at that time) at the Light Microscopy Facility of MPI-CBG. Just for completeness, the voxel size is 0.022x0.022x0.125 µm^3.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bead_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/Bead_Image1_crop.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bead_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/Bead_Image1_crop.tif'</span><span class="p">)</span>
 <span class="n">bead_image</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1575,7 +1575,7 @@ title="Print to PDF"
 <span class="n">stats</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">statistics_of_labelled_pixels</span><span class="p">(</span><span class="n">bead_image</span><span class="p">,</span> <span class="n">label_image</span><span class="p">)</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">stats</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[[</span><span class="s2">&quot;mass_center_x&quot;</span><span class="p">,</span> <span class="s2">&quot;mass_center_y&quot;</span><span class="p">,</span> <span class="s2">&quot;mass_center_z&quot;</span><span class="p">]]</span>
+<span class="n">df</span><span class="p">[[</span><span class="s2">"mass_center_x"</span><span class="p">,</span> <span class="s2">"mass_center_y"</span><span class="p">,</span> <span class="s2">"mass_center_z"</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -1647,11 +1647,11 @@ title="Print to PDF"
 
 <span class="n">num_psfs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;mass_center_x&quot;</span><span class="p">]</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;mass_center_y&quot;</span><span class="p">]</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;mass_center_z&quot;</span><span class="p">]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">"mass_center_x"</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">"mass_center_y"</span><span class="p">]</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">"mass_center_z"</span><span class="p">]</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bead&quot;</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="s2">&quot;at position&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Bead"</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="s2">"at position"</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
     
     <span class="c1"># move PSF in right position in a smaller image</span>
     <span class="n">cle</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">bead_image</span><span class="p">,</span> <span class="n">single_psf_image</span><span class="p">,</span> 
@@ -1736,13 +1736,13 @@ Bead 3 at position 125.43960571289062 35.972496032714844 23.39095115661621
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imsave</span><span class="p">(</span><span class="s1">&#39;../../data/psf.tif&#39;</span><span class="p">,</span> <span class="n">normalized_psf</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imsave</span><span class="p">(</span><span class="s1">'../../data/psf.tif'</span><span class="p">,</span> <span class="n">normalized_psf</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\rober\AppData\Local\Temp\ipykernel_16716\3265681491.py:1: UserWarning: ../../data/psf.tif is a low contrast image
-  imsave(&#39;../../data/psf.tif&#39;, normalized_psf)
+  imsave('../../data/psf.tif', normalized_psf)
 </pre></div>
 </div>
 </div>

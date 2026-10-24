@@ -1568,7 +1568,7 @@ title="Print to PDF"
 <p>In this example we load an image showing a zebrafish eye, courtesy of Mauricio Rocha Martins, Norden lab, MPI CBG Dresden.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multichannel_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/zfish_eye.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">multichannel_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/zfish_eye.tif"</span><span class="p">)</span>
 <span class="n">multichannel_image</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1605,7 +1605,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load cellpose model</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Cellpose</span><span class="p">(</span><span class="n">gpu</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s1">&#39;nuclei&#39;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Cellpose</span><span class="p">(</span><span class="n">gpu</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s1">'nuclei'</span><span class="p">)</span>
 
 <span class="c1"># apply model</span>
 <span class="n">channels</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># This means we are processing single channel greyscale images.</span>
@@ -1695,7 +1695,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stats</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">statistics_of_labelled_pixels</span><span class="p">(</span><span class="n">nuclear_envelope_channel</span><span class="p">,</span> <span class="n">extended_outlines</span><span class="p">)</span>
 
-<span class="n">stats</span><span class="p">[</span><span class="s2">&quot;mean_intensity&quot;</span><span class="p">]</span>
+<span class="n">stats</span><span class="p">[</span><span class="s2">"mean_intensity"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1728,7 +1728,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intensity_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_intensity_map</span><span class="p">(</span><span class="n">nuclear_envelope_channel</span><span class="p">,</span> <span class="n">extended_outlines</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">intensity_map</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">intensity_map</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

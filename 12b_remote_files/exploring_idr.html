@@ -1505,8 +1505,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">original_link</span> <span class="o">=</span> <span class="s1">&#39;https://idr.openmicroscopy.org/webclient/render_image_download/9629351/?format=tif&#39;</span>
-<span class="n">edited_link</span> <span class="o">=</span> <span class="s1">&#39;https://idr.openmicroscopy.org/webclient/render_image/9629351/&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">original_link</span> <span class="o">=</span> <span class="s1">'https://idr.openmicroscopy.org/webclient/render_image_download/9629351/?format=tif'</span>
+<span class="n">edited_link</span> <span class="o">=</span> <span class="s1">'https://idr.openmicroscopy.org/webclient/render_image/9629351/'</span>
 
 <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">edited_link</span><span class="p">)</span>
 
@@ -1524,11 +1524,11 @@ title="Print to PDF"
 <p>Furthermore, can assemble the link from a generic link if you know the image identifier of the image you want to download.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generic_image_url</span> <span class="o">=</span> <span class="s2">&quot;https://idr.openmicroscopy.org/webclient/render_image/</span><span class="si">{image_id}</span><span class="s2">/&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generic_image_url</span> <span class="o">=</span> <span class="s2">"https://idr.openmicroscopy.org/webclient/render_image/</span><span class="si">{image_id}</span><span class="s2">/"</span>
 <span class="n">image_id</span> <span class="o">=</span> <span class="mi">9629351</span>
 
 <span class="c1"># combine generic url with image ID</span>
-<span class="n">image_url</span> <span class="o">=</span> <span class="n">generic_image_url</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s2">&quot;image_id&quot;</span><span class="p">:</span><span class="n">image_id</span><span class="p">})</span>
+<span class="n">image_url</span> <span class="o">=</span> <span class="n">generic_image_url</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s2">"image_id"</span><span class="p">:</span><span class="n">image_id</span><span class="p">})</span>
 
 <span class="c1"># download and show image</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">image_url</span><span class="p">)</span>
@@ -1548,19 +1548,19 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># configure which dataset to browse</span>
 <span class="n">screen_id</span> <span class="o">=</span> <span class="mi">2302</span>
-<span class="n">MAP_URL</span> <span class="o">=</span> <span class="s2">&quot;https://idr.openmicroscopy.org/webclient/api/annotations/?type=map&amp;</span><span class="si">{type}</span><span class="s2">=</span><span class="si">{screen_id}</span><span class="s2">&quot;</span>
+<span class="n">MAP_URL</span> <span class="o">=</span> <span class="s2">"https://idr.openmicroscopy.org/webclient/api/annotations/?type=map&amp;</span><span class="si">{type}</span><span class="s2">=</span><span class="si">{screen_id}</span><span class="s2">"</span>
 
 <span class="c1"># open an interface to the internet</span>
 <span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
 
     <span class="c1"># turn the generic MAP_URL into a specific URL for the screen</span>
-    <span class="n">qs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;screen&#39;</span><span class="p">,</span> <span class="s1">&#39;screen_id&#39;</span><span class="p">:</span> <span class="n">screen_id</span><span class="p">}</span>
+    <span class="n">qs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'type'</span><span class="p">:</span> <span class="s1">'screen'</span><span class="p">,</span> <span class="s1">'screen_id'</span><span class="p">:</span> <span class="n">screen_id</span><span class="p">}</span>
     <span class="n">url</span> <span class="o">=</span> <span class="n">MAP_URL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">qs</span><span class="p">)</span>
 
     <span class="c1"># go throuh all annotations and print them out</span>
-    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;annotations&#39;</span><span class="p">]:</span>
-        <span class="n">namespace</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;ns&#39;</span><span class="p">]</span>
-        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">a</span><span class="p">[</span><span class="s1">&#39;values&#39;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">'annotations'</span><span class="p">]:</span>
+        <span class="n">namespace</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="s1">'ns'</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">a</span><span class="p">[</span><span class="s1">'values'</span><span class="p">]:</span>
             <span class="n">key</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">value</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
             <span class="nb">print</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
@@ -1598,16 +1598,16 @@ Annotation File idr0056-screenB-annotation.csv https://github.com/IDR/idr0056-st
 <p>Next, we can go through sub-datasets. We are looking at a <a class="reference external" href="https://en.wikipedia.org/wiki/High-content_screening">high content screening</a> (HCS) data set, which typically are organized in plates. A for loop allows us to take a look at available plates.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PLATES_URL</span> <span class="o">=</span> <span class="s2">&quot;https://idr.openmicroscopy.org/webclient/api/plates/?id=</span><span class="si">{screen_id}</span><span class="s2">&quot;</span>
-<span class="n">qs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;screen_id&#39;</span><span class="p">:</span> <span class="n">screen_id</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PLATES_URL</span> <span class="o">=</span> <span class="s2">"https://idr.openmicroscopy.org/webclient/api/plates/?id=</span><span class="si">{screen_id}</span><span class="s2">"</span>
+<span class="n">qs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'screen_id'</span><span class="p">:</span> <span class="n">screen_id</span><span class="p">}</span>
 
 <span class="c1"># assemble a specific ULR from the generic URL</span>
 <span class="n">url</span> <span class="o">=</span> <span class="n">PLATES_URL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">qs</span><span class="p">)</span>
 
 <span class="c1"># go through all plates</span>
-<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;plates&#39;</span><span class="p">]:</span>
-    <span class="n">plate_id</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="c1"># note, we will use this variable further down</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="s1">&#39;childCount&#39;</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">'plates'</span><span class="p">]:</span>
+    <span class="n">plate_id</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]</span> <span class="c1"># note, we will use this variable further down</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="s1">'id'</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="s1">'name'</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="s1">'childCount'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1629,25 +1629,25 @@ Annotation File idr0056-screenB-annotation.csv https://github.com/IDR/idr0056-st
 <p>Plates are organized in wells (in the digitaly world you could call them tables) and thus, we can go through all wells in a similar way like going through plates. This time, we will stop after the first row of images to just see a couple of small thumbnails of them. Looking at thumbnails makes a lot of sense as long as you don’t need the full image data and are just browsing the database.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">WELLS_IMAGES_URL</span> <span class="o">=</span> <span class="s2">&quot;https://idr.openmicroscopy.org/webgateway/plate/</span><span class="si">{plate_id}</span><span class="s2">/</span><span class="si">{field}</span><span class="s2">/&quot;</span>
-<span class="n">THUMBNAIL_URL</span> <span class="o">=</span> <span class="s2">&quot;https://idr.openmicroscopy.org/webclient/render_thumbnail/</span><span class="si">{image_id}</span><span class="s2">/&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">WELLS_IMAGES_URL</span> <span class="o">=</span> <span class="s2">"https://idr.openmicroscopy.org/webgateway/plate/</span><span class="si">{plate_id}</span><span class="s2">/</span><span class="si">{field}</span><span class="s2">/"</span>
+<span class="n">THUMBNAIL_URL</span> <span class="o">=</span> <span class="s2">"https://idr.openmicroscopy.org/webclient/render_thumbnail/</span><span class="si">{image_id}</span><span class="s2">/"</span>
 
-<span class="n">qs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;plate_id&#39;</span><span class="p">:</span> <span class="n">plate_id</span><span class="p">,</span> <span class="s1">&#39;field&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="n">qs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'plate_id'</span><span class="p">:</span> <span class="n">plate_id</span><span class="p">,</span> <span class="s1">'field'</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
 <span class="n">url</span> <span class="o">=</span> <span class="n">WELLS_IMAGES_URL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">qs</span><span class="p">)</span>
 <span class="n">grid</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-<span class="n">rowlabels</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="s1">&#39;rowlabels&#39;</span><span class="p">]</span>
-<span class="n">collabels</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="s1">&#39;collabels&#39;</span><span class="p">]</span>
+<span class="n">rowlabels</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="s1">'rowlabels'</span><span class="p">]</span>
+<span class="n">collabels</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="s1">'collabels'</span><span class="p">]</span>
 
 <span class="c1"># go through the well of images.</span>
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">grid</span><span class="p">[</span><span class="s1">&#39;grid&#39;</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">grid</span><span class="p">[</span><span class="s1">'grid'</span><span class="p">]:</span>
     <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">cell</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="c1"># read image specific information we will use this variable further down</span>
-            <span class="n">image_id</span> <span class="o">=</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+            <span class="n">image_id</span> <span class="o">=</span> <span class="n">cell</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]</span>
 
             <span class="c1"># print image ID and show thumbnail</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">image_id</span><span class="p">)</span>
-            <span class="n">thumbnail</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">THUMBNAIL_URL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;image_id&#39;</span><span class="p">:</span><span class="n">image_id</span><span class="p">}))</span>
+            <span class="n">thumbnail</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">THUMBNAIL_URL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">'image_id'</span><span class="p">:</span><span class="n">image_id</span><span class="p">}))</span>
             <span class="n">imshow</span><span class="p">(</span><span class="n">thumbnail</span><span class="p">)</span>
 
             <span class="c1"># leave after first image</span>
@@ -1668,10 +1668,10 @@ Annotation File idr0056-screenB-annotation.csv https://github.com/IDR/idr0056-st
 <p>In order to retrieve the whole image, we can use the code shown on top.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generic_image_url</span> <span class="o">=</span> <span class="s2">&quot;https://idr.openmicroscopy.org/webclient/render_image/</span><span class="si">{image_id}</span><span class="s2">/&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generic_image_url</span> <span class="o">=</span> <span class="s2">"https://idr.openmicroscopy.org/webclient/render_image/</span><span class="si">{image_id}</span><span class="s2">/"</span>
 
 <span class="c1"># combine generic url with image ID</span>
-<span class="n">image_url</span> <span class="o">=</span> <span class="n">generic_image_url</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s2">&quot;image_id&quot;</span><span class="p">:</span><span class="n">image_id</span><span class="p">})</span>
+<span class="n">image_url</span> <span class="o">=</span> <span class="n">generic_image_url</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s2">"image_id"</span><span class="p">:</span><span class="n">image_id</span><span class="p">})</span>
 
 <span class="c1"># download and show image</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">image_url</span><span class="p">)</span>
@@ -1689,8 +1689,8 @@ Annotation File idr0056-screenB-annotation.csv https://github.com/IDR/idr0056-st
 <p>Furthermore, we can print out the meta data using <a class="reference external" href="https://www.json.org/json-en.html">json</a>. Note: We can have a look at the meta data without downloading the image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;image_id&#39;</span><span class="p">:</span> <span class="n">image_id</span><span class="p">}</span>
-<span class="n">IMAGE_DETAILS_URL</span> <span class="o">=</span> <span class="s2">&quot;https://idr.openmicroscopy.org/webclient/imgData/</span><span class="si">{image_id}</span><span class="s2">/&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'image_id'</span><span class="p">:</span> <span class="n">image_id</span><span class="p">}</span>
+<span class="n">IMAGE_DETAILS_URL</span> <span class="o">=</span> <span class="s2">"https://idr.openmicroscopy.org/webclient/imgData/</span><span class="si">{image_id}</span><span class="s2">/"</span>
 <span class="n">url</span> <span class="o">=</span> <span class="n">IMAGE_DETAILS_URL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">qs</span><span class="p">)</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
@@ -1700,137 +1700,137 @@ Annotation File idr0056-screenB-annotation.csv https://github.com/IDR/idr0056-st
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;channels&quot;: [
+    "channels": [
         {
-            &quot;active&quot;: true,
-            &quot;coefficient&quot;: 1.0,
-            &quot;color&quot;: &quot;FF0000&quot;,
-            &quot;emissionWave&quot;: null,
-            &quot;family&quot;: &quot;linear&quot;,
-            &quot;inverted&quot;: false,
-            &quot;label&quot;: &quot;alpha-tubulin (microtubule cytoskeleton)&quot;,
-            &quot;reverseIntensity&quot;: false,
-            &quot;window&quot;: {
-                &quot;end&quot;: 187.0,
-                &quot;max&quot;: 65535.0,
-                &quot;min&quot;: 0.0,
-                &quot;start&quot;: 0.0
+            "active": true,
+            "coefficient": 1.0,
+            "color": "FF0000",
+            "emissionWave": null,
+            "family": "linear",
+            "inverted": false,
+            "label": "alpha-tubulin (microtubule cytoskeleton)",
+            "reverseIntensity": false,
+            "window": {
+                "end": 187.0,
+                "max": 65535.0,
+                "min": 0.0,
+                "start": 0.0
             }
         },
         {
-            &quot;active&quot;: true,
-            &quot;coefficient&quot;: 1.0,
-            &quot;color&quot;: &quot;00FF00&quot;,
-            &quot;emissionWave&quot;: null,
-            &quot;family&quot;: &quot;linear&quot;,
-            &quot;inverted&quot;: false,
-            &quot;label&quot;: &quot;gamma-tubulin (centrosomes)&quot;,
-            &quot;reverseIntensity&quot;: false,
-            &quot;window&quot;: {
-                &quot;end&quot;: 342.0,
-                &quot;max&quot;: 65535.0,
-                &quot;min&quot;: 0.0,
-                &quot;start&quot;: 0.0
+            "active": true,
+            "coefficient": 1.0,
+            "color": "00FF00",
+            "emissionWave": null,
+            "family": "linear",
+            "inverted": false,
+            "label": "gamma-tubulin (centrosomes)",
+            "reverseIntensity": false,
+            "window": {
+                "end": 342.0,
+                "max": 65535.0,
+                "min": 0.0,
+                "start": 0.0
             }
         },
         {
-            &quot;active&quot;: true,
-            &quot;coefficient&quot;: 1.0,
-            &quot;color&quot;: &quot;0000FF&quot;,
-            &quot;emissionWave&quot;: null,
-            &quot;family&quot;: &quot;linear&quot;,
-            &quot;inverted&quot;: false,
-            &quot;label&quot;: &quot;phospho-histone H3 serine 10 (mitotic cells)&quot;,
-            &quot;reverseIntensity&quot;: false,
-            &quot;window&quot;: {
-                &quot;end&quot;: 117.0,
-                &quot;max&quot;: 65535.0,
-                &quot;min&quot;: 0.0,
-                &quot;start&quot;: 1.0
+            "active": true,
+            "coefficient": 1.0,
+            "color": "0000FF",
+            "emissionWave": null,
+            "family": "linear",
+            "inverted": false,
+            "label": "phospho-histone H3 serine 10 (mitotic cells)",
+            "reverseIntensity": false,
+            "window": {
+                "end": 117.0,
+                "max": 65535.0,
+                "min": 0.0,
+                "start": 1.0
             }
         },
         {
-            &quot;active&quot;: false,
-            &quot;coefficient&quot;: 1.0,
-            &quot;color&quot;: &quot;FF0000&quot;,
-            &quot;emissionWave&quot;: null,
-            &quot;family&quot;: &quot;linear&quot;,
-            &quot;inverted&quot;: false,
-            &quot;label&quot;: &quot;Hoechst (DNA)&quot;,
-            &quot;reverseIntensity&quot;: false,
-            &quot;window&quot;: {
-                &quot;end&quot;: 381.0,
-                &quot;max&quot;: 65535.0,
-                &quot;min&quot;: 0.0,
-                &quot;start&quot;: 0.0
+            "active": false,
+            "coefficient": 1.0,
+            "color": "FF0000",
+            "emissionWave": null,
+            "family": "linear",
+            "inverted": false,
+            "label": "Hoechst (DNA)",
+            "reverseIntensity": false,
+            "window": {
+                "end": 381.0,
+                "max": 65535.0,
+                "min": 0.0,
+                "start": 0.0
             }
         }
     ],
-    &quot;id&quot;: 9762957,
-    &quot;init_zoom&quot;: 0,
-    &quot;interpolate&quot;: true,
-    &quot;meta&quot;: {
-        &quot;datasetDescription&quot;: &quot;&quot;,
-        &quot;datasetId&quot;: null,
-        &quot;datasetName&quot;: &quot;Multiple&quot;,
-        &quot;imageAuthor&quot;: &quot;Public data&quot;,
-        &quot;imageDescription&quot;: &quot;&quot;,
-        &quot;imageId&quot;: 9762957,
-        &quot;imageName&quot;: &quot;1988 [Well A-1; Field #1]&quot;,
-        &quot;imageTimestamp&quot;: 1404512029.0,
-        &quot;pixelsType&quot;: &quot;uint16&quot;,
-        &quot;projectDescription&quot;: &quot;&quot;,
-        &quot;projectId&quot;: null,
-        &quot;projectName&quot;: &quot;Multiple&quot;,
-        &quot;wellId&quot;: 1475376,
-        &quot;wellSampleId&quot;: &quot;&quot;
+    "id": 9762957,
+    "init_zoom": 0,
+    "interpolate": true,
+    "meta": {
+        "datasetDescription": "",
+        "datasetId": null,
+        "datasetName": "Multiple",
+        "imageAuthor": "Public data",
+        "imageDescription": "",
+        "imageId": 9762957,
+        "imageName": "1988 [Well A-1; Field #1]",
+        "imageTimestamp": 1404512029.0,
+        "pixelsType": "uint16",
+        "projectDescription": "",
+        "projectId": null,
+        "projectName": "Multiple",
+        "wellId": 1475376,
+        "wellSampleId": ""
     },
-    &quot;perms&quot;: {
-        &quot;canAnnotate&quot;: false,
-        &quot;canDelete&quot;: false,
-        &quot;canEdit&quot;: false,
-        &quot;canLink&quot;: false
+    "perms": {
+        "canAnnotate": false,
+        "canDelete": false,
+        "canEdit": false,
+        "canLink": false
     },
-    &quot;pixel_range&quot;: [
+    "pixel_range": [
         0,
         65535
     ],
-    &quot;pixel_size&quot;: {
-        &quot;x&quot;: 0.6459,
-        &quot;y&quot;: 0.6459,
-        &quot;z&quot;: null
+    "pixel_size": {
+        "x": 0.6459,
+        "y": 0.6459,
+        "z": null
     },
-    &quot;rdefs&quot;: {
-        &quot;defaultT&quot;: 0,
-        &quot;defaultZ&quot;: 0,
-        &quot;invertAxis&quot;: false,
-        &quot;model&quot;: &quot;color&quot;,
-        &quot;projection&quot;: &quot;normal&quot;
+    "rdefs": {
+        "defaultT": 0,
+        "defaultZ": 0,
+        "invertAxis": false,
+        "model": "color",
+        "projection": "normal"
     },
-    &quot;size&quot;: {
-        &quot;c&quot;: 4,
-        &quot;height&quot;: 493,
-        &quot;t&quot;: 1,
-        &quot;width&quot;: 659,
-        &quot;z&quot;: 1
+    "size": {
+        "c": 4,
+        "height": 493,
+        "t": 1,
+        "width": 659,
+        "z": 1
     },
-    &quot;split_channel&quot;: {
-        &quot;c&quot;: {
-            &quot;border&quot;: 2,
-            &quot;gridx&quot;: 3,
-            &quot;gridy&quot;: 2,
-            &quot;height&quot;: 992,
-            &quot;width&quot;: 1985
+    "split_channel": {
+        "c": {
+            "border": 2,
+            "gridx": 3,
+            "gridy": 2,
+            "height": 992,
+            "width": 1985
         },
-        &quot;g&quot;: {
-            &quot;border&quot;: 2,
-            &quot;gridx&quot;: 2,
-            &quot;gridy&quot;: 2,
-            &quot;height&quot;: 992,
-            &quot;width&quot;: 1324
+        "g": {
+            "border": 2,
+            "gridx": 2,
+            "gridy": 2,
+            "height": 992,
+            "width": 1324
         }
     },
-    &quot;tiles&quot;: false
+    "tiles": false
 }
 </pre></div>
 </div>

@@ -1572,10 +1572,10 @@ title="Print to PDF"
 <span class="n">stats</span> <span class="o">=</span> <span class="n">regionprops</span><span class="p">(</span><span class="n">label_image</span><span class="p">)</span>
 
 <span class="n">avg_minor_axis_length</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">s</span><span class="o">.</span><span class="n">minor_axis_length</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">stats</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average minor axis length&quot;</span><span class="p">,</span> <span class="n">avg_minor_axis_length</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Average minor axis length"</span><span class="p">,</span> <span class="n">avg_minor_axis_length</span><span class="p">)</span>
 
 <span class="n">avg_major_axis_length</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">s</span><span class="o">.</span><span class="n">major_axis_length</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">stats</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average major axis length&quot;</span><span class="p">,</span> <span class="n">avg_major_axis_length</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Average major axis length"</span><span class="p">,</span> <span class="n">avg_major_axis_length</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1676,8 +1676,8 @@ Average major axis length 16.966309163176998
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_distance</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">minimum_distance_of_touching_neighbors</span><span class="p">(</span><span class="n">distance_matrix</span><span class="p">,</span> <span class="n">touch_matrix</span><span class="p">)</span>
 <span class="n">max_distance</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">maximum_distance_of_touching_neighbors</span><span class="p">(</span><span class="n">distance_matrix</span><span class="p">,</span> <span class="n">touch_matrix</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;minimum distance of touching neihbors&quot;</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_of_all_pixels</span><span class="p">(</span><span class="n">min_distance</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;maximum distance of touching neihbors&quot;</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_of_all_pixels</span><span class="p">(</span><span class="n">max_distance</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"minimum distance of touching neihbors"</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_of_all_pixels</span><span class="p">(</span><span class="n">min_distance</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"maximum distance of touching neihbors"</span><span class="p">,</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_of_all_pixels</span><span class="p">(</span><span class="n">max_distance</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1695,7 +1695,7 @@ maximum distance of touching neihbors 16.39732325354288
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">draw_distance_mesh_between_touching_labels</span><span class="p">(</span><span class="n">voronoi_diagram</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

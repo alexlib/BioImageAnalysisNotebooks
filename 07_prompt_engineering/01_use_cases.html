@@ -1543,15 +1543,15 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@register_line_cell_magic</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">prompt</span><span class="p">(</span><span class="n">line</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">cell</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;A prompt helper function that sends a message to openAI</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">prompt</span><span class="p">(</span><span class="n">line</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">cell</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-3.5-turbo"</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""A prompt helper function that sends a message to openAI</span>
 <span class="sd">    and prints out the text response.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">message</span> <span class="o">=</span> <span class="n">line</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">cell</span>
+<span class="sd">    """</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">line</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span> <span class="o">+</span> <span class="n">cell</span>
     <span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">()</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
         <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
-        <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">message</span><span class="p">}]</span>
+        <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">message</span><span class="p">}]</span>
     <span class="p">)</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span>
     <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
@@ -1567,7 +1567,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">prompt</span>
 Translate the following joke to German:
 
-What is every parent&#39;s favorite Christmas song? Silent Night!
+What is every parent's favorite Christmas song? Silent Night!
 </pre></div>
 </div>
 </div>
@@ -1608,7 +1608,7 @@ Cloud storage size: 250 GB</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">prompt</span>
-What&#39;s Robert Haase&#39;s (Uni Leipzig) research field ?
+What's Robert Haase's (Uni Leipzig) research field ?
 </pre></div>
 </div>
 </div>
@@ -1619,7 +1619,7 @@ What&#39;s Robert Haase&#39;s (Uni Leipzig) research field ?
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">prompt</span>
-What&#39;s Robert Haase&#39;s (TU Dresden) research field ?
+What's Robert Haase's (TU Dresden) research field ?
 </pre></div>
 </div>
 </div>

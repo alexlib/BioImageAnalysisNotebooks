@@ -1495,13 +1495,13 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">bia_bob</span><span class="w"> </span><span class="kn">import</span> <span class="n">bob</span>
-<span class="n">bob</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="s1">&#39;gpt-4-1106-preview&#39;</span><span class="p">)</span>
+<span class="n">bob</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="s1">'gpt-4-1106-preview'</span><span class="p">)</span>
 <span class="n">bob</span><span class="o">.</span><span class="n">__version__</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0.10.2&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'0.10.2'
 </pre></div>
 </div>
 </div>
@@ -1523,7 +1523,7 @@ title="Print to PDF"
 <span class="kn">import</span><span class="w"> </span><span class="nn">stackview</span>
 
 <span class="c1"># Load the image</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 
 <span class="c1"># Show the image</span>
 <span class="n">stackview</span><span class="o">.</span><span class="n">insight</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
@@ -1554,7 +1554,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bob</span>
 Load the ../../data/blobs.tif grayscale image from disc.
 Segment the nuclei-like objects in it using 
-Otsu&#39;s method and connected component labeling.
+Otsu's method and connected component labeling.
 Measure area of the segmented labels.
 Print the area on top of the labels.
 </pre></div>
@@ -1574,9 +1574,9 @@ Print the area on top of the labels.
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Load the image</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 
-<span class="c1"># Apply Otsu&#39;s threshold</span>
+<span class="c1"># Apply Otsu's threshold</span>
 <span class="n">thresh</span> <span class="o">=</span> <span class="n">threshold_otsu</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 <span class="n">binary</span> <span class="o">=</span> <span class="n">image</span> <span class="o">&gt;</span> <span class="n">thresh</span>
 
@@ -1598,13 +1598,13 @@ Print the area on top of the labels.
         <span class="c1"># draw rectangle around segmented objects</span>
         <span class="n">minr</span><span class="p">,</span> <span class="n">minc</span><span class="p">,</span> <span class="n">maxr</span><span class="p">,</span> <span class="n">maxc</span> <span class="o">=</span> <span class="n">region</span><span class="o">.</span><span class="n">bbox</span>
         <span class="n">rect</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="n">minc</span><span class="p">,</span> <span class="n">minr</span><span class="p">),</span> <span class="n">maxc</span> <span class="o">-</span> <span class="n">minc</span><span class="p">,</span> <span class="n">maxr</span> <span class="o">-</span> <span class="n">minr</span><span class="p">,</span>
-                             <span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+                             <span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">rect</span><span class="p">)</span>
         
         <span class="c1"># print area on top of the nuclei-like objects</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">region</span><span class="o">.</span><span class="n">centroid</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">region</span><span class="o">.</span><span class="n">centroid</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">region</span><span class="o">.</span><span class="n">area</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> 
-                <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
-                <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">region</span><span class="o">.</span><span class="n">centroid</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">region</span><span class="o">.</span><span class="n">centroid</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">region</span><span class="o">.</span><span class="n">area</span><span class="si">}</span><span class="s1">'</span><span class="p">,</span> 
+                <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">'center'</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">'center'</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>

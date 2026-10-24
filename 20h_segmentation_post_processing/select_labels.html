@@ -1536,7 +1536,7 @@ title="Print to PDF"
 <span class="kn">import</span><span class="w"> </span><span class="nn">pyclesperanto_prototype</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cle</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s1">&#39;RTX&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s1">'RTX'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1548,9 +1548,9 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">threshold_otsu</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
-<span class="n">annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/label_annotation.tif&#39;</span><span class="p">)</span>
+<span class="n">annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/label_annotation.tif'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1574,9 +1574,9 @@ title="Print to PDF"
 <p>For training the classifier, you need to specify features. In the following we use mean and standard deviation intensity within the labeled objects and the object size and shape.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="s1">&#39;area,mean_max_distance_to_centroid_ratio,standard_deviation_intensity&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="s1">'area,mean_max_distance_to_centroid_ratio,standard_deviation_intensity'</span>
 
-<span class="n">cl_filename</span> <span class="o">=</span> <span class="s2">&quot;object_selector.cl&quot;</span>
+<span class="n">cl_filename</span> <span class="o">=</span> <span class="s2">"object_selector.cl"</span>
 
 <span class="c1"># Create an object classifier</span>
 <span class="n">apoc</span><span class="o">.</span><span class="n">erase_classifier</span><span class="p">(</span><span class="n">cl_filename</span><span class="p">)</span> <span class="c1"># delete it if it was existing before</span>
@@ -1640,9 +1640,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;area&#39;: 0.29573084473661354,
- &#39;mean_max_distance_to_centroid_ratio&#39;: 0.4264564597125618,
- &#39;standard_deviation_intensity&#39;: 0.27781269555082466}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'area': 0.29573084473661354,
+ 'mean_max_distance_to_centroid_ratio': 0.4264564597125618,
+ 'standard_deviation_intensity': 0.27781269555082466}
 </pre></div>
 </div>
 </div>

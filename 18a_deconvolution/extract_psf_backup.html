@@ -1527,7 +1527,7 @@ title="Print to PDF"
 <p>The example image data used here was acquired by Bert Nitzsche and Robert Haase (both MPI-CBG at that time) at the Light Microscopy Facility of MPI-CBG. Just for completeness, the voxel size is 0.022x0.022x0.125 µm^3.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bead_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/Bead_Image1_crop.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bead_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/Bead_Image1_crop.tif'</span><span class="p">)</span>
 <span class="n">bead_image</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1607,7 +1607,7 @@ title="Print to PDF"
 <span class="n">psf</span> <span class="o">=</span> <span class="n">rl</span><span class="o">.</span><span class="n">doRLDeconvolutionFromNpArrays</span><span class="p">(</span><span class="n">bead_image</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span> 
                                        <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">object_image</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span> 
                                        <span class="n">niter</span><span class="o">=</span><span class="n">iterations</span><span class="p">,</span> 
-                                       <span class="n">method</span><span class="o">=</span><span class="s1">&#39;gpu&#39;</span><span class="p">,</span> 
+                                       <span class="n">method</span><span class="o">=</span><span class="s1">'gpu'</span><span class="p">,</span> 
                                        <span class="n">resAsUint8</span><span class="o">=</span><span class="kc">False</span> <span class="p">)</span>
 </pre></div>
 </div>
@@ -1681,7 +1681,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imsave</span><span class="p">(</span><span class="s1">&#39;../../data/psf.tif&#39;</span><span class="p">,</span> <span class="n">normalized_psf</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imsave</span><span class="p">(</span><span class="s1">'../../data/psf.tif'</span><span class="p">,</span> <span class="n">normalized_psf</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

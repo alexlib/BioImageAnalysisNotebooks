@@ -1521,7 +1521,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 <span class="n">image</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1550,7 +1550,7 @@ title="Print to PDF"
 <p>When processing microscopy image data, it is quite important to respect the voxel size of image data. In particular when volumes should be computed in cubic microns, it is key to know how large a voxel is in X, Y and Z.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;../../data/EM_C_6_c0.tif&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">"../../data/EM_C_6_c0.tif"</span>
 
 <span class="n">image_3d</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="n">image_3d</span><span class="o">.</span><span class="n">shape</span>
@@ -1567,7 +1567,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_voxel_size_from_imagej_tiff</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Opens the metadata of a tiff file and returns the voxels size as (z,y,x)&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">""" Opens the metadata of a tiff file and returns the voxels size as (z,y,x)"""</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">PIL.ExifTags</span><span class="w"> </span><span class="kn">import</span> <span class="n">TAGS</span>
 
@@ -1579,11 +1579,11 @@ title="Print to PDF"
                 <span class="n">meta_dict</span><span class="p">[</span><span class="n">TAGS</span><span class="p">[</span><span class="n">key</span><span class="p">]]</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">tag</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
                 
     <span class="c1"># read out voxel size from meta data</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span><span class="p">[</span><span class="mi">8</span><span class="p">:]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">meta_dict</span><span class="p">[</span><span class="s1">&#39;ImageDescription&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;spacing&#39;</span><span class="p">)]</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span> <span class="p">(</span><span class="n">meta_dict</span><span class="p">[</span><span class="s2">&quot;XResolution&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">meta_dict</span><span class="p">[</span><span class="s2">&quot;XResolution&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span> <span class="p">(</span><span class="n">meta_dict</span><span class="p">[</span><span class="s2">&quot;YResolution&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">meta_dict</span><span class="p">[</span><span class="s2">&quot;YResolution&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span><span class="p">[</span><span class="mi">8</span><span class="p">:]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">meta_dict</span><span class="p">[</span><span class="s1">'ImageDescription'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span> <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'spacing'</span><span class="p">)]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span> <span class="p">(</span><span class="n">meta_dict</span><span class="p">[</span><span class="s2">"XResolution"</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">meta_dict</span><span class="p">[</span><span class="s2">"XResolution"</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span> <span class="p">(</span><span class="n">meta_dict</span><span class="p">[</span><span class="s2">"YResolution"</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">meta_dict</span><span class="p">[</span><span class="s2">"YResolution"</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
 
-    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.4f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">y</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.4f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="s2">"</span><span class="si">%.4f</span><span class="s2">"</span> <span class="o">%</span> <span class="n">y</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="s2">"</span><span class="si">%.4f</span><span class="s2">"</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -1559,7 +1559,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load file</span>
-<span class="n">raw_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/plate1_1_013 [Well 5, Field 1 (Spot 5)].png&#39;</span><span class="p">)[::</span><span class="mi">2</span><span class="p">,::</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">raw_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/plate1_1_013 [Well 5, Field 1 (Spot 5)].png'</span><span class="p">)[::</span><span class="mi">2</span><span class="p">,::</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># visualize</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">raw_image</span><span class="p">)</span>
@@ -1621,7 +1621,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">statistics_of_labelled_neighbors</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
-<span class="n">number_of_neighbors</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">[</span><span class="s2">&quot;proximal_neighbor_count_d160&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">number_of_neighbors</span> <span class="o">=</span> <span class="n">statistics</span><span class="p">[</span><span class="s2">"proximal_neighbor_count_d160"</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">number_of_neighbors</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1631,7 +1631,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\structure\code\pyclesperanto_prototype\pyclesperanto_prototype\_tier9\_statistics_of_labelled_neighbors.py:69: RuntimeWarning: invalid value encountered in divide
-  all_stats[&quot;max_min_distance_ratio_of_touching_neighbors&quot;] = all_stats[&quot;maximum_distance_of_touching_neighbors&quot;] / all_stats[&quot;minimum_distance_of_touching_neighbors&quot;]
+  all_stats["max_min_distance_ratio_of_touching_neighbors"] = all_stats["maximum_distance_of_touching_neighbors"] / all_stats["minimum_distance_of_touching_neighbors"]
 </pre></div>
 </div>
 </div>

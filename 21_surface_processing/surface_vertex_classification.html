@@ -1884,7 +1884,7 @@ To use the future default and silence this warning we advise to pass `rcond=None
 <p>From that table, we can extract a single column as list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sp_curvature</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Quality.SPHERE_FITTED_CURVATURE_HECTA_VOXEL&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sp_curvature</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Quality.SPHERE_FITTED_CURVATURE_HECTA_VOXEL'</span><span class="p">])</span>
 <span class="n">sp_curvature</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -1943,7 +1943,7 @@ To use the future default and silence this warning we advise to pass `rcond=None
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quantified_surface</span><span class="o">.</span><span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quantified_surface</span><span class="o">.</span><span class="n">cmap</span> <span class="o">=</span> <span class="s1">'jet'</span>
 <span class="n">quantified_surface</span>
 </pre></div>
 </div>
@@ -1985,14 +1985,14 @@ To use the future default and silence this warning we advise to pass `rcond=None
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">surface_layer</span> <span class="o">=</span> <span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;hsv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">surface_layer</span> <span class="o">=</span> <span class="n">viewer</span><span class="o">.</span><span class="n">add_surface</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'hsv'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">surface_layer</span><span class="o">.</span><span class="n">properties</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;list&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">surface_layer</span><span class="o">.</span><span class="n">properties</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">'list'</span><span class="p">)</span>
 <span class="n">surface_layer</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">df</span>
 </pre></div>
 </div>
@@ -2052,7 +2052,7 @@ To use the future default and silence this warning we advise to pass `rcond=None
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Selected surface layer: surface
-Selected measurements: [&#39;Quality.AREA&#39;, &#39;Quality.ASPECT_RATIO&#39;, &#39;Quality.GAUSS_CURVATURE&#39;, &#39;Quality.MEAN_CURVATURE&#39;, &#39;Quality.SPHERE_FITTED_CURVATURE_HECTA_VOXEL&#39;, &#39;Quality.SPHERE_FITTED_CURVATURE_KILO_VOXEL&#39;]
+Selected measurements: ['Quality.AREA', 'Quality.ASPECT_RATIO', 'Quality.GAUSS_CURVATURE', 'Quality.MEAN_CURVATURE', 'Quality.SPHERE_FITTED_CURVATURE_HECTA_VOXEL', 'Quality.SPHERE_FITTED_CURVATURE_KILO_VOXEL']
 selected properties       Quality.AREA  Quality.ASPECT_RATIO  Quality.GAUSS_CURVATURE  \
 0        29.997389              1.600400                 0.030287   
 1        46.087046              1.602183                 0.011136   
@@ -2118,7 +2118,7 @@ RFC predictions finished. [2. 2. 3. ... 3. 2. 3.]
 <p>The classifier is an <a class="reference external" href="https://github.com/haesleinhuepf/apoc">apoc</a> TableRowClassifier, which can be applied to the table/DataFrame above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_row_classifier</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">TableRowClassifier</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="s1">&#39;table_row_classifier.cl&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_row_classifier</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">TableRowClassifier</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="s1">'table_row_classifier.cl'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2144,7 +2144,7 @@ RFC predictions finished. [2. 2. 3. ... 3. 2. 3.]
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;classification&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'classification'</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
 <span class="n">df</span>
 </pre></div>
 </div>

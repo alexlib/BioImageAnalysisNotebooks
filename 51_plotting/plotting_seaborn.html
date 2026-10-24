@@ -1532,7 +1532,7 @@ title="Print to PDF"
 <p>We start by loading a table of measurements into a dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/BBBC007_analysis.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../../data/BBBC007_analysis.csv"</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
 </div>
@@ -1672,12 +1672,12 @@ title="Print to PDF"
 <p>From this table we can make a scatter plot of aspect ratio versus mean intensity.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;aspect_ratio&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"aspect_ratio"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"intensity_mean"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;aspect_ratio&#39;, ylabel=&#39;intensity_mean&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel='aspect_ratio', ylabel='intensity_mean'&gt;
 </pre></div>
 </div>
 <img alt="../_images/1c6c2e79ba521336f9e62358c8c6c9d4076f798ebf70d8ee8072f08e476dc7d7.png" src="../_images/1c6c2e79ba521336f9e62358c8c6c9d4076f798ebf70d8ee8072f08e476dc7d7.png" />
@@ -1687,16 +1687,16 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;aspect_ratio&quot;</span><span class="p">,</span>
-            <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span>
-            <span class="n">size</span> <span class="o">=</span> <span class="s2">&quot;area&quot;</span><span class="p">,</span>
-            <span class="n">hue</span> <span class="o">=</span> <span class="s2">&quot;major_axis_length&quot;</span><span class="p">,</span>
-            <span class="n">palette</span> <span class="o">=</span> <span class="s1">&#39;magma&#39;</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="s2">"aspect_ratio"</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="s2">"intensity_mean"</span><span class="p">,</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="s2">"area"</span><span class="p">,</span>
+            <span class="n">hue</span> <span class="o">=</span> <span class="s2">"major_axis_length"</span><span class="p">,</span>
+            <span class="n">palette</span> <span class="o">=</span> <span class="s1">'magma'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;aspect_ratio&#39;, ylabel=&#39;intensity_mean&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel='aspect_ratio', ylabel='intensity_mean'&gt;
 </pre></div>
 </div>
 <img alt="../_images/17600232c00ff8cb90bc9b89e6cda53796661d3c0ddf042d45614e4fea4dff4b.png" src="../_images/17600232c00ff8cb90bc9b89e6cda53796661d3c0ddf042d45614e4fea4dff4b.png" />
@@ -1711,12 +1711,12 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;aspect_ratio&quot;</span><span class="p">,</span>
-            <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span>
-            <span class="n">size</span> <span class="o">=</span> <span class="s2">&quot;area&quot;</span><span class="p">,</span>
-            <span class="n">hue</span> <span class="o">=</span> <span class="s2">&quot;major_axis_length&quot;</span><span class="p">,</span>
-            <span class="n">col</span> <span class="o">=</span> <span class="s2">&quot;file_name&quot;</span><span class="p">,</span>
-            <span class="n">palette</span> <span class="o">=</span> <span class="s1">&#39;magma&#39;</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="s2">"aspect_ratio"</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="s2">"intensity_mean"</span><span class="p">,</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="s2">"area"</span><span class="p">,</span>
+            <span class="n">hue</span> <span class="o">=</span> <span class="s2">"major_axis_length"</span><span class="p">,</span>
+            <span class="n">col</span> <span class="o">=</span> <span class="s2">"file_name"</span><span class="p">,</span>
+            <span class="n">palette</span> <span class="o">=</span> <span class="s1">'magma'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

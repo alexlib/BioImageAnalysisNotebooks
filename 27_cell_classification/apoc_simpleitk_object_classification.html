@@ -1544,9 +1544,9 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load and label data</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">label</span><span class="p">(</span><span class="n">image</span> <span class="o">&gt;</span> <span class="n">threshold_otsu</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
-<span class="n">annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/label_annotation.tif&#39;</span><span class="p">)</span>
+<span class="n">annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/label_annotation.tif'</span><span class="p">)</span>
 
 <span class="c1"># visualize</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
@@ -1892,23 +1892,23 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;label&#39;, &#39;maximum&#39;, &#39;mean&#39;, &#39;median&#39;, &#39;minimum&#39;, &#39;sigma&#39;, &#39;sum&#39;,
-       &#39;variance&#39;, &#39;bbox_0&#39;, &#39;bbox_1&#39;, &#39;bbox_2&#39;, &#39;bbox_3&#39;, &#39;centroid_0&#39;,
-       &#39;centroid_1&#39;, &#39;elongation&#39;, &#39;feret_diameter&#39;, &#39;flatness&#39;, &#39;roundness&#39;,
-       &#39;equivalent_ellipsoid_diameter_0&#39;, &#39;equivalent_ellipsoid_diameter_1&#39;,
-       &#39;equivalent_spherical_perimeter&#39;, &#39;equivalent_spherical_radius&#39;,
-       &#39;number_of_pixels&#39;, &#39;number_of_pixels_on_border&#39;, &#39;perimeter&#39;,
-       &#39;perimeter_on_border&#39;, &#39;perimeter_on_border_ratio&#39;, &#39;principal_axes0&#39;,
-       &#39;principal_axes1&#39;, &#39;principal_axes2&#39;, &#39;principal_axes3&#39;,
-       &#39;principal_moments0&#39;, &#39;principal_moments1&#39;],
-      dtype=&#39;object&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index(['label', 'maximum', 'mean', 'median', 'minimum', 'sigma', 'sum',
+       'variance', 'bbox_0', 'bbox_1', 'bbox_2', 'bbox_3', 'centroid_0',
+       'centroid_1', 'elongation', 'feret_diameter', 'flatness', 'roundness',
+       'equivalent_ellipsoid_diameter_0', 'equivalent_ellipsoid_diameter_1',
+       'equivalent_spherical_perimeter', 'equivalent_spherical_radius',
+       'number_of_pixels', 'number_of_pixels_on_border', 'perimeter',
+       'perimeter_on_border', 'perimeter_on_border_ratio', 'principal_axes0',
+       'principal_axes1', 'principal_axes2', 'principal_axes3',
+       'principal_moments0', 'principal_moments1'],
+      dtype='object')
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">statistics_table</span><span class="p">[[</span><span class="s1">&#39;number_of_pixels&#39;</span><span class="p">,</span><span class="s1">&#39;elongation&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">statistics_table</span><span class="p">[[</span><span class="s1">'number_of_pixels'</span><span class="p">,</span><span class="s1">'elongation'</span><span class="p">]]</span>
 <span class="n">table</span>
 </pre></div>
 </div>
@@ -2021,7 +2021,7 @@ title="Print to PDF"
 <p>Next, we can train the Random Forest Classifer. It needs tablue training data and a ground truth vector.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">classifier_filename</span> <span class="o">=</span> <span class="s1">&#39;table_row_classifier.cl&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">classifier_filename</span> <span class="o">=</span> <span class="s1">'table_row_classifier.cl'</span>
 
 <span class="n">classifier</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">TableRowClassifier</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="n">classifier_filename</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">num_ensembles</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">classifier</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">annotated_classes</span><span class="p">)</span>
@@ -2142,8 +2142,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="p">[</span><span class="s1">&#39;annotated_class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">annotated_classes</span>
-<span class="n">table</span><span class="p">[</span><span class="s1">&#39;predicted_class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">predicted_classes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="p">[</span><span class="s1">'annotated_class'</span><span class="p">]</span> <span class="o">=</span> <span class="n">annotated_classes</span>
+<span class="n">table</span><span class="p">[</span><span class="s1">'predicted_class'</span><span class="p">]</span> <span class="o">=</span> <span class="n">predicted_classes</span>
 <span class="n">table</span>
 </pre></div>
 </div>
@@ -2154,13 +2154,13 @@ A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  table[&#39;annotated_class&#39;] = annotated_classes
+  table['annotated_class'] = annotated_classes
 /var/folders/p1/6svzckgd1y5906pfgm71fvmr0000gn/T/ipykernel_4463/2818530951.py:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  table[&#39;predicted_class&#39;] = predicted_classes
+  table['predicted_class'] = predicted_classes
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -2288,7 +2288,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">class_image</span> <span class="o">=</span> <span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">predicted_classes_with_background</span><span class="p">)</span>
-<span class="n">imshow</span><span class="p">(</span><span class="n">class_image</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">imshow</span><span class="p">(</span><span class="n">class_image</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -1505,7 +1505,7 @@ title="Print to PDF"
 <p>We will load an image showing fluorescent intensity along lines. This 3D image was taken with a confocal microscope.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/DeconvolutionSampleVerticalGrid1AU-crop.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/DeconvolutionSampleVerticalGrid1AU-crop.tif'</span><span class="p">)</span>
 <span class="n">image</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1529,7 +1529,7 @@ title="Print to PDF"
 <p>The following PSF image was extracted from images taken with the same microscope using the procedure <a class="reference internal" href="extract_psf.html#deconvolution-extract-psf"><span class="std std-ref">explained before</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psf</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/psf.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psf</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/psf.tif'</span><span class="p">)</span>
 
 <span class="n">imshow</span><span class="p">(</span><span class="n">psf</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -1547,7 +1547,7 @@ title="Print to PDF"
 <span class="n">deconvolved</span> <span class="o">=</span> <span class="n">rl</span><span class="o">.</span><span class="n">doRLDeconvolutionFromNpArrays</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> 
                                                <span class="n">psf</span><span class="p">,</span> 
                                                <span class="n">niter</span><span class="o">=</span><span class="n">iterations</span><span class="p">,</span> 
-                                               <span class="n">method</span><span class="o">=</span><span class="s1">&#39;gpu&#39;</span><span class="p">,</span> 
+                                               <span class="n">method</span><span class="o">=</span><span class="s1">'gpu'</span><span class="p">,</span> 
                                                <span class="n">resAsUint8</span><span class="o">=</span><span class="kc">False</span> <span class="p">)</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">deconvolved</span><span class="p">)</span>
 </pre></div>
@@ -1555,7 +1555,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERROR:root:Failed to setup Reikna with OpenCL.
-ERROR:root:No module named &#39;reikna&#39;
+ERROR:root:No module named 'reikna'
 </pre></div>
 </div>
 <img alt="../_images/6196b1264f6a72457f0b4c418c842f03d15c187f3d5a0e3b47dcb093596f0c33.png" src="../_images/6196b1264f6a72457f0b4c418c842f03d15c187f3d5a0e3b47dcb093596f0c33.png" />

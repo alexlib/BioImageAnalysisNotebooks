@@ -1529,7 +1529,7 @@ title="Print to PDF"
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">apoc</span>
 
-<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;blobs.tif&#39;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'blobs.tif'</span><span class="p">)</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1560,7 +1560,7 @@ title="Print to PDF"
     <span class="n">viewer</span><span class="o">.</span><span class="n">add_labels</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
     
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">labels</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;annotations_3class.tif&#39;</span><span class="p">)</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'annotations_3class.tif'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1569,7 +1569,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">manual_annotations</span> <span class="o">=</span> <span class="n">labels</span>
 <span class="k">if</span> <span class="n">do_manual_annotation</span><span class="p">:</span>
-    <span class="n">imsave</span><span class="p">(</span><span class="s1">&#39;annotations_3class.tif&#39;</span><span class="p">,</span> <span class="n">manual_annotations</span><span class="p">)</span>
+    <span class="n">imsave</span><span class="p">(</span><span class="s1">'annotations_3class.tif'</span><span class="p">,</span> <span class="n">manual_annotations</span><span class="p">)</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">skimage.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">imshow</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">manual_annotations</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -1593,10 +1593,10 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define features: original image, a blurred version and an edge image</span>
-<span class="n">features</span> <span class="o">=</span> <span class="s2">&quot;original gaussian_blur=2 sobel_of_gaussian_blur=2&quot;</span>
+<span class="n">features</span> <span class="o">=</span> <span class="s2">"original gaussian_blur=2 sobel_of_gaussian_blur=2"</span>
 
 <span class="c1"># this is where the model will be saved</span>
-<span class="n">cl_filename</span> <span class="o">=</span> <span class="s1">&#39;my_model.cl&#39;</span>
+<span class="n">cl_filename</span> <span class="o">=</span> <span class="s1">'my_model.cl'</span>
 
 <span class="n">output_probability_of_class</span> <span class="o">=</span> <span class="mi">3</span>
 

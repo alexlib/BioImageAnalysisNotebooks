@@ -1532,13 +1532,13 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">prompt_image</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s1">&#39;dall-e-3&#39;</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">prompt_image</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s1">'dall-e-3'</span><span class="p">):</span>
     <span class="n">client</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">OpenAI</span><span class="p">()</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
       <span class="n">prompt</span><span class="o">=</span><span class="n">message</span><span class="p">,</span>
       <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
       <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-      <span class="n">size</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">width</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="n">height</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="n">size</span><span class="o">=</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">width</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="n">height</span><span class="si">}</span><span class="s2">"</span>
     <span class="p">)</span>
     <span class="n">image_url</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">url</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">image_url</span><span class="p">)</span>
@@ -1551,7 +1551,7 @@ title="Print to PDF"
 <p>When generating scientific images, they may, or may not be a proper representation. Presumably, DALL-E was trained on many natural images (showing cars, trees, houses, etc.) and not so many images of cells.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuclei</span> <span class="o">=</span> <span class="n">prompt_image</span><span class="p">(</span><span class="s1">&#39;an image of 100 nuclei in a fluorescence microscopy image&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuclei</span> <span class="o">=</span> <span class="n">prompt_image</span><span class="p">(</span><span class="s1">'an image of 100 nuclei in a fluorescence microscopy image'</span><span class="p">)</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">nuclei</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1566,7 +1566,7 @@ title="Print to PDF"
 <p>Maybe, generating images of histological slices is more promising.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">histology</span> <span class="o">=</span> <span class="n">prompt_image</span><span class="p">(</span><span class="s1">&#39;a histology image of lung cancer cells and some healthy tissue&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">histology</span> <span class="o">=</span> <span class="n">prompt_image</span><span class="p">(</span><span class="s1">'a histology image of lung cancer cells and some healthy tissue'</span><span class="p">)</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">histology</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1581,8 +1581,8 @@ title="Print to PDF"
 <p>In some cases, Dall-E 2 produces more realistic output.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">histology</span> <span class="o">=</span> <span class="n">prompt_image</span><span class="p">(</span><span class="s1">&#39;a histology image of lung cancer cells and some healthy tissue&#39;</span><span class="p">,</span>
-                        <span class="n">model</span><span class="o">=</span><span class="s1">&#39;dall-e-2&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">histology</span> <span class="o">=</span> <span class="n">prompt_image</span><span class="p">(</span><span class="s1">'a histology image of lung cancer cells and some healthy tissue'</span><span class="p">,</span>
+                        <span class="n">model</span><span class="o">=</span><span class="s1">'dall-e-2'</span><span class="p">)</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">histology</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1600,20 +1600,20 @@ title="Print to PDF"
 <p>Evaluating generated images is an active research field. One approach is to present readers real images and generated images asking them to identify which are real. In the following list of four images of cats sitting next to microscopes, one cat is real. Which one? Why?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat_microscope_prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat_microscope_prompt</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">Image of a cat sitting behind a microscope.</span>
 <span class="s2">Both are on a brown floor in front of a white wall.</span>
 <span class="s2">The cat is mostly white and has some black dots.</span>
 <span class="s2">The cat sits straight.</span>
 <span class="s2">The cat is a bit larger than the microsope.</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/real_cat.png&#39;</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/real_cat.png'</span><span class="p">)]</span>
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prompt_image</span><span class="p">(</span><span class="n">cat_microscope_prompt</span><span class="p">))</span>
 </pre></div>

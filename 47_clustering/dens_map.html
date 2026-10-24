@@ -1537,7 +1537,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load data</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/Lund-25MB.tif&quot;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/Lund-25MB.tif"</span><span class="p">)</span>
 
 <span class="c1"># Segment nuclei</span>
 <span class="n">background_subtracted</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">top_hat_box</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">radius_x</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">radius_y</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
@@ -1554,9 +1554,9 @@ title="Print to PDF"
 <span class="c1"># Feature selection</span>
 <span class="n">selected_table</span> <span class="o">=</span> <span class="n">nuclei_statistics</span><span class="p">[</span>
     <span class="p">[</span>
-        <span class="s2">&quot;mean&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;variance&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;elongation&quot;</span><span class="p">,</span>
+        <span class="s2">"mean"</span><span class="p">,</span>
+        <span class="s2">"variance"</span><span class="p">,</span>
+        <span class="s2">"elongation"</span><span class="p">,</span>
     <span class="p">]</span>
 <span class="p">]</span>
 <span class="n">selected_statistics</span> <span class="o">=</span> <span class="n">selected_table</span><span class="o">.</span><span class="n">values</span>

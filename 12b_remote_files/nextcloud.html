@@ -1555,9 +1555,9 @@ title="Print to PDF"
 <p><img alt="" src="../_images/login1.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">server_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;https://speicherwolke.uni-leipzig.de&#39;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Server&#39;</span><span class="p">)</span>
-<span class="n">username_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Username:&#39;</span><span class="p">)</span>
-<span class="n">password_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Password</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Password&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">server_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s1">'https://speicherwolke.uni-leipzig.de'</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">'Server'</span><span class="p">)</span>
+<span class="n">username_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">'Username:'</span><span class="p">)</span>
+<span class="n">password_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Password</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">'Password'</span><span class="p">)</span>
 
 <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">server_widget</span><span class="p">,</span> <span class="n">username_widget</span><span class="p">,</span> <span class="n">password_widget</span><span class="p">])</span>
 </pre></div>
@@ -1569,8 +1569,8 @@ title="Print to PDF"
 <p><strong>Do NOT hit Shift-Enter after entering username and password</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">username_widget</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Enter username and password above&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">username_widget</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">''</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">'Enter username and password above'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1586,7 +1586,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># reset password</span>
-<span class="n">password_widget</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">password_widget</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">""</span>
 </pre></div>
 </div>
 </div>
@@ -1598,8 +1598,8 @@ title="Print to PDF"
 <p>To see if the connection was successful, we can just list the files in a given folder.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># enter a folder on the owncloud drive that exists. &#39;/&#39; is the root folder.</span>
-<span class="n">remote_folder</span> <span class="o">=</span> <span class="s2">&quot;/data/&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># enter a folder on the owncloud drive that exists. '/' is the root folder.</span>
+<span class="n">remote_folder</span> <span class="o">=</span> <span class="s2">"/data/"</span>
 
 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">ncc</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="n">remote_folder</span><span class="p">):</span>
     <span class="nb">print</span> <span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
@@ -1619,9 +1619,9 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># enter the source file here</span>
-<span class="n">remote_source_file</span> <span class="o">=</span> <span class="s1">&#39;/data/blobs.tif&#39;</span>
+<span class="n">remote_source_file</span> <span class="o">=</span> <span class="s1">'/data/blobs.tif'</span>
 <span class="c1"># enter the destination</span>
-<span class="n">local_file</span> <span class="o">=</span> <span class="s1">&#39;blobs.tif&#39;</span>
+<span class="n">local_file</span> <span class="o">=</span> <span class="s1">'blobs.tif'</span>
 
 <span class="n">ncc</span><span class="o">.</span><span class="n">get_file</span><span class="p">(</span><span class="n">remote_path</span><span class="o">=</span><span class="n">remote_source_file</span><span class="p">,</span> 
             <span class="n">local_file</span><span class="o">=</span><span class="n">local_file</span><span class="p">)</span>
@@ -1696,7 +1696,7 @@ title="Print to PDF"
 <p>Before uploading an image to the cloud we need to save it locally.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_file_to_upload</span> <span class="o">=</span> <span class="s2">&quot;blobs_labels.tif&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_file_to_upload</span> <span class="o">=</span> <span class="s2">"blobs_labels.tif"</span>
 
 <span class="n">imsave</span><span class="p">(</span><span class="n">local_file_to_upload</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">check_contrast</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
@@ -1711,7 +1711,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/data/&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'/data/'
 </pre></div>
 </div>
 </div>

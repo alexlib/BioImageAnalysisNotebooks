@@ -1530,7 +1530,7 @@ title="Print to PDF"
 <p>We start again with the blobs example image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1546,9 +1546,9 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">visualize</span><span class="p">(</span><span class="n">feature_stack</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Shows lists of images in rows of three</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">feature_stack</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span>
     
@@ -1675,7 +1675,7 @@ PredefinedFeatureSet.small_quick
 <p>You can furthermore, define specific features corresponding to <a class="reference external" href="https://clij.github.io/clij2-docs/reference__pyclesperanto">clesperanto filters</a>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_stack</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">generate_feature_stack</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">&quot;gaussian_blur=3 mean_box=3 top_hat_box=3&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_stack</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">generate_feature_stack</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">"gaussian_blur=3 mean_box=3 top_hat_box=3"</span><span class="p">)</span>
 
 <span class="n">visualize</span><span class="p">(</span><span class="n">feature_stack</span><span class="p">)</span>
 </pre></div>
@@ -1687,7 +1687,7 @@ PredefinedFeatureSet.small_quick
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_stack</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">generate_feature_stack</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">&quot;maximum_box=3 difference_of_gaussian=5 sobel=0&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_stack</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">generate_feature_stack</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">"maximum_box=3 difference_of_gaussian=5 sobel=0"</span><span class="p">)</span>
 
 <span class="n">visualize</span><span class="p">(</span><span class="n">feature_stack</span><span class="p">)</span>
 </pre></div>
@@ -1700,7 +1700,7 @@ PredefinedFeatureSet.small_quick
 <p>You can also vary radii / sigmas of the fetures:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_stack</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">generate_feature_stack</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">&quot;gaussian_blur=1 gaussian_blur=5 gaussian_blur=10 gaussian_blur=20&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_stack</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">generate_feature_stack</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">"gaussian_blur=1 gaussian_blur=5 gaussian_blur=10 gaussian_blur=20"</span><span class="p">)</span>
 
 <span class="n">visualize</span><span class="p">(</span><span class="n">feature_stack</span><span class="p">)</span>
 </pre></div>
@@ -1713,7 +1713,7 @@ PredefinedFeatureSet.small_quick
 <p>Furthermore, some features can be combined, for example you can compute the sobel of a Gaussian or a Laplacian of a Gaussian</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_stack</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">generate_feature_stack</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">&quot;sobel_of_gaussian_blur=1 sobel_of_gaussian_blur=5 sobel_of_gaussian_blur=10&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_stack</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">generate_feature_stack</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">"sobel_of_gaussian_blur=1 sobel_of_gaussian_blur=5 sobel_of_gaussian_blur=10"</span><span class="p">)</span>
 
 <span class="n">visualize</span><span class="p">(</span><span class="n">feature_stack</span><span class="p">)</span>
 </pre></div>
@@ -1725,7 +1725,7 @@ PredefinedFeatureSet.small_quick
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_stack</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">generate_feature_stack</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">&quot;laplace_box_of_gaussian_blur=1 laplace_box_of_gaussian_blur=5 laplace_box_of_gaussian_blur=10&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_stack</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">generate_feature_stack</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="s2">"laplace_box_of_gaussian_blur=1 laplace_box_of_gaussian_blur=5 laplace_box_of_gaussian_blur=10"</span><span class="p">)</span>
 
 <span class="n">visualize</span><span class="p">(</span><span class="n">feature_stack</span><span class="p">)</span>
 </pre></div>

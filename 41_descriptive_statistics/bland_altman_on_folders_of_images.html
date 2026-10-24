@@ -1546,7 +1546,7 @@ title="Print to PDF"
 <p>In this notebook we will compare statistics derived from segmentation results produced by two algorithms on a folder of images.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">folder</span> <span class="o">=</span> <span class="s1">&#39;../../data/BBBC007_batch/&#39;</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">folder</span> <span class="o">=</span> <span class="s1">'../../data/BBBC007_batch/'</span> 
 </pre></div>
 </div>
 </div>
@@ -1572,7 +1572,7 @@ title="Print to PDF"
 <p>Here we write the two segmentation algorithms as Python functions and test them on an image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">folder</span> <span class="o">+</span> <span class="s2">&quot;17P1_POS0013_D_1UL.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">folder</span> <span class="o">+</span> <span class="s2">"17P1_POS0013_D_1UL.tif"</span><span class="p">)</span>
 <span class="n">stackview</span><span class="o">.</span><span class="n">insight</span><span class="p">(</span><span class="n">test_image</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1681,7 +1681,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_metric</span><span class="p">(</span><span class="n">test_image</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_metric</span><span class="p">(</span><span class="n">test_image</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">,</span> <span class="s2">"area"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1699,8 +1699,8 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compare_measurements_from_algorithms</span><span class="p">(</span><span class="n">algorithm_1</span><span class="p">,</span> <span class="n">algorithm_2</span><span class="p">,</span> <span class="n">folder</span><span class="p">,</span> <span class="n">metric</span><span class="p">):</span>
     <span class="n">measurements</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="n">metric</span> <span class="o">+</span> <span class="s1">&#39;_1&#39;</span><span class="p">:[],</span>
-        <span class="n">metric</span> <span class="o">+</span> <span class="s1">&#39;_2&#39;</span><span class="p">:[]</span>
+        <span class="n">metric</span> <span class="o">+</span> <span class="s1">'_1'</span><span class="p">:[],</span>
+        <span class="n">metric</span> <span class="o">+</span> <span class="s1">'_2'</span><span class="p">:[]</span>
     <span class="p">}</span>
 
     <span class="c1"># Iterate over all files in the folder</span>
@@ -1708,7 +1708,7 @@ title="Print to PDF"
         <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
 
         <span class="c1"># Check if the current item is a file</span>
-        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span> <span class="ow">and</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.tif&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span> <span class="ow">and</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".tif"</span><span class="p">):</span>
             <span class="c1"># load image</span>
             <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
 
@@ -1717,8 +1717,8 @@ title="Print to PDF"
             <span class="n">labels_2</span> <span class="o">=</span> <span class="n">algorithm_2</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 
             <span class="c1"># determine mean area and store it</span>
-            <span class="n">measurements</span><span class="p">[</span><span class="n">metric</span> <span class="o">+</span> <span class="s1">&#39;_1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mean_metric</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">labels_1</span><span class="p">,</span> <span class="n">metric</span><span class="p">))</span>
-            <span class="n">measurements</span><span class="p">[</span><span class="n">metric</span> <span class="o">+</span> <span class="s1">&#39;_2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mean_metric</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">labels_2</span><span class="p">,</span> <span class="n">metric</span><span class="p">))</span>
+            <span class="n">measurements</span><span class="p">[</span><span class="n">metric</span> <span class="o">+</span> <span class="s1">'_1'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mean_metric</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">labels_1</span><span class="p">,</span> <span class="n">metric</span><span class="p">))</span>
+            <span class="n">measurements</span><span class="p">[</span><span class="n">metric</span> <span class="o">+</span> <span class="s1">'_2'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mean_metric</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">labels_2</span><span class="p">,</span> <span class="n">metric</span><span class="p">))</span>
     
     <span class="k">return</span> <span class="n">measurements</span>
 </pre></div>
@@ -1730,7 +1730,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">measurements</span> <span class="o">=</span> <span class="n">compare_measurements_from_algorithms</span><span class="p">(</span><span class="n">segmentation_1</span><span class="p">,</span> 
                                                     <span class="n">segmentation_2</span><span class="p">,</span> 
                                                     <span class="n">folder</span><span class="p">,</span> 
-                                                    <span class="s1">&#39;area&#39;</span><span class="p">)</span>
+                                                    <span class="s1">'area'</span><span class="p">)</span>
 
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">measurements</span><span class="p">)</span>
 </pre></div>
@@ -1800,7 +1800,7 @@ title="Print to PDF"
 <p>We now use the Bland-Altman plot to visualize differences.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bland_altman_plot</span><span class="p">(</span><span class="n">measurements</span><span class="p">[</span><span class="s1">&#39;area_1&#39;</span><span class="p">],</span> <span class="n">measurements</span><span class="p">[</span><span class="s1">&#39;area_2&#39;</span><span class="p">],</span> <span class="s1">&#39;area&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bland_altman_plot</span><span class="p">(</span><span class="n">measurements</span><span class="p">[</span><span class="s1">'area_1'</span><span class="p">],</span> <span class="n">measurements</span><span class="p">[</span><span class="s1">'area_2'</span><span class="p">],</span> <span class="s1">'area'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1823,8 +1823,8 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">measurements_cpu_vs_gpu</span> <span class="o">=</span> <span class="n">compare_measurements_from_algorithms</span><span class="p">(</span><span class="n">segmentation_1</span><span class="p">,</span> 
                                                     <span class="n">segmentation_1_gpu</span><span class="p">,</span> 
                                                     <span class="n">folder</span><span class="p">,</span> 
-                                                    <span class="s1">&#39;area&#39;</span><span class="p">)</span>
-<span class="n">bland_altman_plot</span><span class="p">(</span><span class="n">measurements_cpu_vs_gpu</span><span class="p">[</span><span class="s1">&#39;area_1&#39;</span><span class="p">],</span> <span class="n">measurements_cpu_vs_gpu</span><span class="p">[</span><span class="s1">&#39;area_2&#39;</span><span class="p">],</span> <span class="s1">&#39;area&#39;</span><span class="p">)</span>
+                                                    <span class="s1">'area'</span><span class="p">)</span>
+<span class="n">bland_altman_plot</span><span class="p">(</span><span class="n">measurements_cpu_vs_gpu</span><span class="p">[</span><span class="s1">'area_1'</span><span class="p">],</span> <span class="n">measurements_cpu_vs_gpu</span><span class="p">[</span><span class="s1">'area_2'</span><span class="p">],</span> <span class="s1">'area'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

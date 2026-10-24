@@ -1539,10 +1539,10 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">measurements</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;labels&quot;</span><span class="p">:</span>      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-    <span class="s2">&quot;area&quot;</span><span class="p">:</span>       <span class="p">[</span><span class="mi">45</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">68</span><span class="p">],</span>
-    <span class="s2">&quot;minor_axis&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-    <span class="s2">&quot;major_axis&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="s2">"labels"</span><span class="p">:</span>      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="s2">"area"</span><span class="p">:</span>       <span class="p">[</span><span class="mi">45</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">68</span><span class="p">],</span>
+    <span class="s2">"minor_axis"</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="s2">"major_axis"</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1610,7 +1610,7 @@ title="Print to PDF"
 <p>Using these DataFrames, data modification is straighforward. For example one can append a new column and compute its values from existing columns:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;aspect_ratio&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;major_axis&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;minor_axis&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">"aspect_ratio"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"major_axis"</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s2">"minor_axis"</span><span class="p">]</span>
 <span class="n">df</span>
 </pre></div>
 </div>
@@ -1676,7 +1676,7 @@ title="Print to PDF"
 <p>We can also save this table for continuing to work with it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../../data/short_table.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"../../data/short_table.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1687,7 +1687,7 @@ title="Print to PDF"
 <p>Tables can also be read from CSV files.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../data/blobs_statistics.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'../../data/blobs_statistics.csv'</span><span class="p">)</span>
 <span class="n">df_csv</span>
 </pre></div>
 </div>
@@ -1916,10 +1916,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Unnamed: 0&#39;, &#39;area&#39;, &#39;mean_intensity&#39;, &#39;minor_axis_length&#39;,
-       &#39;major_axis_length&#39;, &#39;eccentricity&#39;, &#39;extent&#39;, &#39;feret_diameter_max&#39;,
-       &#39;equivalent_diameter_area&#39;, &#39;bbox-0&#39;, &#39;bbox-1&#39;, &#39;bbox-2&#39;, &#39;bbox-3&#39;],
-      dtype=&#39;object&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index(['Unnamed: 0', 'area', 'mean_intensity', 'minor_axis_length',
+       'major_axis_length', 'eccentricity', 'extent', 'feret_diameter_max',
+       'equivalent_diameter_area', 'bbox-0', 'bbox-1', 'bbox-2', 'bbox-3'],
+      dtype='object')
 </pre></div>
 </div>
 </div>
@@ -1927,7 +1927,7 @@ title="Print to PDF"
 <p>We can then copy&amp;paste the column names we’re interested in and create a new data frame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_analysis</span> <span class="o">=</span> <span class="n">df_csv</span><span class="p">[[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_intensity&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_analysis</span> <span class="o">=</span> <span class="n">df_csv</span><span class="p">[[</span><span class="s1">'area'</span><span class="p">,</span> <span class="s1">'mean_intensity'</span><span class="p">]]</span>
 <span class="n">df_analysis</span>
 </pre></div>
 </div>
@@ -2019,7 +2019,7 @@ title="Print to PDF"
 <p>You can then access columns and add new columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_analysis</span><span class="p">[</span><span class="s1">&#39;total_intensity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_analysis</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df_analysis</span><span class="p">[</span><span class="s1">&#39;mean_intensity&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_analysis</span><span class="p">[</span><span class="s1">'total_intensity'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_analysis</span><span class="p">[</span><span class="s1">'area'</span><span class="p">]</span> <span class="o">*</span> <span class="n">df_analysis</span><span class="p">[</span><span class="s1">'mean_intensity'</span><span class="p">]</span>
 <span class="n">df_analysis</span>
 </pre></div>
 </div>
@@ -2030,7 +2030,7 @@ A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  df_analysis[&#39;total_intensity&#39;] = df_analysis[&#39;area&#39;] * df_analysis[&#39;mean_intensity&#39;]
+  df_analysis['total_intensity'] = df_analysis['area'] * df_analysis['mean_intensity']
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -2139,7 +2139,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_shape</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../data/blobs_statistics.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_shape</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'../../data/blobs_statistics.csv'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

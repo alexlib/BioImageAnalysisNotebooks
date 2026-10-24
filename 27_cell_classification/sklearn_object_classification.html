@@ -1550,9 +1550,9 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load and label data</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">label</span><span class="p">(</span><span class="n">image</span> <span class="o">&gt;</span> <span class="n">threshold_otsu</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
-<span class="n">annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/label_annotation.tif&#39;</span><span class="p">)</span>
+<span class="n">annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/label_annotation.tif'</span><span class="p">)</span>
 
 <span class="c1"># visualize</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
@@ -1609,12 +1609,12 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="n">label_ids</span><span class="p">,</span>
-    <span class="s1">&#39;area&#39;</span><span class="p">:</span> <span class="n">areas</span><span class="p">,</span>
-    <span class="s1">&#39;minor_axis&#39;</span><span class="p">:</span> <span class="n">minor_axis_lengths</span><span class="p">,</span>
-    <span class="s1">&#39;major_axis&#39;</span><span class="p">:</span> <span class="n">major_axis_lengths</span><span class="p">,</span>
-    <span class="s1">&#39;aspect_ratio&#39;</span><span class="p">:</span> <span class="n">aspect_ratios</span><span class="p">,</span>
-    <span class="s1">&#39;annotated_class&#39;</span><span class="p">:</span> <span class="n">annotated_class</span>
+    <span class="s1">'label'</span><span class="p">:</span> <span class="n">label_ids</span><span class="p">,</span>
+    <span class="s1">'area'</span><span class="p">:</span> <span class="n">areas</span><span class="p">,</span>
+    <span class="s1">'minor_axis'</span><span class="p">:</span> <span class="n">minor_axis_lengths</span><span class="p">,</span>
+    <span class="s1">'major_axis'</span><span class="p">:</span> <span class="n">major_axis_lengths</span><span class="p">,</span>
+    <span class="s1">'aspect_ratio'</span><span class="p">:</span> <span class="n">aspect_ratios</span><span class="p">,</span>
+    <span class="s1">'annotated_class'</span><span class="p">:</span> <span class="n">annotated_class</span>
 <span class="p">}</span>
 
 <span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -1704,7 +1704,7 @@ title="Print to PDF"
 <p>From that table, we extract now a table that only contains the annotated rows/labels.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annotated_table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="p">[</span><span class="s1">&#39;annotated_class&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annotated_table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="p">[</span><span class="s1">'annotated_class'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
 <span class="n">annotated_table</span>
 </pre></div>
 </div>
@@ -1854,8 +1854,8 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">select_data</span><span class="p">(</span><span class="n">table</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span>
-        <span class="n">table</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">],</span>
-        <span class="n">table</span><span class="p">[</span><span class="s1">&#39;aspect_ratio&#39;</span><span class="p">]</span>
+        <span class="n">table</span><span class="p">[</span><span class="s1">'area'</span><span class="p">],</span>
+        <span class="n">table</span><span class="p">[</span><span class="s1">'aspect_ratio'</span><span class="p">]</span>
     <span class="p">])</span>
 
 <span class="n">training_data</span> <span class="o">=</span> <span class="n">select_data</span><span class="p">(</span><span class="n">annotated_table</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
@@ -1883,7 +1883,7 @@ title="Print to PDF"
 <p>We also extract the annotation from that table and call it <code class="docutils literal notranslate"><span class="pre">ground_truth</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ground_truth</span> <span class="o">=</span> <span class="n">annotated_table</span><span class="p">[</span><span class="s1">&#39;annotated_class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ground_truth</span> <span class="o">=</span> <span class="n">annotated_table</span><span class="p">[</span><span class="s1">'annotated_class'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">ground_truth</span>
 </pre></div>
 </div>
@@ -1917,7 +1917,7 @@ title="Print to PDF"
 <p>To apply a classifier to the whole dataset, or any other dataset, we need to bring the data into the same format as used for training. We can reuse the function <code class="docutils literal notranslate"><span class="pre">select_data</span></code> for that. Furthermore, we need to drop rows from our table where not-a-number (<a class="reference external" href="https://en.wikipedia.org/wiki/NaN">NaN</a>) values appeared (<span class="xref myst">read more</span>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_without_nans</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s2">&quot;any&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_without_nans</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s2">"any"</span><span class="p">)</span>
 
 <span class="n">all_data</span> <span class="o">=</span> <span class="n">select_data</span><span class="p">(</span><span class="n">table_without_nans</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 <span class="n">all_data</span>
@@ -1995,8 +1995,8 @@ title="Print to PDF"
 <p>We can then hand over <code class="docutils literal notranslate"><span class="pre">all_data</span></code> to the classifier for prediction.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_without_nans</span><span class="p">[</span><span class="s1">&#39;predicted_class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">table_without_nans</span><span class="p">[</span><span class="s1">&#39;predicted_class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_without_nans</span><span class="p">[</span><span class="s1">'predicted_class'</span><span class="p">]</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table_without_nans</span><span class="p">[</span><span class="s1">'predicted_class'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -2009,7 +2009,7 @@ A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  table_without_nans[&#39;predicted_class&#39;] = classifier.predict(all_data)
+  table_without_nans['predicted_class'] = classifier.predict(all_data)
 </pre></div>
 </div>
 </div>
@@ -2018,9 +2018,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># merge prediction with original table</span>
-<span class="n">table_with_prediction</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table_without_nans</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;label&#39;</span><span class="p">)</span>
+<span class="n">table_with_prediction</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table_without_nans</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'outer'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
 <span class="c1"># replace not predicted (NaN) with 0</span>
-<span class="n">table_with_prediction</span><span class="p">[</span><span class="s1">&#39;predicted_class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">table_with_prediction</span><span class="p">[</span><span class="s1">&#39;predicted_class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">table_with_prediction</span><span class="p">[</span><span class="s1">'predicted_class'</span><span class="p">]</span> <span class="o">=</span> <span class="n">table_with_prediction</span><span class="p">[</span><span class="s1">'predicted_class'</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="n">table_with_prediction</span>
 </pre></div>
@@ -2234,7 +2234,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we add a 0 for the class of background at the beginning</span>
-<span class="n">predicted_class</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">table_with_prediction</span><span class="p">[</span><span class="s1">&#39;predicted_class&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> 
+<span class="n">predicted_class</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">table_with_prediction</span><span class="p">[</span><span class="s1">'predicted_class'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> 
 </pre></div>
 </div>
 </div>
@@ -2242,7 +2242,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">class_image</span> <span class="o">=</span> <span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">predicted_class</span><span class="p">)</span>
-<span class="n">imshow</span><span class="p">(</span><span class="n">class_image</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">imshow</span><span class="p">(</span><span class="n">class_image</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

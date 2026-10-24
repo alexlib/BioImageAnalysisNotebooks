@@ -1540,14 +1540,14 @@ title="Print to PDF"
 <p>As example we are using here an image shared by <a class="reference external" href="https://datadryad.org/stash/dataset/doi:10.5061/dryad.02v6wwq2c">Célia Baroux et al(University of Zurich)</a> that was resaved for demonstration purposes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aics_image</span> <span class="o">=</span> <span class="n">AICSImage</span><span class="p">(</span><span class="s2">&quot;../../data/EM_C_6_c0.ome.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aics_image</span> <span class="o">=</span> <span class="n">AICSImage</span><span class="p">(</span><span class="s2">"../../data/EM_C_6_c0.ome.tif"</span><span class="p">)</span>
 <span class="n">aics_image</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attempted file (C:/structure/code/BioImageAnalysisNotebooks/data/EM_C_6_c0.ome.tif) load with reader: aicsimageio.readers.bfio_reader.OmeTiledTiffReader failed with error: No module named &#39;bfio&#39;
-C:\Users\haase\mambaforge\envs\bio39\lib\site-packages\ome_types\_convenience.py:105: FutureWarning: The default XML parser will be changing from &#39;xmlschema&#39; to &#39;lxml&#39; in version 0.4.0.  To silence this warning, please provide the `parser` argument, specifying either &#39;lxml&#39; (to opt into the new behavior), or&#39;xmlschema&#39; (to retain the old behavior).
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attempted file (C:/structure/code/BioImageAnalysisNotebooks/data/EM_C_6_c0.ome.tif) load with reader: aicsimageio.readers.bfio_reader.OmeTiledTiffReader failed with error: No module named 'bfio'
+C:\Users\haase\mambaforge\envs\bio39\lib\site-packages\ome_types\_convenience.py:105: FutureWarning: The default XML parser will be changing from 'xmlschema' to 'lxml' in version 0.4.0.  To silence this warning, please provide the `parser` argument, specifying either 'lxml' (to opt into the new behavior), or'xmlschema' (to retain the old behavior).
   d = to_dict(os.fspath(xml), parser=parser, validate=validate)
 </pre></div>
 </div>
@@ -1588,7 +1588,7 @@ C:\Users\haase\mambaforge\envs\bio39\lib\site-packages\ome_types\_convenience.py
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;TCZYX&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'TCZYX'
 </pre></div>
 </div>
 </div>
@@ -1596,7 +1596,7 @@ C:\Users\haase\mambaforge\envs\bio39\lib\site-packages\ome_types\_convenience.py
 <p>From this object, we can also retrieve pixels as numpy arrays.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np_image</span> <span class="o">=</span> <span class="n">aics_image</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">(</span><span class="s2">&quot;ZYX&quot;</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np_image</span> <span class="o">=</span> <span class="n">aics_image</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">(</span><span class="s2">"ZYX"</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">np_image</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1664,7 +1664,7 @@ C:\Users\haase\mambaforge\envs\bio39\lib\site-packages\ome_types\_convenience.py
 <p>In case additionally the  <a class="reference external" href="https://pypi.org/project/aicspylibczi/"><code class="docutils literal notranslate"><span class="pre">aicspylibczi</span></code> library</a> is installed one can also open CZI files using AICSImageIO.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">czi_image</span> <span class="o">=</span> <span class="n">AICSImage</span><span class="p">(</span><span class="s2">&quot;../../data/PupalWing.czi&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">czi_image</span> <span class="o">=</span> <span class="n">AICSImage</span><span class="p">(</span><span class="s2">"../../data/PupalWing.czi"</span><span class="p">)</span>
 <span class="n">czi_image</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1677,7 +1677,7 @@ C:\Users\haase\mambaforge\envs\bio39\lib\site-packages\ome_types\_convenience.py
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np_czi_image</span> <span class="o">=</span> <span class="n">czi_image</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">(</span><span class="s2">&quot;ZYX&quot;</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np_czi_image</span> <span class="o">=</span> <span class="n">czi_image</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">(</span><span class="s2">"ZYX"</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">np_czi_image</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1706,7 +1706,7 @@ C:\Users\haase\mambaforge\envs\bio39\lib\site-packages\ome_types\_convenience.py
 <p>In case additionally the <a class="reference external" href="https://pypi.org/project/readlif/"><code class="docutils literal notranslate"><span class="pre">readlif</span></code> library</a> is installed, one can also read LIF images using AICSImageIO.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lif_image</span> <span class="o">=</span> <span class="n">AICSImage</span><span class="p">(</span><span class="s2">&quot;../../data/y293-Gal4_vmat-GFP-f01.lif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lif_image</span> <span class="o">=</span> <span class="n">AICSImage</span><span class="p">(</span><span class="s2">"../../data/y293-Gal4_vmat-GFP-f01.lif"</span><span class="p">)</span>
 <span class="n">lif_image</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1719,7 +1719,7 @@ C:\Users\haase\mambaforge\envs\bio39\lib\site-packages\ome_types\_convenience.py
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np_lif_image</span> <span class="o">=</span> <span class="n">lif_image</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">(</span><span class="s2">&quot;ZYX&quot;</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np_lif_image</span> <span class="o">=</span> <span class="n">lif_image</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">(</span><span class="s2">"ZYX"</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">np_lif_image</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>

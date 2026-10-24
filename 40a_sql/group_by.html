@@ -1541,9 +1541,9 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/experiments.csv&quot;</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/images.csv&quot;</span><span class="p">)</span>
-<span class="n">overview</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/overview.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../../data/experiments.csv"</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../../data/images.csv"</span><span class="p">)</span>
+<span class="n">overview</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../../data/overview.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1561,10 +1561,10 @@ title="Print to PDF"
 <p>Just a reminder, our overview table contains the key information retrieved from our database about the number of cells counted in images which were acquired during experiments.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT *</span>
 <span class="s2">FROM overview</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -1696,11 +1696,11 @@ title="Print to PDF"
 <p>The <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> statement allows to group long tables to shorter ones and it allows us to do descriptive statistics. We can for example determine the smallest and largest number of cells observed during an experiment using the so called aggregators <code class="docutils literal notranslate"><span class="pre">MIN()</span></code> and <code class="docutils literal notranslate"><span class="pre">MAX()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT experiment_name, MIN(number_of_cells), MAX(number_of_cells)</span>
 <span class="s2">FROM overview</span>
 <span class="s2">GROUP BY experiment_name</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -1756,11 +1756,11 @@ title="Print to PDF"
 <p>Groups can also be formed using multiple columns. Here we also see that it is common to specify columns used for grouping twice, once after <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> and once after <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> because we want to see the grouping in the table.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT experiment_name, Filename, MIN(number_of_cells), MAX(number_of_cells)</span>
 <span class="s2">FROM overview</span>
 <span class="s2">GROUP BY experiment_name, Filename</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -1869,11 +1869,11 @@ title="Print to PDF"
 <p>A similar strategy uses the <code class="docutils literal notranslate"><span class="pre">COUNT</span></code> aggregator to count the number of images acquired per experiment.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT experiment_name, COUNT(Filename)</span>
 <span class="s2">FROM overview</span>
 <span class="s2">GROUP BY experiment_name</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -1928,11 +1928,11 @@ title="Print to PDF"
 <p>Assume the measurements in our database result from a timelapse analysis. A quick look into a single image file and corresponding measurements shows that the number of cells is decreasing over time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT *</span>
 <span class="s2">FROM overview</span>
-<span class="s2">WHERE Filename = &quot;image0.tif&quot;</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">WHERE Filename = "image0.tif"</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -2052,12 +2052,12 @@ title="Print to PDF"
 <p>We can now determine the average number of cells at the beginning of the experiment by averaging the first 3 timepoints.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT Filename, AVG(number_of_cells) as number_of_cells</span>
 <span class="s2">FROM overview</span>
 <span class="s2">WHERE time_after_exposure_in_s &lt; 3</span>
 <span class="s2">GROUP BY Filename</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -2143,12 +2143,12 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT Filename, AVG(number_of_cells) as number_of_cells</span>
 <span class="s2">FROM overview</span>
 <span class="s2">WHERE time_after_exposure_in_s &lt; 3</span>
 <span class="s2">GROUP BY Filename</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 <span class="n">cell_count_early</span> <span class="o">=</span> <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2156,12 +2156,12 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">""" </span>
 <span class="s2">SELECT Filename, AVG(number_of_cells) as number_of_cells</span>
 <span class="s2">FROM overview</span>
 <span class="s2">WHERE time_after_exposure_in_s &gt; 6</span>
 <span class="s2">GROUP BY Filename;</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 <span class="n">cell_count_late</span> <span class="o">=</span> <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2169,11 +2169,11 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT cell_count_early.Filename, (cell_count_late.number_of_cells / cell_count_early.number_of_cells) AS cell_count_ratio</span>
 <span class="s2">FROM cell_count_early</span>
 <span class="s2">INNER JOIN cell_count_late ON cell_count_early.Filename = cell_count_late.Filename</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">cell_count_ratio_overview</span> <span class="o">=</span> <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 <span class="n">cell_count_ratio_overview</span>
@@ -2261,12 +2261,12 @@ title="Print to PDF"
 <p>We know now the fraction of cells which survived in which file. We need to use the <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> statement again to know in which experiment these survival ratios were observed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT experiment.Comment, cell_count_ratio_overview.cell_count_ratio</span>
 <span class="s2">FROM cell_count_ratio_overview</span>
 <span class="s2">INNER JOIN image ON cell_count_ratio_overview.Filename = image.Filename</span>
 <span class="s2">INNER JOIN experiment ON image.experiment_ID = experiment.ID</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>
@@ -2353,7 +2353,7 @@ title="Print to PDF"
 <p>Also these can be summarized using the <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> statement. Good scientists do not just report the average of these measurements but also the number of images which have been analyzed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT </span>
 <span class="s2">    experiment.Comment as experiment_name, </span>
 <span class="s2">    AVG(cell_count_ratio_overview.cell_count_ratio) as mean_cell_count_ratio, </span>
@@ -2362,7 +2362,7 @@ title="Print to PDF"
 <span class="s2">INNER JOIN image ON cell_count_ratio_overview.Filename = image.Filename</span>
 <span class="s2">INNER JOIN experiment ON image.experiment_ID = experiment.ID</span>
 <span class="s2">GROUP BY experiment.Comment</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 
 <span class="n">query_database</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </pre></div>

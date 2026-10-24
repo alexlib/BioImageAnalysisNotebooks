@@ -1533,8 +1533,8 @@ title="Print to PDF"
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">pyclesperanto_prototype</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cle</span> 
 
-<span class="c1"># comment this out if you don&#39;t have an RTX-type GPU </span>
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s1">&#39;RTX&#39;</span><span class="p">)</span>
+<span class="c1"># comment this out if you don't have an RTX-type GPU </span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s1">'RTX'</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">get_device</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1550,11 +1550,11 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anisotropy</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1"># note that this image is anisotropic, which means the distance measurements are inaccurate. For non-demo data I should fix this. </span>
 
 <span class="c1"># load cell positions </span>
-<span class="n">annotations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;../../data/cells3d_annotations.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> 
+<span class="n">annotations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">'../../data/cells3d_annotations.csv'</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span> 
 <span class="n">annotations</span> <span class="o">=</span> <span class="n">annotations</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:]</span>
 
 <span class="c1"># load image and show a central point </span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/cells3d_nuclei.tif&#39;</span><span class="p">)</span> 
+<span class="n">img</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/cells3d_nuclei.tif'</span><span class="p">)</span> 
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="mi">30</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -1606,7 +1606,7 @@ title="Print to PDF"
 
 <span class="c1"># viewer.add_image(img)</span>
 <span class="c1"># viewer.add_points(annotations, size = 3)</span>
-<span class="c1"># viewer.add_points(detected_spots.T, size = 3, face_color=&#39;blue&#39;)</span>
+<span class="c1"># viewer.add_points(detected_spots.T, size = 3, face_color='blue')</span>
 </pre></div>
 </div>
 </div>
@@ -1642,11 +1642,11 @@ title="Print to PDF"
 
 <span class="n">minimum_dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">minimum_x_projection</span><span class="p">(</span><span class="n">distance_matrix_of_actual_cells</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:]))</span>
 <span class="c1"># [1:, 1:] is necessary to get rid of background</span>
-<span class="n">values</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">minimum_dist</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;minimum distance between </span><span class="se">\n</span><span class="s1">neighbouring cells&#39;</span><span class="p">)</span>
+<span class="n">values</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">minimum_dist</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'minimum distance between </span><span class="se">\n</span><span class="s1">neighbouring cells'</span><span class="p">)</span>
 
 <span class="n">minimum_dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">minimum_x_projection</span><span class="p">(</span><span class="n">distance_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:]))</span>
-<span class="n">values</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">minimum_dist</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;minimum distance between </span><span class="se">\n</span><span class="s1">ground truth and detected spots&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Minimum distance (voxels)&#39;</span><span class="p">)</span>
+<span class="n">values</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">minimum_dist</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'minimum distance between </span><span class="se">\n</span><span class="s1">ground truth and detected spots'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Minimum distance (voxels)'</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
@@ -1703,13 +1703,13 @@ title="Print to PDF"
     <span class="n">tp</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">am</span> <span class="o">=</span> <span class="n">metrics</span> 
     <span class="k">return</span><span class="p">((</span><span class="n">tp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">fn</span> <span class="o">+</span> <span class="n">fp</span><span class="p">)))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The F1 score is: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'The F1 score is: '</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">compute_f1</span><span class="p">(</span><span class="n">compute_true_positives</span><span class="p">(</span><span class="n">distance_matrix</span><span class="p">,</span> <span class="mi">30</span><span class="p">)),</span> <span class="mi">2</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The number of ambiguious matches is: &#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">'The number of ambiguious matches is: '</span><span class="p">)</span> 
 <span class="nb">print</span><span class="p">(</span><span class="n">compute_true_positives</span><span class="p">(</span><span class="n">distance_matrix</span><span class="p">,</span> <span class="mi">30</span><span class="p">)[</span><span class="mi">3</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;We are detecting </span><span class="si">{</span><span class="n">distance_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> cells when there are </span><span class="si">{</span><span class="n">distance_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'We are detecting </span><span class="si">{</span><span class="n">distance_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1"> cells when there are </span><span class="si">{</span><span class="n">distance_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1740,18 +1740,18 @@ We are detecting 16 cells when there are 31
     <span class="n">p</span> <span class="o">=</span> <span class="n">compute_true_positives</span><span class="p">(</span><span class="n">distance_matrix</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
     <span class="n">array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array</span><span class="p">)[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;true positives&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array</span><span class="p">)[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'true positives'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;false positives&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'false positives'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array</span><span class="p">)[:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;false negatives&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array</span><span class="p">)[:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'false negatives'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array</span><span class="p">)[:,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;ambiguious match&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array</span><span class="p">)[:,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'ambiguious match'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">xmin</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">),</span> <span class="n">xmax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">),</span> <span class="n">y</span> <span class="o">=</span> <span class="n">tp</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">xmin</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">),</span> <span class="n">xmax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">threshold_range</span><span class="p">),</span> <span class="n">y</span> <span class="o">=</span> <span class="n">tp</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'k'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Chosen threshold&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of cells&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Chosen threshold'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Number of cells'</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>

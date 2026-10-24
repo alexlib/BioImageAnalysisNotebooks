@@ -1531,7 +1531,7 @@ title="Print to PDF"
 <span class="n">cle</span><span class="o">.</span><span class="n">set_wait_for_kernel_finish</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># selet a GPU with the following in the name. This will fallback to any other GPU if none with this name is found</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s1">&#39;RTX&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s1">'RTX'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1563,7 +1563,7 @@ title="Print to PDF"
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
     <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">result_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">transpose_xz</span><span class="p">(</span><span class="n">test_image_gpu</span><span class="p">,</span> <span class="n">result_image</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pyclesperanto transpose duration: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"pyclesperanto transpose duration: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result_image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1597,7 +1597,7 @@ pyclesperanto transpose duration: 0.04099869728088379
     <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">result_image</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">cu_test_image</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">cp</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">get_current_stream</span><span class="p">()</span><span class="o">.</span><span class="n">synchronize</span><span class="p">()</span> <span class="c1"># we need to wait here to measure time properly</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cupy transpose duration: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"cupy transpose duration: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result_image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1629,7 +1629,7 @@ cupy transpose duration: 0.0
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
     <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">result_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">test_image</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;numpy transpose duration: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"numpy transpose duration: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result_image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>

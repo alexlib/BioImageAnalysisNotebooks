@@ -1527,9 +1527,9 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s2">&quot;label&quot;</span><span class="p">:</span>       <span class="p">[</span><span class="mi">1</span><span class="p">,</span>   <span class="mi">2</span><span class="p">,</span>   <span class="mi">3</span><span class="p">],</span>
-    <span class="s2">&quot;circularity&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">],</span>
-    <span class="s2">&quot;elongation&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">2.3</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">],</span>
+    <span class="s2">"label"</span><span class="p">:</span>       <span class="p">[</span><span class="mi">1</span><span class="p">,</span>   <span class="mi">2</span><span class="p">,</span>   <span class="mi">3</span><span class="p">],</span>
+    <span class="s2">"circularity"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">],</span>
+    <span class="s2">"elongation"</span><span class="p">:</span>  <span class="p">[</span><span class="mf">2.3</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">],</span>
     <span class="p">})</span>
 <span class="n">table1</span>
 </pre></div>
@@ -1585,9 +1585,9 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s2">&quot;label&quot;</span><span class="p">:</span>    <span class="p">[</span><span class="mi">3</span><span class="p">,</span>   <span class="mi">2</span><span class="p">,</span>   <span class="mi">1</span><span class="p">,</span>   <span class="mi">4</span><span class="p">],</span>
-    <span class="s2">&quot;area&quot;</span><span class="p">:</span>     <span class="p">[</span><span class="mi">22</span><span class="p">,</span>  <span class="mi">32</span><span class="p">,</span>  <span class="mi">25</span><span class="p">,</span>  <span class="mi">18</span><span class="p">],</span>
-    <span class="s2">&quot;skewness&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">],</span>
+    <span class="s2">"label"</span><span class="p">:</span>    <span class="p">[</span><span class="mi">3</span><span class="p">,</span>   <span class="mi">2</span><span class="p">,</span>   <span class="mi">1</span><span class="p">,</span>   <span class="mi">4</span><span class="p">],</span>
+    <span class="s2">"area"</span><span class="p">:</span>     <span class="p">[</span><span class="mi">22</span><span class="p">,</span>  <span class="mi">32</span><span class="p">,</span>  <span class="mi">25</span><span class="p">,</span>  <span class="mi">18</span><span class="p">],</span>
+    <span class="s2">"skewness"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">],</span>
     <span class="p">})</span>
 <span class="n">table2</span>
 </pre></div>
@@ -1728,7 +1728,7 @@ title="Print to PDF"
 <p>A better way for combining tables is the <code class="docutils literal notranslate"><span class="pre">merge</span></code> command. It allows to explicitly specify <code class="docutils literal notranslate"><span class="pre">on</span></code> which column the tables should be combined. Data scientists speak of the ‘index’ or ‘identifier’ of rows in the tables.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correctly_combined_tables1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table1</span><span class="p">,</span> <span class="n">table2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;label&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correctly_combined_tables1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table1</span><span class="p">,</span> <span class="n">table2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'inner'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
 <span class="n">correctly_combined_tables1</span>
 </pre></div>
 </div>
@@ -1791,7 +1791,7 @@ title="Print to PDF"
 <p>You may note that in the above example, label 4 is missing. We can also get it in the out table by performing an <code class="docutils literal notranslate"><span class="pre">outer</span> <span class="pre">join</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correctly_combined_tables2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table1</span><span class="p">,</span> <span class="n">table2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;label&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correctly_combined_tables2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table1</span><span class="p">,</span> <span class="n">table2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'outer'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
 <span class="n">correctly_combined_tables2</span>
 </pre></div>
 </div>
@@ -1861,7 +1861,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correctly_combined_tables2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table1</span><span class="p">,</span> <span class="n">table2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;label&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correctly_combined_tables2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table1</span><span class="p">,</span> <span class="n">table2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'right'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
 <span class="n">correctly_combined_tables2</span>
 </pre></div>
 </div>
@@ -1933,10 +1933,10 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s2">&quot;label&quot;</span><span class="p">:</span>    <span class="p">[</span><span class="mi">3</span><span class="p">,</span>   <span class="mi">2</span><span class="p">,</span>   <span class="mi">1</span><span class="p">,</span>   <span class="mi">4</span><span class="p">],</span>
-    <span class="s2">&quot;area&quot;</span><span class="p">:</span>     <span class="p">[</span><span class="mi">22</span><span class="p">,</span>  <span class="mi">32</span><span class="p">,</span>  <span class="mi">25</span><span class="p">,</span>  <span class="mi">18</span><span class="p">],</span>
-    <span class="s2">&quot;skewness&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">],</span>
-    <span class="s2">&quot;elongation&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">2.3</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">]</span>
+    <span class="s2">"label"</span><span class="p">:</span>    <span class="p">[</span><span class="mi">3</span><span class="p">,</span>   <span class="mi">2</span><span class="p">,</span>   <span class="mi">1</span><span class="p">,</span>   <span class="mi">4</span><span class="p">],</span>
+    <span class="s2">"area"</span><span class="p">:</span>     <span class="p">[</span><span class="mi">22</span><span class="p">,</span>  <span class="mi">32</span><span class="p">,</span>  <span class="mi">25</span><span class="p">,</span>  <span class="mi">18</span><span class="p">],</span>
+    <span class="s2">"skewness"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">],</span>
+    <span class="s2">"elongation"</span><span class="p">:</span>  <span class="p">[</span><span class="mf">2.3</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">]</span>
     <span class="p">})</span>
 <span class="n">table3</span>
 </pre></div>
@@ -2003,7 +2003,7 @@ title="Print to PDF"
 <p>Applying merge still preserves both measurements in different columns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correctly_combined_tables3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table1</span><span class="p">,</span> <span class="n">table3</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;label&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correctly_combined_tables3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table1</span><span class="p">,</span> <span class="n">table3</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'outer'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'label'</span><span class="p">)</span>
 <span class="n">correctly_combined_tables3</span> 
 </pre></div>
 </div>
@@ -2079,7 +2079,7 @@ title="Print to PDF"
 <p>We can change ‘x’ and ‘y’ by passing other suffixes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correctly_combined_tables3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table1</span><span class="p">,</span> <span class="n">table3</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;label&#39;</span><span class="p">,</span> <span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;_method1&#39;</span><span class="p">,</span> <span class="s1">&#39;_method2&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correctly_combined_tables3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">table1</span><span class="p">,</span> <span class="n">table3</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'outer'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'label'</span><span class="p">,</span> <span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">'_method1'</span><span class="p">,</span> <span class="s1">'_method2'</span><span class="p">))</span>
 <span class="n">correctly_combined_tables3</span>
 </pre></div>
 </div>
@@ -2160,7 +2160,7 @@ To calculate statistics for whole folders or to perform machine learning, we usu
 <p>Let’s open two tables generated from applying the same worflow to different files.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../data/BBBC007_20P1_POS0007_D_1UL.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'../../data/BBBC007_20P1_POS0007_D_1UL.csv'</span><span class="p">)</span>
 <span class="n">df1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -2238,7 +2238,7 @@ To calculate statistics for whole folders or to perform machine learning, we usu
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../data/BBBC007_20P1_POS0010_D_1UL.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'../../data/BBBC007_20P1_POS0010_D_1UL.csv'</span><span class="p">)</span>
 <span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -2446,9 +2446,9 @@ To calculate statistics for whole folders or to perform machine learning, we usu
 <p>When we give a single value to a new column, it is assigned to all rows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;BBBC007_20P1_POS0007_D_1UL&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span><span class="p">[</span><span class="s1">'file_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'BBBC007_20P1_POS0007_D_1UL'</span>
 
-<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;file_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;BBBC007_20P1_POS0010_D_1UL&#39;</span>
+<span class="n">df2</span><span class="p">[</span><span class="s1">'file_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'BBBC007_20P1_POS0010_D_1UL'</span>
 </pre></div>
 </div>
 </div>

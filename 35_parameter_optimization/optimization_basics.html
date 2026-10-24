@@ -1534,7 +1534,7 @@ title="Print to PDF"
 <p>We start with loading an example image and a manual annotation. Not all objects must be annotated (sparse annotation).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">blobs</span><span class="p">)</span>
 </pre></div>
@@ -1546,7 +1546,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs_annotated.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs_annotated.tif'</span><span class="p">)</span>
 
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">annotation</span><span class="p">)</span>
 </pre></div>
@@ -1585,12 +1585,12 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">binary_and</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">binary_and</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">fitness</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">reference</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Determine how correct a given test segmentation is. </span>
 <span class="sd">    As metric we use the Jaccard index.</span>
 <span class="sd">    Assumtion: test is a binary image(0=False and 1=True) and </span>
 <span class="sd">    reference is an image with 0=unknown, 1=False, 2=True.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">negative_reference</span> <span class="o">=</span> <span class="n">reference</span> <span class="o">==</span> <span class="mi">1</span>
     <span class="n">positive_reference</span> <span class="o">=</span> <span class="n">reference</span> <span class="o">==</span> <span class="mi">2</span>
     <span class="n">negative_test</span> <span class="o">=</span> <span class="n">test</span> <span class="o">==</span> <span class="mi">0</span>
@@ -1666,7 +1666,7 @@ title="Print to PDF"
 <span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>
 
 <span class="c1"># run the optimization</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nelder-mead&#39;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;xatol&#39;</span><span class="p">:</span> <span class="mf">1e-3</span><span class="p">})</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'nelder-mead'</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s1">'xatol'</span><span class="p">:</span> <span class="mf">1e-3</span><span class="p">})</span>
 <span class="n">result</span>
 </pre></div>
 </div>
@@ -1676,7 +1676,7 @@ title="Print to PDF"
        [  3.89498663, 121.9409585 ],
        [  3.89500463, 121.9403702 ]]), array([-0.85761315, -0.85761315, -0.85761315]))
            fun: -0.8576131463050842
-       message: &#39;Optimization terminated successfully.&#39;
+       message: 'Optimization terminated successfully.'
           nfev: 65
            nit: 22
         status: 0
@@ -1689,7 +1689,7 @@ title="Print to PDF"
 <p>From this <code class="docutils literal notranslate"><span class="pre">result</span></code> object we can read out the parameter set that has been determined as optimal and produce a binary image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">'x'</span><span class="p">]</span>
 <span class="n">best_binary</span> <span class="o">=</span> <span class="n">workflow</span><span class="p">(</span><span class="n">blobs</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">best_binary</span><span class="p">)</span>
 </pre></div>
@@ -1708,7 +1708,7 @@ title="Print to PDF"
 <span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">])</span>
 
 <span class="c1"># run the optimization</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nelder-mead&#39;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;xatol&#39;</span><span class="p">:</span> <span class="mf">1e-3</span><span class="p">})</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'nelder-mead'</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s1">'xatol'</span><span class="p">:</span> <span class="mf">1e-3</span><span class="p">})</span>
 <span class="n">result</span>
 </pre></div>
 </div>
@@ -1718,7 +1718,7 @@ title="Print to PDF"
        [6.10351563e-08, 6.00000000e+01],
        [0.00000000e+00, 6.00007324e+01]]), array([-0.63195992, -0.63195992, -0.63195992]))
            fun: -0.6319599151611328
-       message: &#39;Optimization terminated successfully.&#39;
+       message: 'Optimization terminated successfully.'
           nfev: 51
            nit: 13
         status: 0

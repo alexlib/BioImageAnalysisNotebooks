@@ -1524,7 +1524,7 @@ title="Print to PDF"
 <p>Our starting point is an oversegmented (synthetic) label image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oversegmented</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/syntetic_cells.tif&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oversegmented</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/syntetic_cells.tif'</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
 <span class="n">oversegmented</span>
 </pre></div>
 </div>
@@ -1551,7 +1551,7 @@ title="Print to PDF"
 <p>Furthermore, we need an annotation where pixel-intensity = 1 implies that labels should be merged.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annotation</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/syntetic_cells_merge_annotation.tif&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annotation</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/syntetic_cells_merge_annotation.tif'</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
 
 <span class="c1"># binarize the image</span>
 <span class="n">annotation</span> <span class="o">=</span> <span class="n">annotation</span> <span class="o">==</span> <span class="mi">1</span>

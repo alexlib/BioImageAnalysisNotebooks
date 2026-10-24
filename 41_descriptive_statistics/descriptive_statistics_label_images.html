@@ -1535,7 +1535,7 @@ title="Print to PDF"
 <p>We load the image using <a class="reference external" href="https://scikit-image.org/docs/dev/api/skimage.io.html#skimage.io.imread">scikit-image’s <code class="docutils literal notranslate"><span class="pre">imread</span></code></a> and segment it using <span class="xref myst">Gauss-Otsu-Labeling</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">gauss_otsu_labeling</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 <span class="n">imshow</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
 </pre></div>
@@ -1556,7 +1556,7 @@ title="Print to PDF"
 For post-processing the measurements, we turn them into a <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">pandas Dataframe</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">regionprops_table</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;minor_axis_length&#39;</span><span class="p">,</span> <span class="s1">&#39;major_axis_length&#39;</span><span class="p">,</span> <span class="s1">&#39;eccentricity&#39;</span><span class="p">,</span> <span class="s1">&#39;feret_diameter_max&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">regionprops_table</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">[</span><span class="s1">'area'</span><span class="p">,</span> <span class="s1">'minor_axis_length'</span><span class="p">,</span> <span class="s1">'major_axis_length'</span><span class="p">,</span> <span class="s1">'eccentricity'</span><span class="p">,</span> <span class="s1">'feret_diameter_max'</span><span class="p">])</span>
 <span class="n">data_frame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
 <span class="n">data_frame</span>
 </pre></div>
@@ -1685,7 +1685,7 @@ For post-processing the measurements, we turn them into a <a class="reference ex
 <p>You can <em>take</em> a column out of the DataFrame. In this context it works like a Python dictionary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_frame</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_frame</span><span class="p">[</span><span class="s2">"area"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1709,7 +1709,7 @@ Name: area, Length: 61, dtype: int32
 <p>Even though this data structure appears more than just a vector, numpy is capable of applying basic descriptive statistics functions:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data_frame</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data_frame</span><span class="p">[</span><span class="s2">"area"</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1721,7 +1721,7 @@ Name: area, Length: 61, dtype: int32
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">data_frame</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">data_frame</span><span class="p">[</span><span class="s2">"area"</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1733,7 +1733,7 @@ Name: area, Length: 61, dtype: int32
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data_frame</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data_frame</span><span class="p">[</span><span class="s2">"area"</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1746,7 +1746,7 @@ Name: area, Length: 61, dtype: int32
 <p>Individual cells of the DataFrame can be accessed like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_frame</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_frame</span><span class="p">[</span><span class="s2">"area"</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1759,7 +1759,7 @@ Name: area, Length: 61, dtype: int32
 <p>For loops can also iterate over table columns like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">area_value</span> <span class="ow">in</span> <span class="n">data_frame</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">area_value</span> <span class="ow">in</span> <span class="n">data_frame</span><span class="p">[</span><span class="s2">"area"</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">area_value</span><span class="p">)</span>
 </pre></div>
 </div>

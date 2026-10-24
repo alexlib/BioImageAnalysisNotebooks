@@ -1536,7 +1536,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laod example data</span>
-<span class="n">input_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/Haase_MRT_tfl3d1.tif&#39;</span><span class="p">)</span>
+<span class="n">input_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/Haase_MRT_tfl3d1.tif'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1562,7 +1562,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Alternatively, don&#39;t hand over the output image and retrieve it</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Alternatively, don't hand over the output image and retrieve it</span>
 <span class="n">another_slice</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">create_2d_xy</span><span class="p">(</span><span class="n">input_image</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">copy_slice</span><span class="p">(</span><span class="n">input_image</span><span class="p">,</span> <span class="n">another_slice</span><span class="p">,</span> <span class="n">slice_index</span> <span class="o">=</span> <span class="mi">80</span><span class="p">)</span>
 

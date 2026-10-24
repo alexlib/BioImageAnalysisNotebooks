@@ -1554,7 +1554,7 @@ title="Print to PDF"
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">random</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">&quot;RTX&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="s2">"RTX"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1591,7 +1591,7 @@ title="Print to PDF"
 <p>Let’s take a look at an image with arbitrarily shaped pixels. Let’s call them “cells”. In our example image, there is one cell in the center with higher intensity:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">example_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">example_image</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1623,7 +1623,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_maximum</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">maximum_of_touching_neighbors_map</span><span class="p">(</span><span class="n">example_image</span><span class="p">,</span> <span class="n">tissue</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">local_maximum</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">local_maximum</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1644,7 +1644,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">radius</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
     <span class="n">local_maximum</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">maximum_of_touching_neighbors_map</span><span class="p">(</span><span class="n">example_image</span><span class="p">,</span> <span class="n">tissue</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="n">radius</span><span class="p">)</span>
-    <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">local_maximum</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+    <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">local_maximum</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1663,7 +1663,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;n = &quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"n = "</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
     <span class="n">mesh</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">draw_mesh_between_n_closest_labels</span><span class="p">(</span><span class="n">tissue</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
 
     <span class="c1"># make lines a bit thicker for visualization purposes</span>
@@ -1716,10 +1716,10 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;n = &quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"n = "</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 
     <span class="n">local_maximum</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">maximum_of_n_nearest_neighbors_map</span><span class="p">(</span><span class="n">example_image</span><span class="p">,</span> <span class="n">tissue</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">local_maximum</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+    <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">local_maximum</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1769,7 +1769,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_maximum</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">maximum_of_proximal_neighbors_map</span><span class="p">(</span><span class="n">example_image</span><span class="p">,</span> <span class="n">tissue</span><span class="p">,</span> <span class="n">max_distance</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">local_maximum</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">local_maximum</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1780,7 +1780,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_maximum</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">maximum_of_proximal_neighbors_map</span><span class="p">(</span><span class="n">example_image</span><span class="p">,</span> <span class="n">tissue</span><span class="p">,</span> <span class="n">max_distance</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">local_maximum</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">local_maximum</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

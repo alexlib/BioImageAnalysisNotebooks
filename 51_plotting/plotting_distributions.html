@@ -1534,7 +1534,7 @@ title="Print to PDF"
 <p>We start by loading a table of measurements into a pandas DataFrame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/BBBC007_analysis.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../../data/BBBC007_analysis.csv"</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
 </div>
@@ -1677,12 +1677,12 @@ title="Print to PDF"
 <p>Seaborn already identified <code class="docutils literal notranslate"><span class="pre">file_name</span></code> as a categorical value and <code class="docutils literal notranslate"><span class="pre">ìntensity_mean</span></code> as a numerical value. Thus, it plots boxplots for the intensity variable. If we invert x and y, we still get the same graph, but as vertical boxplots.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"intensity_mean"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"file_name"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;intensity_mean&#39;, ylabel=&#39;file_name&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel='intensity_mean', ylabel='file_name'&gt;
 </pre></div>
 </div>
 <img alt="../_images/ef77a01adaa5c5887770a0a98f71164d6620643aa593ca6bf55edbdfd7b50d1a.png" src="../_images/ef77a01adaa5c5887770a0a98f71164d6620643aa593ca6bf55edbdfd7b50d1a.png" />
@@ -1691,7 +1691,7 @@ title="Print to PDF"
 <p>The figure-level, and more general, version of this kind of plot is <code class="docutils literal notranslate"><span class="pre">catplot</span></code>. We just have to provide <code class="docutils literal notranslate"><span class="pre">kind</span></code> as <code class="docutils literal notranslate"><span class="pre">box</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"intensity_mean"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"file_name"</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">"box"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1705,7 +1705,7 @@ title="Print to PDF"
 <p>There are other kinds available, like a <code class="docutils literal notranslate"><span class="pre">bar</span></code> graph.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"file_name"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"intensity_mean"</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">"bar"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1722,12 +1722,12 @@ title="Print to PDF"
 <p>The axes-level function for plotting histograms is <code class="docutils literal notranslate"><span class="pre">histplot</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"intensity_mean"</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"file_name"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;intensity_mean&#39;, ylabel=&#39;Count&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel='intensity_mean', ylabel='Count'&gt;
 </pre></div>
 </div>
 <img alt="../_images/7ce39dc708a5046c5f7cbba2d8cb2aad51d385670a372a6e7b7fc4fa246a55bd.png" src="../_images/7ce39dc708a5046c5f7cbba2d8cb2aad51d385670a372a6e7b7fc4fa246a55bd.png" />
@@ -1736,12 +1736,12 @@ title="Print to PDF"
 <p>We can instead plot the kernel density estimation (kde) with <code class="docutils literal notranslate"><span class="pre">kdeplot</span></code> function. Just be careful while interpreting these plots (check some pitfalls <a class="reference external" href="https://seaborn.pydata.org/tutorial/distributions.html#kernel-density-estimation-pitfalls">here</a>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"intensity_mean"</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"file_name"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel=&#39;intensity_mean&#39;, ylabel=&#39;Density&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot: xlabel='intensity_mean', ylabel='Density'&gt;
 </pre></div>
 </div>
 <img alt="../_images/7050b3f1cafd17da2e1bfa96497351c411ab7fc4490ccbaca39decac64afb868.png" src="../_images/7050b3f1cafd17da2e1bfa96497351c411ab7fc4490ccbaca39decac64afb868.png" />
@@ -1750,7 +1750,7 @@ title="Print to PDF"
 <p>The figure-level function for distributions is <code class="docutils literal notranslate"><span class="pre">distplot</span></code>. With it, you can have histograms and kde in the same plot, or other kinds of plots, like the empirical cumulative distribution function (ecdf).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"intensity_mean"</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"file_name"</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

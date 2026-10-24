@@ -1593,7 +1593,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visualization</span> <span class="o">=</span> <span class="n">mesh</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">cle</span><span class="o">.</span><span class="n">detect_label_edges</span><span class="p">(</span><span class="n">cells</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">visualization</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">visualization</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1609,7 +1609,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">neighbor_count_image</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">touching_neighbor_count_map</span><span class="p">(</span><span class="n">cells</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">neighbor_count_image</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">neighbor_count_image</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1635,7 +1635,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">neighbor_count_image_ex_border</span> <span class="o">=</span> <span class="n">neighbor_count_image</span> <span class="o">*</span> <span class="p">(</span><span class="n">cells_ex_border</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">neighbor_count_image_ex_border</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">neighbor_count_image_ex_border</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1665,10 +1665,10 @@ title="Print to PDF"
 <span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">statistics</span><span class="p">)</span>
 
 <span class="c1"># rename a column</span>
-<span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;mean_intensity&quot;</span><span class="p">:</span> <span class="s2">&quot;number_of_neighbors&quot;</span><span class="p">})</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"mean_intensity"</span><span class="p">:</span> <span class="s2">"number_of_neighbors"</span><span class="p">})</span>
 
 <span class="c1"># only filter out a subset of all columns; only what we care</span>
-<span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[[</span><span class="s2">&quot;label&quot;</span><span class="p">,</span> <span class="s2">&quot;number_of_neighbors&quot;</span><span class="p">,</span> <span class="s2">&quot;centroid_x&quot;</span><span class="p">,</span> <span class="s2">&quot;centroid_y&quot;</span><span class="p">]]</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="p">[[</span><span class="s2">"label"</span><span class="p">,</span> <span class="s2">"number_of_neighbors"</span><span class="p">,</span> <span class="s2">"centroid_x"</span><span class="p">,</span> <span class="s2">"centroid_y"</span><span class="p">]]</span>
 
 <span class="n">table</span>
 </pre></div>

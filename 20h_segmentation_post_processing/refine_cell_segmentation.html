@@ -1531,7 +1531,7 @@ title="Print to PDF"
 <p>The following example image data is a timelapse of cells marked with a membrane marker. The dataset is a courtesy of Sascha M. Kuhn, Nadler Lab, MPI-CBG Dresden.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_timelapse</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/membrane_2d_timelapse.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_timelapse</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/membrane_2d_timelapse.tif"</span><span class="p">)</span>
 <span class="n">image_timelapse</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1584,7 +1584,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_intensity_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">mean_intensity_map</span><span class="p">(</span><span class="n">membranes_single_slice</span><span class="p">,</span> <span class="n">cell_labels_pre</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mean_intensity_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mean_intensity_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1611,7 +1611,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">cell_segmentation_worflow</span><span class="p">(</span><span class="n">membranes_single_slice</span><span class="p">,</span> <span class="n">cell_segmentation_spot_sigma</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">maximum_mean_intensity_per_cell</span><span class="o">=</span><span class="mi">700</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Cell segmentation based on membrane signal</span>
+<span class="w">    </span><span class="sd">"""Cell segmentation based on membrane signal</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -1625,7 +1625,7 @@ title="Print to PDF"
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    cell label image</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     
     <span class="c1"># label cell candidates</span>
     <span class="n">cell_labels_pre</span> <span class="o">=</span> <span class="n">nsbatwm</span><span class="o">.</span><span class="n">local_minima_seeded_watershed</span><span class="p">(</span>
@@ -1658,7 +1658,7 @@ title="Print to PDF"
     <span class="n">cell_labels</span> <span class="o">=</span> <span class="n">cell_segmentation_worflow</span><span class="p">(</span><span class="n">membranes_single_slice</span><span class="p">)</span>
 
     <span class="c1"># print headline</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;t = &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;, number of cells: &quot;</span><span class="p">,</span> <span class="n">cell_labels</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"t = "</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">", number of cells: "</span><span class="p">,</span> <span class="n">cell_labels</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
     
     <span class="c1"># show three images: image, labels, overlay</span>
     <span class="n">fix</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>

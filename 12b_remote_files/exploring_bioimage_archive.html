@@ -1541,14 +1541,14 @@ title="Print to PDF"
 <p>First we access the meta data of the dataets. Here we can for example see what the data can be used for and under which license it can be used.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accession</span> <span class="o">=</span> <span class="s1">&#39;S-BIAD634&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accession</span> <span class="o">=</span> <span class="s1">'S-BIAD634'</span>
 <span class="n">submission</span> <span class="o">=</span> <span class="n">biostudies</span><span class="o">.</span><span class="n">load_submission</span><span class="p">(</span><span class="n">accession</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">submission</span><span class="o">.</span><span class="n">section</span><span class="o">.</span><span class="n">attributes</span><span class="p">:</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">name</span>
     <span class="n">short_value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">short_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">short_value</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1592,14 +1592,14 @@ Funding statement : This work was facilitated by an EraSME grant (project TisQua
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BIAImage(uri=&#39;https://www.ebi.ac.uk/biostudies/files/S-BIAD634/dataset\\groundtruth\\Ganglioneuroblastoma_0.tif&#39;, size=2239668, fpath=WindowsPath(&#39;dataset/groundtruth/Ganglioneuroblastoma_0.tif&#39;))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BIAImage(uri='https://www.ebi.ac.uk/biostudies/files/S-BIAD634/dataset\\groundtruth\\Ganglioneuroblastoma_0.tif', size=2239668, fpath=WindowsPath('dataset/groundtruth/Ganglioneuroblastoma_0.tif'))
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uri</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">uri</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uri</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">uri</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"</span><span class="se">\\</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">)</span>
 <span class="n">image_data</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
 <span class="n">stackview</span><span class="o">.</span><span class="n">insight</span><span class="p">(</span><span class="n">image_data</span><span class="p">)</span>
 </pre></div>
@@ -1660,9 +1660,9 @@ dataset\rawimages\otherspecimen_9.tif
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">folder_path</span><span class="p">):</span>
         <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">folder_path</span><span class="p">)</span>
 
-<span class="n">base_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;../../data/</span><span class="si">{</span><span class="n">accession</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="n">raw_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;../../data/</span><span class="si">{</span><span class="n">accession</span><span class="si">}</span><span class="s2">/images&quot;</span>
-<span class="n">groundtruth_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;../../data/</span><span class="si">{</span><span class="n">accession</span><span class="si">}</span><span class="s2">/groundtruth&quot;</span>
+<span class="n">base_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"../../data/</span><span class="si">{</span><span class="n">accession</span><span class="si">}</span><span class="s2">"</span>
+<span class="n">raw_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"../../data/</span><span class="si">{</span><span class="n">accession</span><span class="si">}</span><span class="s2">/images"</span>
+<span class="n">groundtruth_folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"../../data/</span><span class="si">{</span><span class="n">accession</span><span class="si">}</span><span class="s2">/groundtruth"</span>
 
 <span class="n">ensure_folder_exists</span><span class="p">(</span><span class="n">base_folder</span><span class="p">)</span>
 <span class="n">ensure_folder_exists</span><span class="p">(</span><span class="n">raw_folder</span><span class="p">)</span>
@@ -1675,16 +1675,16 @@ dataset\rawimages\otherspecimen_9.tif
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">study</span><span class="o">.</span><span class="n">images</span><span class="p">:</span>
-    <span class="k">if</span> <span class="s2">&quot;Ganglioneuroblastoma&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">fpath</span><span class="p">):</span>
-        <span class="n">uri</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">uri</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
-        <span class="n">filename</span> <span class="o">=</span> <span class="n">uri</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">rawimages</span><span class="se">\\</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">fpath</span><span class="p">):</span>
-            <span class="n">target_file</span> <span class="o">=</span> <span class="n">raw_folder</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">filename</span>
+    <span class="k">if</span> <span class="s2">"Ganglioneuroblastoma"</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">fpath</span><span class="p">):</span>
+        <span class="n">uri</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">uri</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"</span><span class="se">\\</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"/"</span><span class="p">)</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">uri</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"/"</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s2">"</span><span class="se">\\</span><span class="s2">rawimages</span><span class="se">\\</span><span class="s2">"</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">fpath</span><span class="p">):</span>
+            <span class="n">target_file</span> <span class="o">=</span> <span class="n">raw_folder</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="n">filename</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">target_file</span><span class="p">):</span>
                 <span class="n">image_data</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
                 <span class="n">imsave</span><span class="p">(</span><span class="n">target_file</span><span class="p">,</span> <span class="n">image_data</span><span class="p">)</span>
-        <span class="k">if</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">groundtruth</span><span class="se">\\</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">fpath</span><span class="p">):</span>
-            <span class="n">target_file</span> <span class="o">=</span> <span class="n">groundtruth_folder</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">filename</span>
+        <span class="k">if</span> <span class="s2">"</span><span class="se">\\</span><span class="s2">groundtruth</span><span class="se">\\</span><span class="s2">"</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">fpath</span><span class="p">):</span>
+            <span class="n">target_file</span> <span class="o">=</span> <span class="n">groundtruth_folder</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="n">filename</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">target_file</span><span class="p">):</span>
                 <span class="n">image_data</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
                 <span class="n">imsave</span><span class="p">(</span><span class="n">target_file</span><span class="p">,</span> <span class="n">image_data</span><span class="p">)</span>

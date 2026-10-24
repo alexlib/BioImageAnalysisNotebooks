@@ -1637,7 +1637,7 @@ title="Print to PDF"
 <p>You can also compute your own measurement for each object and then visualize it in a parametric map image. Consider using <a class="reference external" href="https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.regionprops">scikit-image’s <code class="docutils literal notranslate"><span class="pre">regionprops()</span></code></a> for computing the measurements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics_table</span> <span class="o">=</span> <span class="n">regionprops_table</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">labels</span><span class="p">),</span> <span class="n">properties</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;label&#39;</span><span class="p">,</span> <span class="s1">&#39;area&#39;</span><span class="p">,))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics_table</span> <span class="o">=</span> <span class="n">regionprops_table</span><span class="p">(</span><span class="n">cle</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">labels</span><span class="p">),</span> <span class="n">properties</span><span class="o">=</span><span class="p">(</span><span class="s1">'label'</span><span class="p">,</span> <span class="s1">'area'</span><span class="p">,))</span>
 </pre></div>
 </div>
 </div>
@@ -1649,11 +1649,11 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remapped</span> <span class="o">=</span> <span class="n">map_array</span><span class="p">(</span>
         <span class="n">cle</span><span class="o">.</span><span class="n">pull</span><span class="p">(</span><span class="n">labels</span><span class="p">),</span>
-        <span class="n">statistics_table</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span>
-        <span class="n">statistics_table</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">],</span>
+        <span class="n">statistics_table</span><span class="p">[</span><span class="s1">'label'</span><span class="p">],</span>
+        <span class="n">statistics_table</span><span class="p">[</span><span class="s1">'area'</span><span class="p">],</span>
         <span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">remapped</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">remapped</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1674,12 +1674,12 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
 <span class="n">area</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">area</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">statistics</span><span class="p">]</span>
 
 <span class="n">area_map2</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">area</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">area_map2</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">area_map2</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1695,15 +1695,15 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pixel_count_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">label_pixel_count_map</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pixel_count_map</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pixel_count_map</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/haase/code/pyclesperanto_prototype/pyclesperanto_prototype/_tier9/_statistics_of_labelled_pixels.py:283: RuntimeWarning: invalid value encountered in true_divide
-  region_props[&#39;mean_max_distance_to_centroid_ratio&#39;] = region_props[&#39;max_distance_to_centroid&#39;] / region_props[
+  region_props['mean_max_distance_to_centroid_ratio'] = region_props['max_distance_to_centroid'] / region_props[
 /Users/haase/code/pyclesperanto_prototype/pyclesperanto_prototype/_tier9/_statistics_of_labelled_pixels.py:285: RuntimeWarning: invalid value encountered in true_divide
-  region_props[&#39;mean_max_distance_to_mass_center_ratio&#39;] = region_props[&#39;max_distance_to_mass_center&#39;] / region_props[
+  region_props['mean_max_distance_to_mass_center_ratio'] = region_props['max_distance_to_mass_center'] / region_props[
 </pre></div>
 </div>
 <img alt="../_images/7cb6659a1576604736201f7c7e27d390ea48adab71f37bbc7b9c9cd79cc45750.png" src="../_images/7cb6659a1576604736201f7c7e27d390ea48adab71f37bbc7b9c9cd79cc45750.png" />
@@ -1722,7 +1722,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;label&#39;, &#39;elongation&#39;, &#39;feret_diameter&#39;, &#39;flatness&#39;, &#39;roundness&#39;, &#39;equivalent_ellipsoid_diameter_0&#39;, &#39;equivalent_ellipsoid_diameter_1&#39;, &#39;equivalent_spherical_perimeter&#39;, &#39;equivalent_spherical_radius&#39;, &#39;number_of_pixels&#39;, &#39;number_of_pixels_on_border&#39;, &#39;perimeter&#39;, &#39;perimeter_on_border&#39;, &#39;perimeter_on_border_ratio&#39;])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys(['label', 'elongation', 'feret_diameter', 'flatness', 'roundness', 'equivalent_ellipsoid_diameter_0', 'equivalent_ellipsoid_diameter_1', 'equivalent_spherical_perimeter', 'equivalent_spherical_radius', 'number_of_pixels', 'number_of_pixels_on_border', 'perimeter', 'perimeter_on_border', 'perimeter_on_border_ratio'])
 </pre></div>
 </div>
 </div>
@@ -1732,12 +1732,12 @@ title="Print to PDF"
 <h2>Number of pixels map<a class="headerlink" href="#number-of-pixels-map" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
-<span class="n">number_of_pixels</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">&#39;number_of_pixels&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
+<span class="n">number_of_pixels</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">'number_of_pixels'</span><span class="p">]</span>
 
 <span class="n">number_of_pixels_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">number_of_pixels</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">number_of_pixels_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">number_of_pixels_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1754,7 +1754,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">extension_ratio_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">extension_ratio_map</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
 
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">extension_ratio_map</span><span class="p">,</span> 
-           <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span> 
+           <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">,</span> 
            <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
            <span class="n">min_display_intensity</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> 
            <span class="n">max_display_intensity</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
@@ -1771,7 +1771,7 @@ title="Print to PDF"
 <p>If we use additionally an intensity image, we can also produce parametric images showing intensity measurements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">),</span> <span class="n">factor_x</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">factor_y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">auto_size</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">),</span> <span class="n">factor_x</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">factor_y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">auto_size</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">blobs</span><span class="p">)</span>
 </pre></div>
@@ -1785,7 +1785,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_intensity_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">label_mean_intensity_map</span><span class="p">(</span><span class="n">blobs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mean_intensity_map</span><span class="p">,</span> 
-           <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span> 
+           <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">,</span> 
            <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
            <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
            <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
@@ -1800,7 +1800,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">maximum_intensity_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">maximum_intensity_map</span><span class="p">(</span><span class="n">blobs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">maximum_intensity_map</span><span class="p">,</span> 
-           <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span> 
+           <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">,</span> 
            <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
            <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> 
            <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">270</span><span class="p">)</span>
@@ -1814,7 +1814,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stddev_intensity_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">standard_deviation_intensity_map</span><span class="p">(</span><span class="n">blobs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">stddev_intensity_map</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">stddev_intensity_map</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1827,14 +1827,14 @@ title="Print to PDF"
 <h2>Aspect ratio map<a class="headerlink" href="#aspect-ratio-map" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
 <span class="n">aspect_ratio</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">statistics</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">minor_axis_length</span><span class="p">:</span>
         <span class="n">aspect_ratio</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">major_axis_length</span> <span class="o">/</span> <span class="n">s</span><span class="o">.</span><span class="n">minor_axis_length</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">aspect_ratio</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># note: an aspect ratio of 0 is an &quot;invalid&quot; value</span>
+        <span class="n">aspect_ratio</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># note: an aspect ratio of 0 is an "invalid" value</span>
 </pre></div>
 </div>
 </div>
@@ -1843,7 +1843,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aspect_ratio_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">aspect_ratio</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">aspect_ratio_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">aspect_ratio_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1856,12 +1856,12 @@ title="Print to PDF"
 <h2>Elongation map<a class="headerlink" href="#elongation-map" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
 <span class="n">eccentricity</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">eccentricity</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">statistics</span><span class="p">]</span>
 
 <span class="n">eccentricity_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">eccentricity</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">eccentricity_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">eccentricity_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1874,12 +1874,12 @@ title="Print to PDF"
 <h2>Extent map<a class="headerlink" href="#extent-map" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
 <span class="n">extent</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">extent</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">statistics</span><span class="p">]</span>
 
 <span class="n">extent_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">extent</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">extent_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">extent_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1892,12 +1892,12 @@ title="Print to PDF"
 <h2>Feret diameter map<a class="headerlink" href="#feret-diameter-map" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
 <span class="n">feret_diameter</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">feret_diameter_max</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">statistics</span><span class="p">]</span>
 
 <span class="n">feret_diameter_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">feret_diameter</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">feret_diameter_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">feret_diameter_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1910,12 +1910,12 @@ title="Print to PDF"
 <h2>Orientation map<a class="headerlink" href="#orientation-map" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
 <span class="n">orientation</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">orientation</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">statistics</span><span class="p">]</span>
 
 <span class="n">orientation_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">orientation</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">orientation_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">orientation_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1928,12 +1928,12 @@ title="Print to PDF"
 <h2>Perimeter map<a class="headerlink" href="#perimeter-map" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
 <span class="n">perimeter_ski</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">perimeter</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">statistics</span><span class="p">]</span>
 
 <span class="n">perimeter_ski_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">perimeter_ski</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">perimeter_ski_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">perimeter_ski_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1946,12 +1946,12 @@ title="Print to PDF"
 <h2>Solidity map<a class="headerlink" href="#solidity-map" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
 <span class="n">solidity</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">solidity</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">statistics</span><span class="p">]</span>
 
 <span class="n">solidity_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">solidity</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">solidity_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">solidity_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1964,12 +1964,12 @@ title="Print to PDF"
 <h2>Elongation map<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
-<span class="n">elongation</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">&#39;elongation&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
+<span class="n">elongation</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">'elongation'</span><span class="p">]</span>
 
 <span class="n">elongation_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">elongation</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">elongation_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">elongation_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1982,12 +1982,12 @@ title="Print to PDF"
 <h2>Flatness map<a class="headerlink" href="#flatness-map" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
-<span class="n">flatness</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">&#39;flatness&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
+<span class="n">flatness</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">'flatness'</span><span class="p">]</span>
 
 <span class="n">flatness_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">flatness</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">flatness_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">flatness_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2000,12 +2000,12 @@ title="Print to PDF"
 <h2>Roundness map<a class="headerlink" href="#roundness-map" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
-<span class="n">roundness</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">&#39;roundness&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
+<span class="n">roundness</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">'roundness'</span><span class="p">]</span>
 
 <span class="n">roundness_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">roundness</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">roundness_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">roundness_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2018,12 +2018,12 @@ title="Print to PDF"
 <h2>Perimeter map<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
-<span class="n">perimeter_sitk</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">&#39;perimeter&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
+<span class="n">perimeter_sitk</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">'perimeter'</span><span class="p">]</span>
 
 <span class="n">perimeter_sitk_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">perimeter_sitk</span><span class="p">)</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">perimeter_sitk_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">perimeter_sitk_map</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2037,8 +2037,8 @@ title="Print to PDF"
 <p>If you generate a parametric image with the “label” column, the parametric image should actually be equal to the label input image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we&#39;re appending a [0] for the &quot;measurement&quot; of the background and attach all values behind</span>
-<span class="n">label</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we're appending a [0] for the "measurement" of the background and attach all values behind</span>
+<span class="n">label</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">statistics_sitk</span><span class="p">[</span><span class="s1">'label'</span><span class="p">]</span>
 
 <span class="n">label_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
 
@@ -2079,7 +2079,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perimeter_difference</span> <span class="o">=</span> <span class="n">perimeter_sitk_map</span> <span class="o">-</span> <span class="n">perimeter_ski_map</span>
 
-<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">perimeter_difference</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">&quot;jet&quot;</span><span class="p">)</span>
+<span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">perimeter_difference</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_map</span><span class="o">=</span><span class="s2">"jet"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

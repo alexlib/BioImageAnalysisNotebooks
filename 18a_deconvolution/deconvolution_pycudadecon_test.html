@@ -1505,7 +1505,7 @@ title="Print to PDF"
 <p>We will load an image showing fluorescent intensity along lines. This 3D image was taken with a confocal microscope.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;C:/structure/code/pycudadecon/test/test_data/im_raw.tif&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'C:/structure/code/pycudadecon/test/test_data/im_raw.tif'</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 <span class="n">image</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -1529,7 +1529,7 @@ title="Print to PDF"
 <p>The following PSF image was extracted from images taken with the same microscope using the procedure <a class="reference internal" href="extract_psf.html#deconvolution-extract-psf"><span class="std std-ref">explained before</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psf</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;C:/structure/code/pycudadecon/test/test_data/psf.tif&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psf</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'C:/structure/code/pycudadecon/test/test_data/psf.tif'</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">psf</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
@@ -1592,7 +1592,7 @@ title="Print to PDF"
 decon<span class=" -Color -Color-Bold -Color-Bold-Yellow">(</span>
     images<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> Union<span class=" -Color -Color-Bold -Color-Bold-Yellow">[</span>str<span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span> numpy<span class=" -Color -Color-Bold -Color-Bold-Yellow">.</span>ndarray<span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span> Sequence<span class=" -Color -Color-Bold -Color-Bold-Yellow">[</span>Union<span class=" -Color -Color-Bold -Color-Bold-Yellow">[</span>str<span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span> numpy<span class=" -Color -Color-Bold -Color-Bold-Yellow">.</span>ndarray<span class=" -Color -Color-Bold -Color-Bold-Yellow">]]],</span>
     psf<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> Union<span class=" -Color -Color-Bold -Color-Bold-Yellow">[</span>str<span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span> numpy<span class=" -Color -Color-Bold -Color-Bold-Yellow">.</span>ndarray<span class=" -Color -Color-Bold -Color-Bold-Yellow">],</span>
-    fpattern<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> str <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;*.tif&#39;</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
+    fpattern<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> str <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">'*.tif'</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     <span class=" -Color -Color-Bold -Color-Bold-Yellow">**</span>kwargs<span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
 <span class=" -Color -Color-Bold -Color-Bold-Yellow">)</span> <span class=" -Color -Color-Bold -Color-Bold-Yellow">-&gt;</span> Union<span class=" -Color -Color-Bold -Color-Bold-Yellow">[</span>numpy<span class=" -Color -Color-Bold -Color-Bold-Yellow">.</span>ndarray<span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span> List<span class=" -Color -Color-Bold -Color-Bold-Yellow">[</span>numpy<span class=" -Color -Color-Bold -Color-Bold-Yellow">.</span>ndarray<span class=" -Color -Color-Bold -Color-Bold-Yellow">]]</span>
 <span class=" -Color -Color-Bold -Color-Bold-Red">Docstring:</span>
@@ -1611,7 +1611,7 @@ psf : str or np.ndarray
     complex OTF.
 fpattern : str, optional
     Filepattern to use when a directory is provided in the `images` argument,
-    by default &quot;*.tif&quot;
+    by default "*.tif"
 **kwargs
     All other kwargs must be valid for either :func:`rl_init` or :func:`rl_decon`.
 
@@ -1634,22 +1634,22 @@ Examples
 --------
 deconvolve a 3D TIF volume with a 3D PSF volume (e.g. a single bead stack)
 
-&gt;&gt;&gt; result = decon(&#39;/path/to/image.tif&#39;, &#39;/path/to/psf.tif&#39;)
+&gt;&gt;&gt; result = decon('/path/to/image.tif', '/path/to/psf.tif')
 
 deconvolve all TIF files in a specific directory that match a certain
 `filename pattern &lt;https://docs.python.org/3.6/library/fnmatch.html&gt;`_,
-(in this example, all TIFs with the string &#39;560nm&#39; in their name)
+(in this example, all TIFs with the string '560nm' in their name)
 
 &gt;&gt;&gt; result = decon(
-...     &#39;/directory/with/images&#39;, &#39;/path/to/psf.tif&#39;, fpattern=&#39;*560nm*.tif&#39;
+...     '/directory/with/images', '/path/to/psf.tif', fpattern='*560nm*.tif'
 ... )
 
 deconvolve a list of images, provided either as np.ndarrays, filepaths,
 or directories
 
-&gt;&gt;&gt; imarray = tifffile.imread(&#39;some_other_image.tif&#39;)
-&gt;&gt;&gt; inputs = [&#39;/directory/with/images&#39;, &#39;/path/to/image.tif&#39;, imarray]
-&gt;&gt;&gt; result = decon(inputs, &#39;/path/to/psf.tif&#39;, fpattern=&#39;*560nm*.tif&#39;)
+&gt;&gt;&gt; imarray = tifffile.imread('some_other_image.tif')
+&gt;&gt;&gt; inputs = ['/directory/with/images', '/path/to/image.tif', imarray]
+&gt;&gt;&gt; result = decon(inputs, '/path/to/psf.tif', fpattern='*560nm*.tif')
 <span class=" -Color -Color-Bold -Color-Bold-Red">File:</span>      c:\users\rober\miniconda3\envs\bio_39\lib\site-packages\pycudadecon\deconvolution.py
 <span class=" -Color -Color-Bold -Color-Bold-Red">Type:</span>      function
 </pre></div>

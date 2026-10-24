@@ -1697,12 +1697,12 @@ title="Print to PDF"
                <span class="n">plot</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
                <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
                <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-               <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">)</span>
+               <span class="n">colormap</span><span class="o">=</span><span class="s1">'rainbow'</span><span class="p">)</span>
     <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">proximal_neighbor_count_map</span><span class="p">,</span> 
                <span class="n">plot</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> 
                <span class="n">min_display_intensity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
                <span class="n">max_display_intensity</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-               <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">)</span>
+               <span class="n">colormap</span><span class="o">=</span><span class="s1">'rainbow'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1774,11 +1774,11 @@ title="Print to PDF"
     <span class="n">proximal_neighbor_count_list</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">read_intensities_from_map</span><span class="p">(</span><span class="n">labels_excluding_border</span><span class="p">,</span> <span class="n">proximal_neighbor_count_map</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="p">{</span>
-        <span class="s2">&quot;number_of_cells&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">labels_excluding_border</span><span class="o">.</span><span class="n">max</span><span class="p">()],</span>
-        <span class="s2">&quot;touching_neighbor_count_mean&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">touching_neighbor_count_list</span><span class="p">)],</span>
-        <span class="s2">&quot;touching_neighbor_count_std&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">touching_neighbor_count_list</span><span class="p">)],</span>
-        <span class="s2">&quot;proximal_neighbor_count_mean&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">proximal_neighbor_count_list</span><span class="p">)],</span>
-        <span class="s2">&quot;proximal_neighbor_count_std&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">proximal_neighbor_count_list</span><span class="p">)]</span>
+        <span class="s2">"number_of_cells"</span> <span class="p">:</span> <span class="p">[</span><span class="n">labels_excluding_border</span><span class="o">.</span><span class="n">max</span><span class="p">()],</span>
+        <span class="s2">"touching_neighbor_count_mean"</span> <span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">touching_neighbor_count_list</span><span class="p">)],</span>
+        <span class="s2">"touching_neighbor_count_std"</span> <span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">touching_neighbor_count_list</span><span class="p">)],</span>
+        <span class="s2">"proximal_neighbor_count_mean"</span> <span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">proximal_neighbor_count_list</span><span class="p">)],</span>
+        <span class="s2">"proximal_neighbor_count_std"</span> <span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">proximal_neighbor_count_list</span><span class="p">)]</span>
     <span class="p">}</span>
 </pre></div>
 </div>
@@ -1848,7 +1848,7 @@ title="Print to PDF"
         <span class="n">random_sigma_y</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span>
     
     <span class="n">measurements</span> <span class="o">=</span> <span class="n">measure_neighbor_count</span><span class="p">(</span><span class="n">cells</span><span class="p">)</span>
-    <span class="n">measurements</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sigma</span>
+    <span class="n">measurements</span><span class="p">[</span><span class="s2">"sigma"</span><span class="p">]</span> <span class="o">=</span> <span class="n">sigma</span>
     <span class="n">statistics</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">measurements</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="n">statistics_over_sigma</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -2075,24 +2075,24 @@ title="Print to PDF"
 <p>First, let’s plot the neighbor count together with the standard error as error bar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">],</span> 
-             <span class="n">y</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;touching_neighbor_count_mean&quot;</span><span class="p">],</span>
-             <span class="n">yerr</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;touching_neighbor_count_std&quot;</span><span class="p">]</span> <span class="o">/</span> 
-                  <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;number_of_cells&quot;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"sigma"</span><span class="p">],</span> 
+             <span class="n">y</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"touching_neighbor_count_mean"</span><span class="p">],</span>
+             <span class="n">yerr</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"touching_neighbor_count_std"</span><span class="p">]</span> <span class="o">/</span> 
+                  <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"number_of_cells"</span><span class="p">])</span>
             <span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">],</span> 
-             <span class="n">y</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;proximal_neighbor_count_mean&quot;</span><span class="p">],</span>
-             <span class="n">yerr</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;proximal_neighbor_count_std&quot;</span><span class="p">]</span> <span class="o">/</span> 
-                  <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;number_of_cells&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"sigma"</span><span class="p">],</span> 
+             <span class="n">y</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"proximal_neighbor_count_mean"</span><span class="p">],</span>
+             <span class="n">yerr</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"proximal_neighbor_count_std"</span><span class="p">]</span> <span class="o">/</span> 
+                  <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"number_of_cells"</span><span class="p">])</span>
             <span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">&quot;Touching neighbor count&quot;</span><span class="p">,</span> <span class="s2">&quot;Proximal_neighbor_count&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;sigma&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;neighbor count&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">"Touching neighbor count"</span><span class="p">,</span> <span class="s2">"Proximal_neighbor_count"</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"sigma"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"neighbor count"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;neighbor count&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, 'neighbor count')
 </pre></div>
 </div>
 <img alt="../_images/0b54e0535e3ae7770801baaa75395e92f669653f2f5c106bde5990797e5c3c3f.png" src="../_images/0b54e0535e3ae7770801baaa75395e92f669653f2f5c106bde5990797e5c3c3f.png" />
@@ -2102,15 +2102,15 @@ title="Print to PDF"
 <p>Last but not least a sanity check if the number of cells in the image was more or less independent from the sigma.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">],</span>
-            <span class="n">y</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;number_of_cells&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;sigma&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Cell count&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"sigma"</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"number_of_cells"</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"sigma"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Cell count"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Cell count&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, 'Cell count')
 </pre></div>
 </div>
 <img alt="../_images/6db543b6a818ce7f76eec13d51fbd759fe5173cae6612d7141a9e6968998ba77.png" src="../_images/6db543b6a818ce7f76eec13d51fbd759fe5173cae6612d7141a9e6968998ba77.png" />
@@ -2118,7 +2118,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;number_of_cells&quot;</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">&quot;number_of_cells&quot;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"number_of_cells"</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">statistics_over_sigma</span><span class="p">[</span><span class="s2">"number_of_cells"</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>

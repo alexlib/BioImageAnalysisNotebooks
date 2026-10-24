@@ -1534,7 +1534,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load image</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/blobs.tif"</span><span class="p">)</span>
 
 <span class="c1"># denoising</span>
 <span class="n">blurred_image</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1567,16 +1567,16 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Red">Signature:</span>
 regionprops_table<span class=" -Color -Color-Bold -Color-Bold-Yellow">(</span>
-    image<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;napari.types.ImageData&#39;</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
-    labels<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;napari.types.LabelsData&#39;</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
+    image<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">'napari.types.ImageData'</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
+    labels<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">'napari.types.LabelsData'</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     size<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">True</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     intensity<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">True</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     perimeter<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">False</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     shape<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">False</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     position<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">False</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     moments<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">False</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
-    napari_viewer<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;napari.Viewer&#39;</span> <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">None</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
-<span class=" -Color -Color-Bold -Color-Bold-Yellow">)</span> <span class=" -Color -Color-Bold -Color-Bold-Yellow">-&gt;</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;pandas.DataFrame&#39;</span>
+    napari_viewer<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">'napari.Viewer'</span> <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">None</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
+<span class=" -Color -Color-Bold -Color-Bold-Yellow">)</span> <span class=" -Color -Color-Bold -Color-Bold-Yellow">-&gt;</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">'pandas.DataFrame'</span>
 <span class=" -Color -Color-Bold -Color-Bold-Red">Docstring:</span> Adds a table widget to a given napari viewer with quantitative analysis results derived from an image-label pair.
 <span class=" -Color -Color-Bold -Color-Bold-Red">File:</span>      c:\users\maral\mambaforge\envs\feature_blogpost\lib\site-packages\napari_skimage_regionprops\_regionprops.py
 <span class=" -Color -Color-Bold -Color-Bold-Red">Type:</span>      function
@@ -1918,34 +1918,34 @@ regionprops_table<span class=" -Color -Color-Bold -Color-Bold-Yellow">(</span>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;label&#39;, &#39;area&#39;, &#39;bbox_area&#39;, &#39;equivalent_diameter&#39;, &#39;convex_area&#39;,
-       &#39;max_intensity&#39;, &#39;mean_intensity&#39;, &#39;min_intensity&#39;, &#39;perimeter&#39;,
-       &#39;perimeter_crofton&#39;, &#39;extent&#39;, &#39;local_centroid-0&#39;, &#39;local_centroid-1&#39;,
-       &#39;solidity&#39;, &#39;feret_diameter_max&#39;, &#39;major_axis_length&#39;,
-       &#39;minor_axis_length&#39;, &#39;orientation&#39;, &#39;eccentricity&#39;, &#39;centroid-0&#39;,
-       &#39;centroid-1&#39;, &#39;bbox-0&#39;, &#39;bbox-1&#39;, &#39;bbox-2&#39;, &#39;bbox-3&#39;,
-       &#39;weighted_centroid-0&#39;, &#39;weighted_centroid-1&#39;, &#39;moments-0-0&#39;,
-       &#39;moments-0-1&#39;, &#39;moments-0-2&#39;, &#39;moments-0-3&#39;, &#39;moments-1-0&#39;,
-       &#39;moments-1-1&#39;, &#39;moments-1-2&#39;, &#39;moments-1-3&#39;, &#39;moments-2-0&#39;,
-       &#39;moments-2-1&#39;, &#39;moments-2-2&#39;, &#39;moments-2-3&#39;, &#39;moments-3-0&#39;,
-       &#39;moments-3-1&#39;, &#39;moments-3-2&#39;, &#39;moments-3-3&#39;, &#39;moments_normalized-0-0&#39;,
-       &#39;moments_normalized-0-1&#39;, &#39;moments_normalized-0-2&#39;,
-       &#39;moments_normalized-0-3&#39;, &#39;moments_normalized-1-0&#39;,
-       &#39;moments_normalized-1-1&#39;, &#39;moments_normalized-1-2&#39;,
-       &#39;moments_normalized-1-3&#39;, &#39;moments_normalized-2-0&#39;,
-       &#39;moments_normalized-2-1&#39;, &#39;moments_normalized-2-2&#39;,
-       &#39;moments_normalized-2-3&#39;, &#39;moments_normalized-3-0&#39;,
-       &#39;moments_normalized-3-1&#39;, &#39;moments_normalized-3-2&#39;,
-       &#39;moments_normalized-3-3&#39;, &#39;moments_central-0-0&#39;, &#39;moments_central-0-1&#39;,
-       &#39;moments_central-0-2&#39;, &#39;moments_central-0-3&#39;, &#39;moments_central-1-0&#39;,
-       &#39;moments_central-1-1&#39;, &#39;moments_central-1-2&#39;, &#39;moments_central-1-3&#39;,
-       &#39;moments_central-2-0&#39;, &#39;moments_central-2-1&#39;, &#39;moments_central-2-2&#39;,
-       &#39;moments_central-2-3&#39;, &#39;moments_central-3-0&#39;, &#39;moments_central-3-1&#39;,
-       &#39;moments_central-3-2&#39;, &#39;moments_central-3-3&#39;, &#39;moments_hu-0&#39;,
-       &#39;moments_hu-1&#39;, &#39;moments_hu-2&#39;, &#39;moments_hu-3&#39;, &#39;moments_hu-4&#39;,
-       &#39;moments_hu-5&#39;, &#39;moments_hu-6&#39;, &#39;standard_deviation_intensity&#39;,
-       &#39;aspect_ratio&#39;, &#39;roundness&#39;, &#39;circularity&#39;],
-      dtype=&#39;object&#39;)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index(['label', 'area', 'bbox_area', 'equivalent_diameter', 'convex_area',
+       'max_intensity', 'mean_intensity', 'min_intensity', 'perimeter',
+       'perimeter_crofton', 'extent', 'local_centroid-0', 'local_centroid-1',
+       'solidity', 'feret_diameter_max', 'major_axis_length',
+       'minor_axis_length', 'orientation', 'eccentricity', 'centroid-0',
+       'centroid-1', 'bbox-0', 'bbox-1', 'bbox-2', 'bbox-3',
+       'weighted_centroid-0', 'weighted_centroid-1', 'moments-0-0',
+       'moments-0-1', 'moments-0-2', 'moments-0-3', 'moments-1-0',
+       'moments-1-1', 'moments-1-2', 'moments-1-3', 'moments-2-0',
+       'moments-2-1', 'moments-2-2', 'moments-2-3', 'moments-3-0',
+       'moments-3-1', 'moments-3-2', 'moments-3-3', 'moments_normalized-0-0',
+       'moments_normalized-0-1', 'moments_normalized-0-2',
+       'moments_normalized-0-3', 'moments_normalized-1-0',
+       'moments_normalized-1-1', 'moments_normalized-1-2',
+       'moments_normalized-1-3', 'moments_normalized-2-0',
+       'moments_normalized-2-1', 'moments_normalized-2-2',
+       'moments_normalized-2-3', 'moments_normalized-3-0',
+       'moments_normalized-3-1', 'moments_normalized-3-2',
+       'moments_normalized-3-3', 'moments_central-0-0', 'moments_central-0-1',
+       'moments_central-0-2', 'moments_central-0-3', 'moments_central-1-0',
+       'moments_central-1-1', 'moments_central-1-2', 'moments_central-1-3',
+       'moments_central-2-0', 'moments_central-2-1', 'moments_central-2-2',
+       'moments_central-2-3', 'moments_central-3-0', 'moments_central-3-1',
+       'moments_central-3-2', 'moments_central-3-3', 'moments_hu-0',
+       'moments_hu-1', 'moments_hu-2', 'moments_hu-3', 'moments_hu-4',
+       'moments_hu-5', 'moments_hu-6', 'standard_deviation_intensity',
+       'aspect_ratio', 'roundness', 'circularity'],
+      dtype='object')
 </pre></div>
 </div>
 </div>

@@ -1586,7 +1586,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load image</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/blobs.tif"</span><span class="p">)</span>
 
 <span class="c1"># denoising</span>
 <span class="n">blurred_image</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1619,16 +1619,16 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Red">Signature:</span>
 label_statistics<span class=" -Color -Color-Bold -Color-Bold-Yellow">(</span>
-    intensity_image<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;napari.types.ImageData&#39;</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
-    label_image<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;napari.types.LabelsData&#39;</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
+    intensity_image<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">'napari.types.ImageData'</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
+    label_image<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">'napari.types.LabelsData'</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     size<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">True</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     intensity<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">True</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     perimeter<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">False</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     shape<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">False</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     position<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">False</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
     moments<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> bool <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">False</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
-    napari_viewer<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;napari.Viewer&#39;</span> <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">None</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
-<span class=" -Color -Color-Bold -Color-Bold-Yellow">)</span> <span class=" -Color -Color-Bold -Color-Bold-Yellow">-&gt;</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">&#39;pandas.DataFrame&#39;</span>
+    napari_viewer<span class=" -Color -Color-Bold -Color-Bold-Yellow">:</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">'napari.Viewer'</span> <span class=" -Color -Color-Bold -Color-Bold-Yellow">=</span> <span class=" -Color -Color-Bold -Color-Bold-Green">None</span><span class=" -Color -Color-Bold -Color-Bold-Yellow">,</span>
+<span class=" -Color -Color-Bold -Color-Bold-Yellow">)</span> <span class=" -Color -Color-Bold -Color-Bold-Yellow">-&gt;</span> <span class=" -Color -Color-Bold -Color-Bold-Blue">'pandas.DataFrame'</span>
 <span class=" -Color -Color-Bold -Color-Bold-Red">Docstring:</span>
 Measure intensity/shape/... statistics per label
 
@@ -1649,7 +1649,7 @@ napari_viewer: napari.Viewer, optional
 Returns
 -------
 pandas DataFrame, in case napari_viewr is None, otherwise the DataFrame will be added to
-the passed label_image&#39;s layer.features
+the passed label_image's layer.features
 
 
 See Also
@@ -1995,16 +1995,16 @@ See Also
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;label&#39;, &#39;maximum&#39;, &#39;mean&#39;, &#39;median&#39;, &#39;minimum&#39;, &#39;sigma&#39;, &#39;sum&#39;,
-       &#39;variance&#39;, &#39;bbox_0&#39;, &#39;bbox_1&#39;, &#39;bbox_2&#39;, &#39;bbox_3&#39;, &#39;centroid_0&#39;,
-       &#39;centroid_1&#39;, &#39;elongation&#39;, &#39;feret_diameter&#39;, &#39;flatness&#39;, &#39;roundness&#39;,
-       &#39;equivalent_ellipsoid_diameter_0&#39;, &#39;equivalent_ellipsoid_diameter_1&#39;,
-       &#39;equivalent_spherical_perimeter&#39;, &#39;equivalent_spherical_radius&#39;,
-       &#39;number_of_pixels&#39;, &#39;number_of_pixels_on_border&#39;, &#39;perimeter&#39;,
-       &#39;perimeter_on_border&#39;, &#39;perimeter_on_border_ratio&#39;, &#39;principal_axes0&#39;,
-       &#39;principal_axes1&#39;, &#39;principal_axes2&#39;, &#39;principal_axes3&#39;,
-       &#39;principal_moments0&#39;, &#39;principal_moments1&#39;],
-      dtype=&#39;object&#39;)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index(['label', 'maximum', 'mean', 'median', 'minimum', 'sigma', 'sum',
+       'variance', 'bbox_0', 'bbox_1', 'bbox_2', 'bbox_3', 'centroid_0',
+       'centroid_1', 'elongation', 'feret_diameter', 'flatness', 'roundness',
+       'equivalent_ellipsoid_diameter_0', 'equivalent_ellipsoid_diameter_1',
+       'equivalent_spherical_perimeter', 'equivalent_spherical_radius',
+       'number_of_pixels', 'number_of_pixels_on_border', 'perimeter',
+       'perimeter_on_border', 'perimeter_on_border_ratio', 'principal_axes0',
+       'principal_axes1', 'principal_axes2', 'principal_axes3',
+       'principal_moments0', 'principal_moments1'],
+      dtype='object')
 </pre></div>
 </div>
 </div>
@@ -2264,7 +2264,7 @@ See Also
 <p>First, we check its range on the above example image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_pixels_on_border</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;number_of_pixels_on_border&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_pixels_on_border</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'number_of_pixels_on_border'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">number_of_pixels_on_border</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">number_of_pixels_on_border</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2308,7 +2308,7 @@ See Also
 <h3><code class="docutils literal notranslate"><span class="pre">perimeter_on_border</span></code><a class="headerlink" href="#perimeter-on-border" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perimeter_on_border</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;perimeter_on_border&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perimeter_on_border</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'perimeter_on_border'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">perimeter_on_border</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">perimeter_on_border</span><span class="p">)</span>
 
 <span class="n">perimeter_on_border_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">perimeter_on_border</span><span class="p">)</span>
@@ -2342,7 +2342,7 @@ See Also
 <p>In this context, the <span class="xref myst">SimpleITK documentation</span> points to a <a class="reference external" href="https://www.insight-journal.org/browse/publication/176">publication</a> which mentiones “‘SizeOnBorder’ is the number of pixels in the objects which are on the border of the image.” While the documentation is wage, the <code class="docutils literal notranslate"><span class="pre">perimeter_on_border_ratio</span></code> may be related.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perimeter_on_border_ratio</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;perimeter_on_border_ratio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perimeter_on_border_ratio</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'perimeter_on_border_ratio'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">perimeter_on_border_ratio</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">perimeter_on_border_ratio</span><span class="p">)</span>
 
 <span class="n">perimeter_on_border_ratio_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">perimeter_on_border_ratio</span><span class="p">)</span>
@@ -2376,7 +2376,7 @@ See Also
 <p>In our example, we have <code class="docutils literal notranslate"><span class="pre">principal_axes0</span></code> - <code class="docutils literal notranslate"><span class="pre">principal_axes3</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal_axes_0</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;principal_axes0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal_axes_0</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'principal_axes0'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">principal_axes_0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">principal_axes_0</span><span class="p">)</span>
 
 <span class="n">principal_axes_0_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">principal_axes_0</span><span class="p">)</span>
@@ -2406,7 +2406,7 @@ See Also
 <p>(<code class="docutils literal notranslate"><span class="pre">principal_axes3</span></code> looks the same)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal_axes_1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;principal_axes1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal_axes_1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'principal_axes1'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">principal_axes_1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">principal_axes_1</span><span class="p">)</span>
 
 <span class="n">principal_axes_1_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">principal_axes_1</span><span class="p">)</span>
@@ -2435,7 +2435,7 @@ See Also
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal_axes_2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;principal_axes2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal_axes_2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'principal_axes2'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">principal_axes_2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">principal_axes_2</span><span class="p">)</span>
 
 <span class="n">principal_axes_2_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">principal_axes_2</span><span class="p">)</span>
@@ -2467,7 +2467,7 @@ See Also
 <h3><code class="docutils literal notranslate"><span class="pre">principal</span> <span class="pre">moments</span></code><a class="headerlink" href="#principal-moments" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal_moments_0</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;principal_moments0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal_moments_0</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'principal_moments0'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">principal_moments_0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">principal_moments_0</span><span class="p">)</span>
 
 <span class="n">principal_moments_0_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">principal_moments_0</span><span class="p">)</span>
@@ -2496,7 +2496,7 @@ See Also
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal_moments_1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;principal_moments1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">principal_moments_1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'principal_moments1'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">principal_moments_1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">principal_moments_1</span><span class="p">)</span>
 
 <span class="n">principal_moments_1_map</span> <span class="o">=</span> <span class="n">cle</span><span class="o">.</span><span class="n">replace_intensities</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">principal_moments_1</span><span class="p">)</span>

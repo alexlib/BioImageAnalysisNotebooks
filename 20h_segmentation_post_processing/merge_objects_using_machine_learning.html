@@ -1524,7 +1524,7 @@ title="Print to PDF"
 <p>A common example can be derived from an image showing intensities in cell membranes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/membrane2d.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/membrane2d.tif'</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1578,7 +1578,7 @@ title="Print to PDF"
 <p>For technical reasons it is also recommeded to turn the intensity image into an image of type integer. Therefore, normalization might be necessary. It is important that images used for training and images used for prediction have intensities in the same range.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oversegmented</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/membrane2d_oversegmented.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oversegmented</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/membrane2d_oversegmented.tif"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">oversegmented</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1605,7 +1605,7 @@ title="Print to PDF"
 <p>An annotation serves telling the algorithm which segmented objects should be merged and which not.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/membrane2d_merge_annotation.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annotation</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/membrane2d_merge_annotation.tif"</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">annotation</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1665,9 +1665,9 @@ title="Print to PDF"
 <p>Note: most features are recommended to be used in isotropic images only.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_definition</span> <span class="o">=</span> <span class="s2">&quot;touch_portion mean_touch_intensity&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_definition</span> <span class="o">=</span> <span class="s2">"touch_portion mean_touch_intensity"</span>
 
-<span class="n">classifier_filename</span> <span class="o">=</span> <span class="s2">&quot;label_merger.cl&quot;</span>
+<span class="n">classifier_filename</span> <span class="o">=</span> <span class="s2">"label_merger.cl"</span>
 
 <span class="n">apoc</span><span class="o">.</span><span class="n">erase_classifier</span><span class="p">(</span><span class="n">classifier_filename</span><span class="p">)</span>
 <span class="n">classifier</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectMerger</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="n">classifier_filename</span><span class="p">)</span>

@@ -1493,7 +1493,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">skimage.filters</span><span class="w"> </span><span class="kn">import</span> <span class="n">threshold_otsu</span><span class="p">,</span> <span class="n">threshold_yen</span>
 
-<span class="n">data_folder</span> <span class="o">=</span> <span class="s1">&#39;../data/banana/&#39;</span>
+<span class="n">data_folder</span> <span class="o">=</span> <span class="s1">'../data/banana/'</span>
 </pre></div>
 </div>
 </div>
@@ -1506,37 +1506,37 @@ title="Print to PDF"
 <span class="n">file_list</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">data_folder</span><span class="p">)</span>
 
 <span class="c1"># filter the list so that only tif images remain</span>
-<span class="n">image_file_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_list</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.tif&quot;</span><span class="p">)]</span>
+<span class="n">image_file_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_list</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".tif"</span><span class="p">)]</span>
 <span class="n">image_file_list</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;banana0002.tif&#39;,
- &#39;banana0003.tif&#39;,
- &#39;banana0004.tif&#39;,
- &#39;banana0005.tif&#39;,
- &#39;banana0006.tif&#39;,
- &#39;banana0007.tif&#39;,
- &#39;banana0008.tif&#39;,
- &#39;banana0009.tif&#39;,
- &#39;banana0010.tif&#39;,
- &#39;banana0011.tif&#39;,
- &#39;banana0012.tif&#39;,
- &#39;banana0013.tif&#39;,
- &#39;banana0014.tif&#39;,
- &#39;banana0015.tif&#39;,
- &#39;banana0016.tif&#39;,
- &#39;banana0017.tif&#39;,
- &#39;banana0018.tif&#39;,
- &#39;banana0019.tif&#39;,
- &#39;banana0020.tif&#39;,
- &#39;banana0021.tif&#39;,
- &#39;banana0022.tif&#39;,
- &#39;banana0023.tif&#39;,
- &#39;banana0024.tif&#39;,
- &#39;banana0025.tif&#39;,
- &#39;banana0026.tif&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['banana0002.tif',
+ 'banana0003.tif',
+ 'banana0004.tif',
+ 'banana0005.tif',
+ 'banana0006.tif',
+ 'banana0007.tif',
+ 'banana0008.tif',
+ 'banana0009.tif',
+ 'banana0010.tif',
+ 'banana0011.tif',
+ 'banana0012.tif',
+ 'banana0013.tif',
+ 'banana0014.tif',
+ 'banana0015.tif',
+ 'banana0016.tif',
+ 'banana0017.tif',
+ 'banana0018.tif',
+ 'banana0019.tif',
+ 'banana0020.tif',
+ 'banana0021.tif',
+ 'banana0022.tif',
+ 'banana0023.tif',
+ 'banana0024.tif',
+ 'banana0025.tif',
+ 'banana0026.tif']
 </pre></div>
 </div>
 </div>
@@ -1544,9 +1544,9 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">process_image</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">threshold_function</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Process a given image file name </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     
     <span class="c1"># load data</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">skimage.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">imread</span>
@@ -1566,7 +1566,7 @@ title="Print to PDF"
     <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">areas</span><span class="p">)</span>
 
-<span class="n">process_image</span><span class="p">(</span><span class="s1">&#39;../data/banana/banana0026.tif&#39;</span><span class="p">,</span> <span class="n">threshold_otsu</span><span class="p">)</span>
+<span class="n">process_image</span><span class="p">(</span><span class="s1">'../data/banana/banana0026.tif'</span><span class="p">,</span> <span class="n">threshold_otsu</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -1501,11 +1501,11 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiments</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;ID&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
-    <span class="s2">&quot;Comment&quot;</span><span class="p">:[</span><span class="s2">&quot;High dose&quot;</span><span class="p">,</span> <span class="s2">&quot;Medium dose&quot;</span><span class="p">,</span> <span class="s2">&quot;Control&quot;</span><span class="p">,</span> <span class="s2">&quot;Super high dose&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;Concentration&quot;</span><span class="p">:[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]</span>
+    <span class="s2">"ID"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
+    <span class="s2">"Comment"</span><span class="p">:[</span><span class="s2">"High dose"</span><span class="p">,</span> <span class="s2">"Medium dose"</span><span class="p">,</span> <span class="s2">"Control"</span><span class="p">,</span> <span class="s2">"Super high dose"</span><span class="p">],</span>
+    <span class="s2">"Concentration"</span><span class="p">:[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]</span>
 <span class="p">}</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">experiments</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../../data/experiments.csv&quot;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">experiments</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"../../data/experiments.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1513,11 +1513,11 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">images</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;ID&quot;</span><span class="p">:</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)),</span>
-    <span class="s2">&quot;Filename&quot;</span><span class="p">:[</span><span class="sa">f</span><span class="s2">&quot;image</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.tif&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)],</span>
-    <span class="s2">&quot;experiment_ID&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+    <span class="s2">"ID"</span><span class="p">:</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)),</span>
+    <span class="s2">"Filename"</span><span class="p">:[</span><span class="sa">f</span><span class="s2">"image</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.tif"</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)],</span>
+    <span class="s2">"experiment_ID"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 <span class="p">}</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">images</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../../data/images.csv&quot;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">images</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"../../data/images.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1525,12 +1525,12 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">measurements</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;image_ID&quot;</span><span class="p">:[],</span>
-    <span class="s2">&quot;time_after_exposure_in_s&quot;</span><span class="p">:[],</span>
-    <span class="s2">&quot;number_of_cells&quot;</span><span class="p">:[]</span>
+    <span class="s2">"image_ID"</span><span class="p">:[],</span>
+    <span class="s2">"time_after_exposure_in_s"</span><span class="p">:[],</span>
+    <span class="s2">"number_of_cells"</span><span class="p">:[]</span>
 <span class="p">}</span>
 
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">],</span> <span class="n">images</span><span class="p">[</span><span class="s2">&quot;experiment_ID&quot;</span><span class="p">]):</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="s2">"ID"</span><span class="p">],</span> <span class="n">images</span><span class="p">[</span><span class="s2">"experiment_ID"</span><span class="p">]):</span>
         
     <span class="n">num_cells_over_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10</span><span class="p">,))</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">100</span><span class="p">)</span>
     
@@ -1543,12 +1543,12 @@ title="Print to PDF"
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">num_cells_over_time</span><span class="p">)</span>
     
     <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">num_cells_over_time</span><span class="p">):</span>
-        <span class="n">measurements</span><span class="p">[</span><span class="s2">&quot;image_ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-        <span class="n">measurements</span><span class="p">[</span><span class="s2">&quot;time_after_exposure_in_s&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-        <span class="n">measurements</span><span class="p">[</span><span class="s2">&quot;number_of_cells&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">measurements</span><span class="p">[</span><span class="s2">"image_ID"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">measurements</span><span class="p">[</span><span class="s2">"time_after_exposure_in_s"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="n">measurements</span><span class="p">[</span><span class="s2">"number_of_cells"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     
     
-<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">measurements</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../../data/measurements.csv&quot;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">measurements</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"../../data/measurements.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

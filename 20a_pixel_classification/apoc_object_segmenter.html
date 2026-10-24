@@ -1534,7 +1534,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1545,7 +1545,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">manual_annotations</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs_annotations.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">manual_annotations</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs_annotations.tif'</span><span class="p">)</span>
 
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">manual_annotations</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -1564,7 +1564,7 @@ title="Print to PDF"
 <span class="n">features</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">PredefinedFeatureSet</span><span class="o">.</span><span class="n">medium_quick</span><span class="o">.</span><span class="n">value</span>
 
 <span class="c1"># this is where the model will be saved</span>
-<span class="n">cl_filename</span> <span class="o">=</span> <span class="s1">&#39;../../data/blobs_object_segmenter.cl&#39;</span>
+<span class="n">cl_filename</span> <span class="o">=</span> <span class="s1">'../../data/blobs_object_segmenter.cl'</span>
 
 <span class="n">apoc</span><span class="o">.</span><span class="n">erase_classifier</span><span class="p">(</span><span class="n">cl_filename</span><span class="p">)</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">apoc</span><span class="o">.</span><span class="n">ObjectSegmenter</span><span class="p">(</span><span class="n">opencl_filename</span><span class="o">=</span><span class="n">cl_filename</span><span class="p">,</span> <span class="n">positive_class_identifier</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>

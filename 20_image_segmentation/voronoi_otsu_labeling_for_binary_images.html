@@ -1523,7 +1523,7 @@ title="Print to PDF"
 <p>To demonstrate this, we start wit a binary image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blobs_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/blobs.tif"</span><span class="p">)</span>
 <span class="n">binary_image</span> <span class="o">=</span> <span class="n">threshold_otsu</span><span class="p">(</span><span class="n">blobs_image</span><span class="p">)</span>
 
 <span class="n">binary_image</span>
@@ -1582,7 +1582,7 @@ title="Print to PDF"
 <p>Below you see the result of the Watershed in ImageJ. How do you need to modify the <code class="docutils literal notranslate"><span class="pre">label_image</span></code> result above to turn it again into a binary image like the result of ImageJ?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">binary_watershed_imagej</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs_otsu_watershed.tif&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">binary_watershed_imagej</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"../../data/blobs_otsu_watershed.tif"</span><span class="p">)</span>
 
 <span class="n">stackview</span><span class="o">.</span><span class="n">insight</span><span class="p">(</span><span class="n">binary_watershed_imagej</span><span class="p">)</span>
 </pre></div>

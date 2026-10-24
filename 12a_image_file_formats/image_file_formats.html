@@ -1564,7 +1564,7 @@ title="Print to PDF"
 <p>The JPEG file format is, at least per default in may programs, a lossy file format. That means information is lost when saving the image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imsave</span><span class="p">(</span><span class="s2">&quot;temp.jpg&quot;</span><span class="p">,</span> <span class="n">original_image</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imsave</span><span class="p">(</span><span class="s2">"temp.jpg"</span><span class="p">,</span> <span class="n">original_image</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1577,7 +1577,7 @@ title="Print to PDF"
 <p>The warning above confirms this. Furthermore, when we reload the image, we can see in the colorbar that the intensity range is different now.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jpg_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;temp.jpg&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jpg_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">"temp.jpg"</span><span class="p">)</span>
 
 <span class="n">cle</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">jpg_image</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -1609,23 +1609,23 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">resave_image_statistics</span><span class="p">(</span><span class="n">original_image</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Saves and reloads an image in multiple formats and returns a table with image statistics.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Saves and reloads an image in multiple formats and returns a table with image statistics."""</span>
 
     <span class="c1"># prepare table</span>
     <span class="n">stats</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;ending&quot;</span><span class="p">:[],</span>
-        <span class="s2">&quot;data_type&quot;</span><span class="p">:[],</span>
-        <span class="s2">&quot;shape&quot;</span><span class="p">:[],</span>
-        <span class="s2">&quot;size&quot;</span><span class="p">:[],</span>
-        <span class="s2">&quot;min&quot;</span><span class="p">:[],</span>
-        <span class="s2">&quot;max&quot;</span><span class="p">:[],</span>
-        <span class="s2">&quot;mean&quot;</span><span class="p">:[],</span>
-        <span class="s2">&quot;standard_deviation&quot;</span><span class="p">:[],</span>
-        <span class="s2">&quot;mean_squared_error&quot;</span><span class="p">:[],</span>
+        <span class="s2">"ending"</span><span class="p">:[],</span>
+        <span class="s2">"data_type"</span><span class="p">:[],</span>
+        <span class="s2">"shape"</span><span class="p">:[],</span>
+        <span class="s2">"size"</span><span class="p">:[],</span>
+        <span class="s2">"min"</span><span class="p">:[],</span>
+        <span class="s2">"max"</span><span class="p">:[],</span>
+        <span class="s2">"mean"</span><span class="p">:[],</span>
+        <span class="s2">"standard_deviation"</span><span class="p">:[],</span>
+        <span class="s2">"mean_squared_error"</span><span class="p">:[],</span>
     <span class="p">}</span>
     
     <span class="c1"># go through different file endings</span>
-    <span class="n">endings</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;tif&quot;</span><span class="p">,</span><span class="s2">&quot;png&quot;</span><span class="p">,</span><span class="s2">&quot;mhd&quot;</span><span class="p">,</span><span class="s2">&quot;mha&quot;</span><span class="p">,</span><span class="s2">&quot;jpg&quot;</span><span class="p">,</span><span class="s2">&quot;gif&quot;</span><span class="p">,</span><span class="s2">&quot;bmp&quot;</span><span class="p">]</span>
+    <span class="n">endings</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">"tif"</span><span class="p">,</span><span class="s2">"png"</span><span class="p">,</span><span class="s2">"mhd"</span><span class="p">,</span><span class="s2">"mha"</span><span class="p">,</span><span class="s2">"jpg"</span><span class="p">,</span><span class="s2">"gif"</span><span class="p">,</span><span class="s2">"bmp"</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">ending</span> <span class="ow">in</span> <span class="n">endings</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">ending</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1634,27 +1634,27 @@ title="Print to PDF"
                 <span class="n">size</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">NaN</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="c1"># save and reload image</span>
-                <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;temp.&quot;</span> <span class="o">+</span> <span class="n">ending</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="s2">"temp."</span> <span class="o">+</span> <span class="n">ending</span>
                 <span class="n">imsave</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">original_image</span><span class="p">)</span>
 
                 <span class="n">reloaded_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
                 <span class="n">size</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
             
             <span class="c1"># determine statistics</span>
-            <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;ending&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ending</span><span class="p">)</span>
-            <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;data_type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reloaded_image</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
-            <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;shape&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reloaded_image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-            <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
-            <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;min&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">reloaded_image</span><span class="p">))</span>
-            <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;max&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">reloaded_image</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)))</span>
-            <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">reloaded_image</span><span class="p">))</span>
-            <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;standard_deviation&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">reloaded_image</span><span class="p">))</span>
+            <span class="n">stats</span><span class="p">[</span><span class="s2">"ending"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ending</span><span class="p">)</span>
+            <span class="n">stats</span><span class="p">[</span><span class="s2">"data_type"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reloaded_image</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+            <span class="n">stats</span><span class="p">[</span><span class="s2">"shape"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reloaded_image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+            <span class="n">stats</span><span class="p">[</span><span class="s2">"size"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+            <span class="n">stats</span><span class="p">[</span><span class="s2">"min"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">reloaded_image</span><span class="p">))</span>
+            <span class="n">stats</span><span class="p">[</span><span class="s2">"max"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">reloaded_image</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)))</span>
+            <span class="n">stats</span><span class="p">[</span><span class="s2">"mean"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">reloaded_image</span><span class="p">))</span>
+            <span class="n">stats</span><span class="p">[</span><span class="s2">"standard_deviation"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">reloaded_image</span><span class="p">))</span>
 
-            <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;mean_squared_error&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">original_image</span> <span class="o">-</span> <span class="n">reloaded_image</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+            <span class="n">stats</span><span class="p">[</span><span class="s2">"mean_squared_error"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">original_image</span> <span class="o">-</span> <span class="n">reloaded_image</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
 
         <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
             <span class="c1"># some formats are not supported</span>
-            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;File format not supported: &quot;</span> <span class="o">+</span> <span class="n">ending</span><span class="p">)</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">"File format not supported: "</span> <span class="o">+</span> <span class="n">ending</span><span class="p">)</span>
             <span class="k">pass</span>
 
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">stats</span><span class="p">)</span>

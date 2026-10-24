@@ -1536,7 +1536,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the location of the folder to go through</span>
-<span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;../../data/banana/&#39;</span>
+<span class="n">directory</span> <span class="o">=</span> <span class="s1">'../../data/banana/'</span>
 
 <span class="c1"># get a list of files in that folder</span>
 <span class="n">file_list</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span>
@@ -1546,32 +1546,32 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;banana0002.tif&#39;,
- &#39;banana0003.tif&#39;,
- &#39;banana0004.tif&#39;,
- &#39;banana0005.tif&#39;,
- &#39;banana0006.tif&#39;,
- &#39;banana0007.tif&#39;,
- &#39;banana0008.tif&#39;,
- &#39;banana0009.tif&#39;,
- &#39;banana0010.tif&#39;,
- &#39;banana0011.tif&#39;,
- &#39;banana0012.tif&#39;,
- &#39;banana0013.tif&#39;,
- &#39;banana0014.tif&#39;,
- &#39;banana0015.tif&#39;,
- &#39;banana0016.tif&#39;,
- &#39;banana0017.tif&#39;,
- &#39;banana0018.tif&#39;,
- &#39;banana0019.tif&#39;,
- &#39;banana0020.tif&#39;,
- &#39;banana0021.tif&#39;,
- &#39;banana0022.tif&#39;,
- &#39;banana0023.tif&#39;,
- &#39;banana0024.tif&#39;,
- &#39;banana0025.tif&#39;,
- &#39;banana0026.tif&#39;,
- &#39;image_source.txt&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['banana0002.tif',
+ 'banana0003.tif',
+ 'banana0004.tif',
+ 'banana0005.tif',
+ 'banana0006.tif',
+ 'banana0007.tif',
+ 'banana0008.tif',
+ 'banana0009.tif',
+ 'banana0010.tif',
+ 'banana0011.tif',
+ 'banana0012.tif',
+ 'banana0013.tif',
+ 'banana0014.tif',
+ 'banana0015.tif',
+ 'banana0016.tif',
+ 'banana0017.tif',
+ 'banana0018.tif',
+ 'banana0019.tif',
+ 'banana0020.tif',
+ 'banana0021.tif',
+ 'banana0022.tif',
+ 'banana0023.tif',
+ 'banana0024.tif',
+ 'banana0025.tif',
+ 'banana0026.tif',
+ 'image_source.txt']
 </pre></div>
 </div>
 </div>
@@ -1579,38 +1579,38 @@ title="Print to PDF"
 <p>Obviously, there are not just images in that folder. We can filter that list with a short for-statement:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_file_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_list</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.tif&quot;</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_file_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_list</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".tif"</span><span class="p">)]</span>
 
 <span class="n">image_file_list</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;banana0002.tif&#39;,
- &#39;banana0003.tif&#39;,
- &#39;banana0004.tif&#39;,
- &#39;banana0005.tif&#39;,
- &#39;banana0006.tif&#39;,
- &#39;banana0007.tif&#39;,
- &#39;banana0008.tif&#39;,
- &#39;banana0009.tif&#39;,
- &#39;banana0010.tif&#39;,
- &#39;banana0011.tif&#39;,
- &#39;banana0012.tif&#39;,
- &#39;banana0013.tif&#39;,
- &#39;banana0014.tif&#39;,
- &#39;banana0015.tif&#39;,
- &#39;banana0016.tif&#39;,
- &#39;banana0017.tif&#39;,
- &#39;banana0018.tif&#39;,
- &#39;banana0019.tif&#39;,
- &#39;banana0020.tif&#39;,
- &#39;banana0021.tif&#39;,
- &#39;banana0022.tif&#39;,
- &#39;banana0023.tif&#39;,
- &#39;banana0024.tif&#39;,
- &#39;banana0025.tif&#39;,
- &#39;banana0026.tif&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['banana0002.tif',
+ 'banana0003.tif',
+ 'banana0004.tif',
+ 'banana0005.tif',
+ 'banana0006.tif',
+ 'banana0007.tif',
+ 'banana0008.tif',
+ 'banana0009.tif',
+ 'banana0010.tif',
+ 'banana0011.tif',
+ 'banana0012.tif',
+ 'banana0013.tif',
+ 'banana0014.tif',
+ 'banana0015.tif',
+ 'banana0016.tif',
+ 'banana0017.tif',
+ 'banana0018.tif',
+ 'banana0019.tif',
+ 'banana0020.tif',
+ 'banana0021.tif',
+ 'banana0022.tif',
+ 'banana0023.tif',
+ 'banana0024.tif',
+ 'banana0025.tif',
+ 'banana0026.tif']
 </pre></div>
 </div>
 </div>
@@ -1621,7 +1621,7 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># go through all files in the folder</span>
 <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
     <span class="c1"># if the filename is of a tif-image, print it out</span>
-    <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.tif&quot;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">".tif"</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1700,16 +1700,16 @@ banana0026.tif
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_and_measure</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This function opens an image and returns its mean intensity.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
     
     <span class="c1"># return mean intensity in the image</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 
 <span class="c1"># for testing</span>
-<span class="n">load_and_measure</span><span class="p">(</span><span class="n">directory</span> <span class="o">+</span> <span class="s2">&quot;banana0010.tif&quot;</span><span class="p">)</span>
+<span class="n">load_and_measure</span><span class="p">(</span><span class="n">directory</span> <span class="o">+</span> <span class="s2">"banana0010.tif"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

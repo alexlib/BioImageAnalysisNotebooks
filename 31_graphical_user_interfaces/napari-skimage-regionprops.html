@@ -1534,7 +1534,7 @@ title="Print to PDF"
 <p>We start with loading an image and visualizing it in napari.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">&#39;../../data/blobs.tif&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s1">'../../data/blobs.tif'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1548,7 +1548,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/haase/opt/anaconda3/envs/bio_39/lib/python3.9/site-packages/napari_tools_menu/__init__.py:168: FutureWarning: Public access to Window.qt_viewer is deprecated and will be removed in
-v0.5.0. It is considered an &quot;implementation detail&quot; of the napari
+v0.5.0. It is considered an "implementation detail" of the napari
 application, not part of the napari viewer model. If your use case
 requires access to qt_viewer, please open an issue to discuss.
   self.tools_menu = ToolsMenu(self, self.qt_viewer.viewer)
@@ -1592,7 +1592,7 @@ requires access to qt_viewer, please open an issue to discuss.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># measure region properties</span>
-<span class="n">statistics</span> <span class="o">=</span> <span class="n">regionprops_table</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">])</span>
+<span class="n">statistics</span> <span class="o">=</span> <span class="n">regionprops_table</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="p">[</span><span class="s1">'area'</span><span class="p">])</span>
 
 <span class="c1"># save properties in the labels layer for later reuse</span>
 <span class="n">label_layer</span><span class="o">.</span><span class="n">properties</span> <span class="o">=</span> <span class="n">statistics</span>
@@ -1603,9 +1603,9 @@ requires access to qt_viewer, please open an issue to discuss.
 <p>We then use the scriptable napari plugin <a class="reference external" href="https://github.com/haesleinhuepf/napari-skimage-regionprops">napari-skimage-regionprops</a> to visualize the measurements in a <code class="docutils literal notranslate"><span class="pre">parametric_image</span></code> and add that image to the napari viewer as well.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parametric_image</span> <span class="o">=</span> <span class="n">visualize_measurement_on_labels</span><span class="p">(</span><span class="n">label_layer</span><span class="p">,</span> <span class="s1">&#39;area&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parametric_image</span> <span class="o">=</span> <span class="n">visualize_measurement_on_labels</span><span class="p">(</span><span class="n">label_layer</span><span class="p">,</span> <span class="s1">'area'</span><span class="p">)</span>
 
-<span class="n">viewer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+<span class="n">viewer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="n">parametric_image</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">)</span>
 
 <span class="n">napari</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">nbscreenshot</span><span class="p">(</span><span class="n">viewer</span><span class="p">)</span>
 </pre></div>
